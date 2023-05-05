@@ -277,7 +277,7 @@ ol>.block-children {
 
 .container-title > .slider {
     width: 100%;
-    max-width: calc(var(--contentMaxWidth) + var(--tocContainerWidth));
+    max-width: var(--contentMaxWidth);
     margin: 0px auto;
     padding: var(--pageHeaderPaddingTop) 0 var(--pageHeaderPaddingBottom);
     z-index: 1;
@@ -326,7 +326,7 @@ ol>.block-children {
     z-index: 20;
 
     > .tabbed-navigation {
-        max-width: calc(var(--contentMaxWidth) + var(--tocContainerWidth));
+        max-width: var(--contentMaxWidth);
         width: 100%;
         margin: 0px auto;
         z-index: 1;
@@ -383,10 +383,6 @@ ol>.block-children {
 }
 
 @media (max-width: 1169px) {
-    :root {
-        --tocContainerWidth: 0px;
-    }
-
     #section-content-page {
         width: 100%;
     }
