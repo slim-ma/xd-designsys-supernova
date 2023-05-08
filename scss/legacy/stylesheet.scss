@@ -365,6 +365,7 @@ ol>.block-children {
     flex-direction: column;
     /* align-content: center; */
     align-items: center;
+    max-width: var(--contentMaxWidth); 
     justify-content: center;
 }
 
@@ -378,7 +379,7 @@ ol>.block-children {
 
 #section-content-page {
     max-width: var(--contentMaxWidth);
-    width: calc(100% - 240px); /* removing the width of the table of contents */
+    width: 100%;
     margin-bottom: 100px;
 }
 
