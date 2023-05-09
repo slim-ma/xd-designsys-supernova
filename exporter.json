@@ -623,11 +623,22 @@
       {
         "key": "co.stevelim.documentation.page-section",
         "category": "Content",
-        "title": "Page Section",
-        "description": "Show content as a full-width page section",
+        "title": "Image Link",
+        "description": "Wrap an image within anchor tag",
         "icon": "icons/custom-block-page-section.png",
         "mode": "block",
-        "properties": []
+        "properties": [
+          {
+            "key": "image",
+            "type": "image",
+            "label": "Image"
+          },
+          {
+            "key": "url",
+            "label": "Url",
+            "type": "string"
+          }
+        ]
       },
       {
         "key": "io.supernova.documentation-main.markdown",
