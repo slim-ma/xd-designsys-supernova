@@ -1,5 +1,14 @@
 {[ const block = context /]}
 
+{[ let image = block.properties.image /]}
+{[ let url = block.properties.url /]}
+{[ let openNew = block.properties.openNew /]}
+{[ let alt = block.properties.alt /]}
+
 <div class="content-block content-block--image-link">
  Hi there!
+ {{ image }}<br/>
+ {{ url }}<br/>
+ {{ openNew }}<br/>
+ {{ alt }}<br/>
 </div>

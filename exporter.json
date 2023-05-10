@@ -638,6 +638,18 @@
             "label": "Url",
             "type": "string",
             "default": ""
+          },
+          {
+            "key": "openNew",
+            "label": "Open in a new tab",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "key": "alt",
+            "label": "Alt text",
+            "default": "",
+            "type": "string"
           }
         ]
       },
