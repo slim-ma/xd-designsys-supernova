@@ -621,7 +621,7 @@
     ],
     "blocks": [
       {
-        "key": "co.stevelim.documentation.page-section",
+        "key": "co.stevelim.documentation.image-link",
         "category": "Content",
         "title": "Image Link",
         "description": "Wrap an image within anchor tag",
