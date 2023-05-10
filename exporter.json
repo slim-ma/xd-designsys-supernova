@@ -643,7 +643,7 @@
             "key": "openNew",
             "label": "Open in a new tab",
             "type": "boolean",
-            "default": "false"
+            "default": false
           },
           {
             "key": "alt",
