@@ -11,6 +11,8 @@
   {[ for item in image]}
     item: {{item}}<br/>
   {[/]}<br/>
+  {{image.URL}}<br/>
+  {{image.url}}<br/><br/>
  {{ url }}<br/>
  {{ openNew }}<br/>
  {{ alt }}<br/>
