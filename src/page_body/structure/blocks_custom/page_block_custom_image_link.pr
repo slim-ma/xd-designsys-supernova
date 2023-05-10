@@ -7,7 +7,10 @@
 
 <div class="content-block content-block--image-link">
  Hi there!
- {{ image }}<br/>
+ {{ htmlSafeString(image) }}<br/>
+  {[ for item in image]}
+    item: {{item}}<br/>
+  {[/]}<br/>
  {{ url }}<br/>
  {{ openNew }}<br/>
  {{ alt }}<br/>
