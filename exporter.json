@@ -650,6 +650,18 @@
             "label": "Alt text",
             "default": "",
             "type": "string"
+          },
+          {
+            "key": "class",
+            "label":"Class",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "height",
+            "label": "Height",
+            "type": "number",
+            "default": 50
           }
         ]
       },

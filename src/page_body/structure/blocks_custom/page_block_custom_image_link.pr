@@ -1,19 +1,47 @@
 {[ const block = context /]}
-
+{* set up variables *}
 {[ let image = block.properties.image /]}
-{[ let url = block.properties.url /]}
-{[ let openNew = block.properties.openNew /]}
+{[ let asset = image.asset /]}
+{[ let imgUrl = asset.url /]}
 {[ let alt = block.properties.alt /]}
+{[ let className = block.properties.class /]}
+{[ let height = block.properties.height /]}
+{[ let openNew = block.properties.openNew /]}
+{[ let linkUrl = block.properties.url /]}
 
-<div class="content-block content-block--image-link">
- Hi there!
- {{ htmlSafeString(image) }}<br/>
-  {[ for item in image]}
-    item: {{item}}<br/>
-  {[/]}<br/>
-  {{image.URL}}<br/>
-  {{image.url}}<br/><br/>
- {{ url }}<br/>
- {{ openNew }}<br/>
- {{ alt }}<br/>
+{* set up markup strings *}
+{[ let target = "" /]}
+{[ if openNew ]}
+  {[ target = "target=\"_blank\"" /]}
+{[/]}
+
+{[ let class = "" /]}
+{[ if className ]}
+  {[ class = className /]}
+{[/]}
+
+<div class="content-block content-block--image-link {{class}}">
+  <a href="{{linkUrl}}" class="image-link__anchor" {{ target }}>
+    <img
+      src="{{ imgUrl }}"
+      alt="{{alt}}"
+      {[if className ]}
+      class="{{class}}__image image-link__image"
+      {[else]}
+      class="image-link__image"
+      {[/]}
+      {[if height]}
+      height="{{height}}"
+      {[/]}
+    />
+  </a>
 </div>
+
+{* NOTES:
+ block: {{ getKeys(block.properties) }}<br/>
+ imageKeys: {{ getKeys(image) }}<br/>
+ asset: {{ getKeys(asset) }}<br/>
+ asset.type: {{ asset.type }}<br/>
+ ---<br/>
+ class: {{ class }}<br/>
+*}
