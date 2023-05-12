@@ -20,6 +20,7 @@
   {[ class = className /]}
 {[/]}
 
+{[ if linkUrl ]}
 <div class="content-block content-block--image-link {{class}}">
   <a href="{{linkUrl}}" class="image-link__anchor" {{ target }}>
     <img
@@ -36,7 +37,22 @@
     />
   </a>
 </div>
-
+{[ else ]}
+<div class="content-block content-block--image-link {{class}}">
+  <img
+    src="{{ imgUrl }}"
+    alt="{{alt}}"
+    {[if className ]}
+    class="{{class}}__image image-link__image"
+    {[else]}
+    class="image-link__image"
+    {[/]}
+    {[if height]}
+    height="{{height}}"
+    {[/]}
+  />
+</div>
+{[/]}
 {* NOTES:
  block: {{ getKeys(block.properties) }}<br/>
  imageKeys: {{ getKeys(image) }}<br/>

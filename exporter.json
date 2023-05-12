@@ -830,6 +830,12 @@
           "key": "accordion",
           "description": "Tabs displayed as an accordion.",
           "thumbnail": "thumbnails/Tabs_Accordion.png"
+        },
+        {
+          "name": "Sections",
+          "key": "sections",
+          "description": "Tabs displayed as page sections",
+          "thumbnail": "thumbnails/Tabs_Sections.png"
         }
       ],
       "TokenList": [
