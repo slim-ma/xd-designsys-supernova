@@ -11,10 +11,12 @@
 {[ if (variant === "sections")]}
   {[ map (block.children.enumerated()) to index tab ]}
     {[ let id = tab.id.prefixed("T") /]}
-    <section class="xd-section" id="{{ id }}">
-      {[ for child in tab.children ]}
-        {[ inject "page_body_structure_block" context ({"block": child, "pageId": pageId}) /]}
-      {[/]}
+    <section class="xd-section {{ tab.caption }}" id="{{ id }}">
+      <div class="xd-section__content">
+        {[ for child in tab.children ]}
+          {[ inject "page_body_structure_block" context ({"block": child, "pageId": pageId}) /]}
+        {[/]}
+      </div>
     </section>
   {[/]}
 {[ else ]}
