@@ -13,6 +13,8 @@ declare global {
     registerFunction(name: string, fn: (...args) => any)
     registerTransformer(name: string, fn: (transformedValue: any, ...args) => any)
     registerPayload(name: string, payload: string | number | object | Array<any> | Object)
+    systemData(): object
+    blueprintData(): object | null
   }
 
   const Pulsar: PulsarInterface
@@ -298,6 +300,7 @@ declare global {
   type DocumentationPage = DocumentationItem & {
     blocks: Array<DocumentationPageBlock>
     parent: DocumentationGroup
+    relativeUrl: string
   }
 
   type DocumentationPageStyle = {
