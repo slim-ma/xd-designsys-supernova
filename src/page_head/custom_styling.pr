@@ -61,6 +61,7 @@
 }
 
  {* Side navigation *}
+ {*
 .side-navigation-wrapper {
     {[ let sideNavBackgroundOption = configuration.sideNavigationBackground /]}
     {[ let sideNavigationBackground = (sideNavBackgroundOption ? getColorValueFromSettings(sideNavBackgroundOption.value, ((sideNavBackgroundOption.aliasTo !== null) ? ds.tokenById(sideNavBackgroundOption.aliasTo) : null)) : null) /]}
@@ -68,6 +69,7 @@
     --sideNavBackground: {{ sideNavigationBackground }} !important;
     {[/]}
 }
+ *}
 
  {* Top navigation *}
 #header {
