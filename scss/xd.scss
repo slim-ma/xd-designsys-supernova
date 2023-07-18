@@ -1,0 +1,19 @@
+/* PAGE SECTIONS */
+/* -- home page hero */
+.is-homepage .container-title {
+  background: url(https://studio-assets.supernova.io/design-systems/27071/6c81b241-6834-49c1-a7ec-de4cc7f15298.png) no-repeat top left;
+  background-size: cover;
+  height: 810px;
+}
+  
+.masthead__arrow {
+  position: relative;
+  margin-bottom: 0;
+  &> img {
+   position: absolute;
+    top: -177px;
+    left: 50%;
+    margin-left: -24px;
+  }
+}
+  
