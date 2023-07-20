@@ -77,10 +77,10 @@
 
     >.content-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      margin-top: 20px;
-      padding: 0 var(--contentContainerPadding);
       margin: var(--pageHeaderMargin);
+      padding: 0;
   }
 }
 

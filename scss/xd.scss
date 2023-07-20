@@ -1,4 +1,13 @@
-/* PAGES */
+.xd-section {
+  padding: 140px var(--contentContainerPadding) 75px;
+}
+.xd-section__content {
+  margin: 0 auto;
+  max-width: var(--contentMaxWidth);
+  width: 100%;
+}
+
+/* SPECIFIC PAGES */
 /* -- home page */
 .is-homepage {
   .container-title {
@@ -13,7 +22,7 @@
       }
   }
 
-  .main > section {
+  main > .xd-section {
    padding: 140px 0 75px;
   }
 }
