@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.12",
+  "version": "4.6.13",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -649,7 +649,7 @@
         "key": "co.stevelim.documentation.card-one-col",
         "title": "Full Width Card",
         "description": "Card link w/optional image (full width)",
-        "icon": "custom-block-card-1col.png",
+        "icon": "icons/custom-block-card-1col.png",
         "mode": "block",
         "category": "Content",
         "properties": [
@@ -707,7 +707,7 @@
         "key": "co.stevelim.documentation.card-two-col",
         "title": "Two Half Width Cards",
         "description": "Two card link across 2 columns",
-        "icon": "custom-block-card-2col.png",
+        "icon": "icons/custom-block-card-2col.png",
         "mode": "block",
         "category": "Content",
         "properties": [
