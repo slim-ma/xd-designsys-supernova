@@ -20,7 +20,7 @@
 <div class="content-block content-block--1card-container {{class}} {{orientation}}">
   {[ if linkUrl ]}
   {* WITH LINK *}
-  <a href="{{linkUrl}}" class="card__anchor">
+  <a href="{{linkUrl}}" class="card-link">
     {[ if imgUrl ]}
     <img
       src="{{ imgUrl }}"
@@ -35,7 +35,7 @@
   </a>
   {[ else ]}
   {* NO LINK *}
-  <div href="{{linkUrl}}" class="card__anchor">
+  <div class="card">
     {[ if imgUrl ]}
     <img
       src="{{ imgUrl }}"

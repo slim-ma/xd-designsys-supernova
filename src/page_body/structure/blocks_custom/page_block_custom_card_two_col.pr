@@ -35,7 +35,7 @@
 <div class="content-block content-block--2card-container" {{orientation}}>
   {[ if linkUrl1 ]}
   {* Card1 WITH LINK *}
-  <a href="{{linkUrl1}}" class="card__anchor {{class1}}">
+  <a href="{{linkUrl1}}" class="card-link {{class1}}">
     {[ if imgUrl1 ]}
     <img
       src="{{ imgUrl1 }}"
@@ -50,7 +50,7 @@
   </a>
   {[ else ]}
   {* Card1 NO LINK *}
-  <div href="{{linkUrl1}}" class="card__anchor {{class1}}">
+  <div class="card {{class1}}">
     {[ if imgUrl1 ]}
     <img
       src="{{ imgUrl1 }}"
@@ -67,7 +67,7 @@
   {* END Card1 *}
   {[ if linkUrl2 ]}
   {* Card2 WITH LINK *}
-  <a href="{{linkUrl2}}" class="card__anchor {{class2}}">
+  <a href="{{linkUrl2}}" class="card-link {{class2}}">
     {[ if imgUrl2 ]}
     <img
       src="{{ imgUrl2 }}"
@@ -82,7 +82,7 @@
   </a>
   {[ else ]}
   {* Card2 NO LINK *}
-  <div href="{{linkUrl2}}" class="card__anchor {{class2}}">
+  <div class="card {{class2}}">
     {[ if imgUrl2 ]}
     <img
       src="{{ imgUrl2 }}"
