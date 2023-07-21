@@ -7,7 +7,6 @@
 {[ let image = block.properties.image /]}
 {[ let asset = image.asset /]}
 {[ let imgUrl = asset.url /]}
-{[ let alt = block.properties.alt /]}
 {[ let hoverText = block.properties.hoverText /]}
 {[ let orientation = block.properties.orientation /]}
 

@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.17",
+  "version": "4.6.18",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -687,13 +687,7 @@
           {
             "key": "image",
             "type": "image",
-            "label": "Image"
-          },
-          {
-            "key": "alt",
-            "label": "Image alt text",
-            "default": "",
-            "type": "string"
+            "label": "Image (hz: 565 wide / vt: 1130 x 340)"
           },
           {
             "key": "hoverText",
@@ -741,12 +735,6 @@
             "type": "image"
           },
           {
-            "key": "alt1",
-            "label": "First Card Image alt text",
-            "default": "",
-            "type": "string"
-          },
-          {
             "key": "hoverText1",
             "label":"First Card Hover Text",
             "type": "string",
@@ -754,25 +742,25 @@
           },
           {
             "key": "title2",
-            "label":"First Card Title",
+            "label":"Second Card Title",
             "type": "string",
             "default": ""
           },
           {
             "key": "body2",
-            "label":"First Card Body",
+            "label":"Second Card Body",
             "type": "string",
             "default": ""
           },
           {
             "key": "class2",
-            "label":"First Card Class",
+            "label":"Second Card Class",
             "type": "string",
             "default": ""
           },
           {
             "key": "url2",
-            "label": "First Class Url",
+            "label": "Second Card Url",
             "type": "string",
             "default": ""
           },
@@ -782,14 +770,8 @@
             "type": "image"
           },
           {
-            "key": "alt2",
-            "label": "First Card Image alt text",
-            "default": "",
-            "type": "string"
-          },
-          {
             "key": "hoverText2",
-            "label":"First Card Hover Text",
+            "label":"Second Card Hover Text",
             "type": "string",
             "default": "Learn more"
           }

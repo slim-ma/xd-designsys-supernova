@@ -7,7 +7,6 @@
 {[ let image1 = block.properties.image1 /]}
 {[ let asset1 = image1.asset1 /]}
 {[ let imgUrl1 = asset.url1 /]}
-{[ let alt1 = block.properties.alt1 /]}
 {[ let hoverText1 = block.properties.hoverText1 /]}
 {[ let orientation1 = block.properties.orientation1 /]}
 {* 2nd card variables *}
@@ -18,7 +17,6 @@
 {[ let image2 = block.properties.image2 /]}
 {[ let asset2 = image1.asset2 /]}
 {[ let imgUrl2 = asset.url2 /]}
-{[ let alt2 = block.properties.alt2 /]}
 {[ let hoverText2 = block.properties.hoverText2 /]}
 {[ let orientation2 = block.properties.orientation2 /]}
 
@@ -35,14 +33,7 @@
 <div class="content-block content-block--2card-container" {{orientation}}>
   {[ if linkUrl1 ]}
   {* Card1 WITH LINK *}
-  <a href="{{linkUrl1}}" class="card-link {{class1}}">
-    {[ if imgUrl1 ]}
-    <img
-      src="{{ imgUrl1 }}"
-      alt="{{alt1}}"
-      class="card__image"
-    />
-    {[/]}
+  <a href="{{linkUrl1}}" class="card-link {{class1}} {[if imgUrl1]}with-image{[/]}">
     <div class="card__content">
     {[ if title1 !== "" ]}<h4>{{title1}}</h4>{[/]}
     {[ if body1 !== "" ]}<p>{{body1}}</p>{[/]}
@@ -50,14 +41,7 @@
   </a>
   {[ else ]}
   {* Card1 NO LINK *}
-  <div class="card {{class1}}">
-    {[ if imgUrl1 ]}
-    <img
-      src="{{ imgUrl1 }}"
-      alt="{{alt1}}"
-      class="card__image"
-    />
-    {[/]}
+  <div class="card {{class1}} {[if imgUrl]}with-image{[/]}">
     <div class="card__content">
     {[ if title1 !== "" ]}<h4>{{title1}}</h4>{[/]}
     {[ if body1 !== "" ]}<p>{{body1}}</p>{[/]}
@@ -67,14 +51,7 @@
   {* END Card1 *}
   {[ if linkUrl2 ]}
   {* Card2 WITH LINK *}
-  <a href="{{linkUrl2}}" class="card-link {{class2}}">
-    {[ if imgUrl2 ]}
-    <img
-      src="{{ imgUrl2 }}"
-      alt="{{alt2}}"
-      class="card__image"
-    />
-    {[/]}
+  <a href="{{linkUrl2}}" class="card-link {{class2}} {[if imgUrl2]}with-image{[/]}">
     <div class="card__content">
     {[ if title2 !== "" ]}<h4>{{title2}}</h4>{[/]}
     {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
@@ -82,14 +59,7 @@
   </a>
   {[ else ]}
   {* Card2 NO LINK *}
-  <div class="card {{class2}}">
-    {[ if imgUrl2 ]}
-    <img
-      src="{{ imgUrl2 }}"
-      alt="{{alt2}}"
-      class="card__image"
-    />
-    {[/]}
+  <div class="card {{class2}} {[if imgUrl2]}with-image{[/]}">
     <div class="card__content">
     {[ if title2 !== "" ]}<h4>{{title2}}</h4>{[/]}
     {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
