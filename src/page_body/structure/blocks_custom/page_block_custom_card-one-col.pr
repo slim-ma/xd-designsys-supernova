@@ -1,0 +1,53 @@
+{[ const block = context /]}
+{* set up variables *}
+{[ let title = block.properties.title /]}
+{[ let body = block.properties.body /]}
+{[ let className = block.properties.class /]}
+{[ let url = block.properties.url /]}
+{[ let image = block.properties.image /]}
+{[ let asset = image.asset /]}
+{[ let imgUrl = asset.url /]}
+{[ let alt = block.properties.alt /]}
+{[ let hoverText = block.properties.hoverText /]}
+{[ let orientation = block.properties.orientation /]}
+
+{[ let class = "" /]}
+{[ if className ]}
+  {[ class = className /]}
+{[/]}
+
+{[ if (title !== "" || body !== "")]}
+<div class="content-block content-block--1card-container {{class}} {{orientation}}">
+  {[ if linkUrl ]}
+  {* WITH LINK *}
+  <a href="{{linkUrl}}" class="card__anchor">
+    {[ if imgUrl ]}
+    <img
+      src="{{ imgUrl }}"
+      alt="{{alt}}"
+      class="card__image"
+    />
+    {[/]}
+    <div class="card__content">
+    {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
+    {[ if body !== "" ]}<p>{{body}}</p>{[/]}
+    </div>
+  </a>
+  {[ else ]}
+  {* NO LINK *}
+  <div href="{{linkUrl}}" class="card__anchor">
+    {[ if imgUrl ]}
+    <img
+      src="{{ imgUrl }}"
+      alt="{{alt}}"
+      class="card__image"
+    />
+    {[/]}
+    <div class="card__content">
+    {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
+    {[ if body !== "" ]}<p>{{body}}</p>{[/]}
+    </div>
+  </div>
+  {[/]}{* end if linkURL *}
+</div>
+{[/]}{* end title/body check *}

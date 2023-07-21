@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.11",
+  "version": "4.6.12",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -602,10 +602,10 @@
     "blocks": [
       {
         "key": "co.stevelim.documentation.image-link",
-        "category": "Content",
         "title": "Image Link",
         "description": "Wrap an image within anchor tag",
         "icon": "icons/custom-block-page-section.png",
+        "category": "Content",
         "mode": "block",
         "properties": [
           {
@@ -642,6 +642,156 @@
             "label": "Height",
             "type": "number",
             "default": 50
+          }
+        ]
+      },
+      {
+        "key": "co.stevelim.documentation.card-one-col",
+        "title": "Full Width Card",
+        "description": "Card link w/optional image (full width)",
+        "icon": "custom-block-card-1col.png",
+        "mode": "block",
+        "category": "Content",
+        "properties": [
+          {
+            "key": "orientation",
+            "type": "enum",
+            "label": "Orientation",
+            "values": ["vertical", "horizontal"],
+            "default": "vertical"
+          },
+          {
+            "key": "title",
+            "label":"Title",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "body",
+            "label":"Body",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "class",
+            "label":"Class",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "url",
+            "label": "Url",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "image",
+            "type": "image",
+            "label": "Image"
+          },
+          {
+            "key": "alt",
+            "label": "Image alt text",
+            "default": "",
+            "type": "string"
+          },
+          {
+            "key": "hoverText",
+            "label":"Hover Text",
+            "type": "string",
+            "default": "Learn more"
+          }
+        ]
+      },
+      {
+        "key": "co.stevelim.documentation.card-two-col",
+        "title": "Two Half Width Cards",
+        "description": "Two card link across 2 columns",
+        "icon": "custom-block-card-2col.png",
+        "mode": "block",
+        "category": "Content",
+        "properties": [
+          {
+            "key": "title1",
+            "label":"First Card Title",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "body1",
+            "label":"First Card Body",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "class1",
+            "label":"First Card Class",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "url1",
+            "label": "First Class Url",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "image1",
+            "label": "First Card Image",
+            "type": "image"
+          },
+          {
+            "key": "alt1",
+            "label": "First Card Image alt text",
+            "default": "",
+            "type": "string"
+          },
+          {
+            "key": "hoverText1",
+            "label":"First Card Hover Text",
+            "type": "string",
+            "default": "Learn more"
+          },
+          {
+            "key": "title2",
+            "label":"First Card Title",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "body2",
+            "label":"First Card Body",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "class2",
+            "label":"First Card Class",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "url2",
+            "label": "First Class Url",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "image2",
+            "label": "Second Card Image",
+            "type": "image"
+          },
+          {
+            "key": "alt2",
+            "label": "First Card Image alt text",
+            "default": "",
+            "type": "string"
+          },
+          {
+            "key": "hoverText2",
+            "label":"First Card Hover Text",
+            "type": "string",
+            "default": "Learn more"
           }
         ]
       },
