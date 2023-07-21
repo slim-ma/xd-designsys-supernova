@@ -20,7 +20,7 @@
 <div class="content-block content-block--1card-container {{class}} {{orientation}}">
   {[ if linkUrl ]}
   {* WITH LINK *}
-  <a href="{{linkUrl}}" class="card-link" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
+  <a href="{{linkUrl}}" class="card-link {[if imgUrl]}with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
     <div class="card__content">
     {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
     {[ if body !== "" ]}<p>{{body}}</p>{[/]}
@@ -28,7 +28,7 @@
   </a>
   {[ else ]}
   {* NO LINK *}
-  <div class="card" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
+  <div class="card {[if imgUrl]}with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
     <div class="card__content">
     {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
     {[ if body !== "" ]}<p>{{body}}</p>{[/]}
