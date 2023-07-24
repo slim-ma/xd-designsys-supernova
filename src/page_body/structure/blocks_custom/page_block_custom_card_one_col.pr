@@ -5,14 +5,18 @@
 {[ let className = block.properties.class /]}
 {[ let url = block.properties.url /]}
 {[ let image = block.properties.image /]}
-{[ let asset = image.asset /]}
-{[ let imgUrl = asset.url /]}
 {[ let hoverText = block.properties.hoverText /]}
 {[ let orientation = block.properties.orientation /]}
 
 {[ let class = "" /]}
 {[ if className ]}
   {[ class = className /]}
+{[/]}
+
+{[ let imgUrl = "" /]}
+{[ if image ]}
+{[ let asset = image.asset /]}
+{[ imgUrl = asset.url /]}
 {[/]}
 
 {[ if (title !== "" || body !== "")]}

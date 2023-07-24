@@ -5,8 +5,6 @@
 {[ let className1 = block.properties.class1 /]}
 {[ let url1 = block.properties.url1 /]}
 {[ let image1 = block.properties.image1 /]}
-{[ let asset1 = image1.asset /]}
-{[ let imgUrl1 = asset1.url /]}
 {[ let hoverText1 = block.properties.hoverText1 /]}
 {[ let orientation1 = block.properties.orientation1 /]}
 {* 2nd card variables *}
@@ -15,8 +13,6 @@
 {[ let className2 = block.properties.class2 /]}
 {[ let url2 = block.properties.url2 /]}
 {[ let image2 = block.properties.image2 /]}
-{[ let asset2 = image1.asset /]}
-{[ let imgUrl2 = asset2.url /]}
 {[ let hoverText2 = block.properties.hoverText2 /]}
 {[ let orientation2 = block.properties.orientation2 /]}
 
@@ -28,6 +24,18 @@
 {[ if className2 ]}
   {[ className2 = className2 /]}
 {[/]}
+
+{[ let imgUrl1 = "" /]}
+{[ if image1 ]}
+{[ let asset1 = image1.asset /]}
+{[ imgUrl1 = asset1.url /]}
+{[/]}
+{[ let imgUrl2 = "" /]}
+{[ if image2 ]}
+{[ let asset2 = image2.asset /]}
+{[ imgUrl2 = asset2.url /]}
+{[/]}
+
 
 {[ if (title1 !== "" || body1 !== "") && (title2 !== "" || body2 !== "") ]}
 <div class="content-block content-block--2card-container" {{orientation}}>
