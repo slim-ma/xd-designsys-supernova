@@ -5,8 +5,8 @@
 {[ let className1 = block.properties.class1 /]}
 {[ let url1 = block.properties.url1 /]}
 {[ let image1 = block.properties.image1 /]}
-{[ let asset1 = image1.asset1 /]}
-{[ let imgUrl1 = asset.url1 /]}
+{[ let asset1 = image1.asset /]}
+{[ let imgUrl1 = asset1.url /]}
 {[ let hoverText1 = block.properties.hoverText1 /]}
 {[ let orientation1 = block.properties.orientation1 /]}
 {* 2nd card variables *}
@@ -15,8 +15,8 @@
 {[ let className2 = block.properties.class2 /]}
 {[ let url2 = block.properties.url2 /]}
 {[ let image2 = block.properties.image2 /]}
-{[ let asset2 = image1.asset2 /]}
-{[ let imgUrl2 = asset.url2 /]}
+{[ let asset2 = image1.asset /]}
+{[ let imgUrl2 = asset2.url /]}
 {[ let hoverText2 = block.properties.hoverText2 /]}
 {[ let orientation2 = block.properties.orientation2 /]}
 
@@ -41,7 +41,7 @@
   </a>
   {[ else ]}
   {* Card1 NO LINK *}
-  <div class="card {{class1}} {[if imgUrl]}with-image{[/]}">
+  <div class="card {{class1}} {[if imgUrl1]}with-image{[/]}">
     <div class="card__content">
     {[ if title1 !== "" ]}<h4>{{title1}}</h4>{[/]}
     {[ if body1 !== "" ]}<p>{{body1}}</p>{[/]}
