@@ -22,7 +22,7 @@
 {[/]}
 {[ let class2 = "" /]}
 {[ if className2 ]}
-  {[ className2 = className2 /]}
+  {[ class2 = className2 /]}
 {[/]}
 
 {[ let imgUrl1 = "" /]}
