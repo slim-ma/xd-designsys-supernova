@@ -21,23 +21,25 @@
 {[/]}
 
 {[ if (title !== "" || body !== "")]}
-<div class="content-block content-block--1card-container {{class}} {{orientation}}">
+<div class="content-block content-block--card-container {{class}} {{orientation}}">
+  <div class="card-wrapper">
   {[ if url ]}
   {* WITH LINK *}
-  <a href="{{url}}" class="card card--link {[if imgUrl]}with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
-    <div class="card__content">
-    {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
-    {[ if body !== "" ]}<p>{{body}}</p>{[/]}
+    <a href="{{url}}" class="card card--link {[if imgUrl]}with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
+      <div class="card__content">
+      {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
+      {[ if body !== "" ]}<p>{{body}}</p>{[/]}
+      </div>
+    </a>
+    {[ else ]}
+    {* NO LINK *}
+    <div class="card {[if imgUrl]}with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
+      <div class="card__content">
+      {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
+      {[ if body !== "" ]}<p>{{body}}</p>{[/]}
+      </div>
     </div>
-  </a>
-  {[ else ]}
-  {* NO LINK *}
-  <div class="card {[if imgUrl]}with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
-    <div class="card__content">
-    {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
-    {[ if body !== "" ]}<p>{{body}}</p>{[/]}
-    </div>
-  </div>
   {[/]}{* end if linkURL *}
+  </div>
 </div>
 {[/]}{* end title/body check *}
