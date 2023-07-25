@@ -44,11 +44,11 @@
 
 
 {[ if (title1 !== "" || body1 !== "") && (title2 !== "" || body2 !== "") ]}
-<div class="content-block content-block--card-container {{containerClass}} ">
+<div class="content-block content-block--2card-container {{containerClass}}">
   <div class="card-wrapper">
-    {[ if url1 ]}
-    {* Card1 WITH LINK *}
-    <a href="{{url1}}" class="card card--link {{class1}} {[if imgUrl1]}with-image{[/]} {[orientation1]}">
+  {[ if url1 ]}
+  {* Card1 WITH LINK *}
+    <a href="{{url1}}" class="card card--link {{class1}} {[if imgUrl1]}with-image{[/]} {{orientation1}}">
       <div class="card__content">
       {[ if title1 !== "" ]}<h4>{{title1}}</h4>{[/]}
       {[ if body1 !== "" ]}<p>{{body1}}</p>{[/]}
@@ -56,17 +56,17 @@
     </a>
     {[ else ]}
     {* Card1 NO LINK *}
-    <div class="card {{class1}} {[if imgUrl1]}with-image{[/]} {[orientation1]}">
+    <div class="card {{class1}} {[if imgUrl1]}with-image{[/]} {{orientation1}}">
       <div class="card__content">
       {[ if title1 !== "" ]}<h4>{{title1}}</h4>{[/]}
       {[ if body1 !== "" ]}<p>{{body1}}</p>{[/]}
       </div>
     </div>
-    {[/]}{* end if linkURL1 *}
-    {* END Card1 *}
-    {[ if url2 ]}
-    {* Card2 WITH LINK *}
-    <a href="{{url2}}" class="card card--link {{class2}} {[if imgUrl2]}with-image{[/]} {[orientation2]}">
+  {[/]}{* end if linkURL1 *}
+  {* END Card1 *}
+  {[ if url2 ]}
+  {* Card2 WITH LINK *}
+    <a href="{{url2}}" class="card card--link {{class2}} {[if imgUrl2]}with-image{[/]} {{orientation2}}">
       <div class="card__content">
       {[ if title2 !== "" ]}<h4>{{title2}}</h4>{[/]}
       {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
@@ -74,7 +74,7 @@
     </a>
     {[ else ]}
     {* Card2 NO LINK *}
-    <div class="card {{class2}} {[if imgUrl2]}with-image{[/]} {[orientation2]}">
+    <div class="card {{class2}} {[if imgUrl2]}with-image{[/]} {{orientation2}}">
       <div class="card__content">
       {[ if title2 !== "" ]}<h4>{{title2}}</h4>{[/]}
       {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
