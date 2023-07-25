@@ -21,9 +21,9 @@
 
 {[ if (title !== "" || body !== "")]}
 <div class="content-block content-block--1card-container {{class}} {{orientation}}">
-  {[ if linkUrl ]}
+  {[ if url ]}
   {* WITH LINK *}
-  <a href="{{linkUrl}}" class="card-link {[if imgUrl]}with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
+  <a href="{{url}}" class="card-link {[if imgUrl]}with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
     <div class="card__content">
     {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
     {[ if body !== "" ]}<p>{{body}}</p>{[/]}

@@ -39,9 +39,9 @@
 
 {[ if (title1 !== "" || body1 !== "") && (title2 !== "" || body2 !== "") ]}
 <div class="content-block content-block--2card-container" {{orientation}}>
-  {[ if linkUrl1 ]}
+  {[ if url1 ]}
   {* Card1 WITH LINK *}
-  <a href="{{linkUrl1}}" class="card-link {{class1}} {[if imgUrl1]}with-image{[/]}">
+  <a href="{{url1}}" class="card-link {{class1}} {[if imgUrl1]}with-image{[/]}">
     <div class="card__content">
     {[ if title1 !== "" ]}<h4>{{title1}}</h4>{[/]}
     {[ if body1 !== "" ]}<p>{{body1}}</p>{[/]}
@@ -57,9 +57,9 @@
   </div>
   {[/]}{* end if linkURL1 *}
   {* END Card1 *}
-  {[ if linkUrl2 ]}
+  {[ if url2 ]}
   {* Card2 WITH LINK *}
-  <a href="{{linkUrl2}}" class="card-link {{class2}} {[if imgUrl2]}with-image{[/]}">
+  <a href="{{url2}}" class="card-link {{class2}} {[if imgUrl2]}with-image{[/]}">
     <div class="card__content">
     {[ if title2 !== "" ]}<h4>{{title2}}</h4>{[/]}
     {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
@@ -73,7 +73,7 @@
     {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
     </div>
   </div>
-  {[/]}{* end if linkURL2 *}
+  {[/]}{* end if url2 *}
 </div>
 {* end Card2 *}
 {[/]}{* end title/body check *}
