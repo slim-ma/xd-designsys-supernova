@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.26",
+  "version": "4.6.27",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -731,7 +731,7 @@
           },
           {
             "key": "url1",
-            "label": "First Class Url",
+            "label": "First Card Url",
             "type": "string",
             "default": ""
           },
