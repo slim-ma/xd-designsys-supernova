@@ -44,7 +44,7 @@
 
 
 {[ if (title1 !== "" || body1 !== "") && (title2 !== "" || body2 !== "") ]}
-<div class="content-block content-block--2card-container {{containerClass}}">
+<div class="content-block content-block--card-container {{containerClass}}">
   <div class="card-wrapper">
   {[ if url1 ]}
   {* Card1 WITH LINK *}
