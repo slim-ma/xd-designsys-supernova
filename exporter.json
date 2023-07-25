@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.24",
+  "version": "4.6.25",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -674,7 +674,7 @@
           },
           {
             "key": "class",
-            "label":"Class",
+            "label":"Container Class",
             "type": "string",
             "default": ""
           },
@@ -705,6 +705,12 @@
         "mode": "block",
         "category": "Content",
         "properties": [
+          {
+            "key": "containerClass",
+            "type": "string",
+            "label": "Container Class",
+            "default": ""
+          },
           {
             "key": "title1",
             "label":"First Card Title",

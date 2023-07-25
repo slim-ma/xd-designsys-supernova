@@ -1,5 +1,6 @@
 {[ const block = context /]}
 {* set up variables *}
+{[ let containerClass = block.properties.containerClass /]}
 {[ let title = block.properties.title /]}
 {[ let body = block.properties.body /]}
 {[ let className = block.properties.class /]}

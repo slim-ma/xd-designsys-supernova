@@ -1,4 +1,5 @@
 {[ const block = context /]}
+{[ let wrapperClass = block.properties.containerClass /]}
 {* 1st card variables *}
 {[ let title1 = block.properties.title1 /]}
 {[ let body1 = block.properties.body1 /]}
@@ -15,6 +16,11 @@
 {[ let image2 = block.properties.image2 /]}
 {[ let hoverText2 = block.properties.hoverText2 /]}
 {[ let orientation2 = block.properties.orientation2 /]}
+
+{[ let containerClass = "" /]}
+{[ if wrapperClass ]}
+  {[ containerClass = wrapperClass /]}
+{[/]}
 
 {[ let class1 = "" /]}
 {[ if className1 ]}
@@ -38,7 +44,7 @@
 
 
 {[ if (title1 !== "" || body1 !== "") && (title2 !== "" || body2 !== "") ]}
-<div class="content-block content-block--2card-container" {{orientation}}>
+<div class="content-block content-block--2card-container {{containerClass}} {{orientation}}">
   {[ if url1 ]}
   {* Card1 WITH LINK *}
   <a href="{{url1}}" class="card card-link {{class1}} {[if imgUrl1]}with-image{[/]}">
