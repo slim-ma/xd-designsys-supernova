@@ -33,7 +33,7 @@
   </a>
   {[ else ]}
   {* NO LINK *}
-  <div class="card {{orientation}} {{class}} {[if imgUrl]}with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
+  <div class="card {{orientation}} {{class}} {[if imgUrl]} with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
     <div class="card__content">
     {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
     {[ if body !== "" ]}<p>{{body}}</p>{[/]}
