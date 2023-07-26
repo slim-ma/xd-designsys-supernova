@@ -21,7 +21,7 @@
 {[/]}
 
 {[ if (title !== "" || body !== "")]}
-<div class="content-block content-block--card-container {{containerClass}}">
+<div class="content-block card-container--one-card {{containerClass}}">
   <div class="card-wrapper">
   {[ if url ]}
   {* WITH LINK *}

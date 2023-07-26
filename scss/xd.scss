@@ -15,7 +15,7 @@
 }
 
 /* CARD */
-.content-block--1card-container {
+.card-container--one-card {
   &> .card {
     border-radius: 24px;
     background: white;
@@ -30,7 +30,7 @@
 }
   
 
-.content-block--2card-container {
+.card-container--two-card {
   display: flex;
   flex-direction: row;
   gap: 24px;
