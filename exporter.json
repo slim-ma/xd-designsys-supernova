@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.52",
+  "version": "4.6.53",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -687,7 +687,7 @@
           {
             "key": "image",
             "type": "image",
-            "label": "Image (hz: 565 wide / vt: 1130 x 340)"
+            "label": "Image(hz 565w | vt 1130x340)"
           },
           {
             "key": "hoverText",
@@ -737,7 +737,7 @@
           },
           {
             "key": "image1",
-            "label": "First Card Image",
+            "label": "1st Card Image (553w)",
             "type": "image"
           },
           {
@@ -772,7 +772,7 @@
           },
           {
             "key": "image2",
-            "label": "Second Card Image",
+            "label": "2nd Card Image (553w)",
             "type": "image"
           },
           {
