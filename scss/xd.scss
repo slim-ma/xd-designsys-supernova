@@ -70,7 +70,13 @@ main > p:last-child {
 .card__content > p:last-child {
   margin-bottom: 0;
 }
-  
+/* CARD -link */
+.card-link::after {
+  position: absolute;
+  background: red;
+  height: 100%;
+  width: 100%;
+}
   
 
 /* SPECIFIC PAGES */
