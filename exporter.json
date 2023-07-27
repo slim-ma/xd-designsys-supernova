@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.53",
+  "version": "4.6.54",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -737,7 +737,7 @@
           },
           {
             "key": "image1",
-            "label": "1st Card Image (553w)",
+            "label": "1st Card Image (553w 160h)",
             "type": "image"
           },
           {

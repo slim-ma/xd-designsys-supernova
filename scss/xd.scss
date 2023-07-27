@@ -17,8 +17,10 @@ main > p:last-child {
 }
 
 .tab-content {
-  max-width: var(--contentMaxWidth);
-  margin: 0 auto;
+  padding: 200px 53px 40px;
+  background-size: 553px;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
 /* CARD */
@@ -46,8 +48,15 @@ main > p:last-child {
   border: 0;
   border-radius: 24px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: block;
   padding: 75px 56px;
   width: 50%;
+  }
+  &> .with-image {
+    padding: 200px 53px 40px;
+    background-size: 553px;
+    background-repeat: no-repeat;
+    background-position: top left;
   }
 }
 
