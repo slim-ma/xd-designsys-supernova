@@ -91,11 +91,8 @@
 }
 
 .tab-content-block {
-  background: var(--colorBackgroundPrimary);
-  border: 1px solid var(--colorBorderSubtle);
-  border-radius: var(--borderRadiusLarge);
-  padding: 24px;
-  margin-top: -1px;
+  max-width: var(--contentMaxWidth);
+  margin: 0 auto;
 }
 
 .tab-pills .tab-content-block {
