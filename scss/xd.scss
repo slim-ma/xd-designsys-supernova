@@ -16,13 +16,6 @@ main > p:last-child {
   width: 100%;
 }
 
-.tab-content {
-  padding: 200px 53px 40px;
-  background-size: 553px;
-  background-repeat: no-repeat;
-  background-position: top left;
-}
-
 /* CARD */
 .card-container--one-card {
   & .card {
@@ -72,6 +65,10 @@ main > p:last-child {
     max-width: var(--contentMaxWidth);
     width: 100%;
   }
+}
+
+.card__content > p:last-child {
+  margin-bottom: 0;
 }
   
   
