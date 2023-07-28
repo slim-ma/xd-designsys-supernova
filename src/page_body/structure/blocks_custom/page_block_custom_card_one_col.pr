@@ -24,21 +24,15 @@
 <div class="content-block card-container--one-card {[if containerClass]}{{containerClass}}{[/]}">
   <div class="card-wrapper">
   {[ if url ]}
-  {* WITH LINK *}
   <a href="{{url}}" class="card card--link {[if imgUrl]} with-image{[/]} {{orientation}} {{class}}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
     <div class="card__content">
     {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
     {[ if body !== "" ]}<p>{{body}}</p>{[/]}
     </div>
-  </a>
-  {[ else ]}
-  {* NO LINK *}
-  <div class="card {{orientation}} {{class}} {[if imgUrl]} with-image{[/]}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
-    <div class="card__content">
-    {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
-    {[ if body !== "" ]}<p>{{body}}</p>{[/]}
+    <div class="card__action-text">
+      {[if hoverText]}{{hoverText}}{[else]}Learn more{[/]}
     </div>
-  </div>
+  </a>
   {[/]}{* end if url *}
   </div>
 </div>
