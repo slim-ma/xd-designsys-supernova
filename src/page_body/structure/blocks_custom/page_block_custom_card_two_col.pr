@@ -50,38 +50,25 @@
   {* Card1 WITH LINK *}
     <a href="{{url1}}" class="card card--link {{class1}} {[if imgUrl1]} with-image{[/]} {{orientation1}}" {[if imgUrl1]}style="background-image:url('{{imgUrl1}}')"{[/]}>
       <div class="card__content">
-      {[ if title1 !== "" ]}<h4>{{title1}}</h4>{[/]}
-      {[ if body1 !== "" ]}<p>{{body1}}</p>{[/]}
+        {[ if title1 !== "" ]}<h4>{{title1}}</h4>{[/]}
+        {[ if body1 !== "" ]}<p>{{body1}}</p>{[/]}
+        <div class="card__action-text">
+          {[if hoverText]}{{hoverText}}{[else]}Learn more{[/]}
+        </div>
       </div>
     </a>
-    {[ else ]}
-    {* Card1 NO LINK *}
-    <div class="card {{class1}} {[if imgUrl1]} with-image{[/]} {{orientation1}}" {[if imgUrl1]}style="background-image:url('{{imgUrl1}}')"{[/]}>
-      <div class="card__content">
-      {[ if title1 !== "" ]}<h4>{{title1}}</h4>{[/]}
-      {[ if body1 !== "" ]}<p>{{body1}}</p>{[/]}
-      </div>
-    </div>
-  {[/]}{* end if linkURL1 *}
-  {* END Card1 *}
-  {[ if url2 ]}
-  {* Card2 WITH LINK *}
+  {[/]}{* end if linkURL1 *}{* END Card1 *}
+  {[ if url2 ]}{* Card2 WITH LINK *}
     <a href="{{url2}}" class="card card--link {{class2}} {[if imgUrl2]} with-image{[/]} {{orientation2}}" {[if imgUrl2]}style="background-image:url('{{imgUrl2}}')"{[/]}>
       <div class="card__content">
-      {[ if title2 !== "" ]}<h4>{{title2}}</h4>{[/]}
-      {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
+        {[ if title2 !== "" ]}<h4>{{title2}}</h4>{[/]}
+        {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
+        <div class="card__action-text">
+          {[if hoverText]}{{hoverText}}{[else]}Learn more{[/]}
+        </div>
       </div>
     </a>
-    {[ else ]}
-    {* Card2 NO LINK *}
-    <div class="card {{class2}} {[if imgUrl2]} with-image{[/]} {{orientation2}}" {[if imgUrl2]}style="background-image:url('{{imgUrl2}}')"{[/]}>
-      <div class="card__content">
-      {[ if title2 !== "" ]}<h4>{{title2}}</h4>{[/]}
-      {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
-      </div>
-    </div>
-  {[/]}{* end if url2 *}
+    {[/]}{* end Card2 *}
   </div>
 </div>
-{* end Card2 *}
 {[/]}{* end title/body check *}
