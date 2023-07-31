@@ -61,9 +61,9 @@
   {[ if url2 ]}{* Card2 WITH LINK *}
     <a href="{{url2}}" class="card card--link {{class2}} {[if imgUrl2]} with-image{[/]} {{orientation2}}" {[if imgUrl2]}style="background-image:url('{{imgUrl2}}')"{[/]}>
       <div class="card__content">
-        {[ if title2 !== "" ]}<h4>{{title2}}</h4>{[/]}
-        {[ if body2 !== "" ]}<p>{{body2}}</p>{[/]}
-        <div class="card__action-text">
+        {[ if title2 !== "" ]}<h4 class="card--title">{{title2}}</h4>{[/]}
+        {[ if body2 !== "" ]}<p class="card--body">{{body2}}</p>{[/]}
+        <div class="card--action-text">
           {[if hoverText]}{{hoverText}}{[else]}Learn more{[/]}
         </div>
       </div>

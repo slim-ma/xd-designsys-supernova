@@ -26,10 +26,10 @@
   {[ if url ]}
   <a href="{{url}}" class="card card--link {[if imgUrl]} with-image{[/]} {{orientation}} {{class}}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
     <div class="card__content">
-    {[ if title !== "" ]}<h4>{{title}}</h4>{[/]}
-    {[ if body !== "" ]}<p>{{body}}</p>{[/]}
+    {[ if title !== "" ]}<h4 class="card--title">{{title}}</h4>{[/]}
+    {[ if body !== "" ]}<p class="card--body">{{body}}</p>{[/]}
     </div>
-    <div class="card__action-text">
+    <div class="card--action-text">
       {[if hoverText]}{{hoverText}}{[else]}Learn more{[/]}
     </div>
   </a>
