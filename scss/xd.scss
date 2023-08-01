@@ -98,7 +98,7 @@ main > p:last-child {
 .card--link{
   &:hover {
     text-decoration: none;
-    .card__action-text {
+    .card--action-text {
       opacity: 1;
     }
   }
