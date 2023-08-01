@@ -96,7 +96,6 @@ main > p:last-child {
   
 /* ## CARD -link */
 .card--link{
-  transition: 1s;
   &:hover {
     text-decoration: none;
     .card__action-text {
@@ -110,7 +109,7 @@ main > p:last-child {
     width: 100%;
   }
 }
-.card__action-text {
+.card--action-text {
   opacity: 0;
   font-size: 24px;
   font-weight: 900;
@@ -166,7 +165,7 @@ main > p:last-child {
   border:solid rgba(0,0,0,0) 6px;
 }
 /* ### CARD TEXT ANIMATION ### */
-.card--action-text, .card--title, .card--link {
+.card, .card--action-text, .card--title {
   transition: 1s;
 }
 
