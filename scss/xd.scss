@@ -33,13 +33,23 @@ main > p:last-child {
   & .vertical.with-image {
     padding: 360px 56px 24px;
   }
+  & .vertical {
+    .card--body {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .card--action-text {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
   & .card.horizontal.with-image {
     padding: 75px calc(50% + 80px) 75px 80px;
     background-position: top right;
     background-size: 50%;
   }
 }
-  
+
 .card-container--two-card > .card-wrapper {
   display: flex;
   flex-direction: row;
@@ -124,12 +134,26 @@ main > p:last-child {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.card-container--one-card .vertical.with-image .card--action-text {
+  margin-bottom: -30px;
+}
 
 /* ## CARD ANIMATION ## */
 /* ### CARD BORDER ANIMATION ### */
 .card--link:hover:after {
   opacity: 1;
 }
+.card-container--one-card .vertical.with-image:hover {
+  padding-top: 348px;
+  padding-bottom: 12px;
+  .card--action-text {
+    margin-bottom: 0;
+  }
+  .card--title {
+    margin-bottom: 0;
+  }
+}
+  
 // define property
 @property --border-gradient-angle {
   syntax: "<angle>";
