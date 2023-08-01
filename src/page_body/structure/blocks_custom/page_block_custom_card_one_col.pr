@@ -20,20 +20,18 @@
 {[ imgUrl = asset.url /]}
 {[/]}
 
-{[ if (title !== "" || body !== "")]}
+{[ if (title !== "" || url !== "")]}
 <div class="content-block card-container--one-card {[if containerClass]}{{containerClass}}{[/]}">
   <div class="card-wrapper">
-  {[ if url ]}
-  <a href="{{url}}" class="card card--link {[if imgUrl]} with-image{[/]} {{orientation}} {{class}}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
-    <div class="card__content">
-    {[ if title !== "" ]}<h4 class="card--title">{{title}}</h4>{[/]}
-    {[ if body !== "" ]}<p class="card--body">{{body}}</p>{[/]}
-    </div>
-    <div class="card--action-text">
-      {[if hoverText]}{{hoverText}}{[else]}Learn more{[/]}
-    </div>
-  </a>
-  {[/]}{* end if url *}
+    <a href="{{url}}" class="card card--link {[if imgUrl]} with-image{[/]} {{orientation}} {{class}}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
+      <div class="card__content">
+        {[ if title !== "" ]}<h4 class="card--title">{{title}}</h4>{[/]}
+        {[ if body !== "" ]}<p class="card--body">{{body}}</p>{[/]}
+        <div class="card--action-text">
+          {[if hoverText]}{{hoverText}}{[else]}Learn more{[/]}
+        </div>
+      </div>
+    </a>
   </div>
 </div>
 {[/]}{* end title/body check *}

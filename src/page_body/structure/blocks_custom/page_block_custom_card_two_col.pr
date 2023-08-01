@@ -43,11 +43,9 @@
 {[/]}
 
 
-{[ if (title1 !== "" || body1 !== "") && (title2 !== "" || body2 !== "") ]}
+{[ if (title1 !== "" || url1 !== "") ]}
 <div class="content-block card-container--two-card {[if containerClass]}{{containerClass}}{[/]}">
   <div class="card-wrapper">
-  {[ if url1 ]}
-  {* Card1 WITH LINK *}
     <a href="{{url1}}" class="card card--link {{class1}} {[if imgUrl1]} with-image{[/]} {{orientation1}}" {[if imgUrl1]}style="background-image:url('{{imgUrl1}}')"{[/]}>
       <div class="card__content">
         {[ if title1 !== "" ]}<h4 class="card--title">{{title1}}</h4>{[/]}
@@ -57,8 +55,7 @@
         </div>
       </div>
     </a>
-  {[/]}{* end if linkURL1 *}{* END Card1 *}
-  {[ if url2 ]}{* Card2 WITH LINK *}
+  {[ if (title2 !== "" || url2 !== "") ]}{* Card2 *}
     <a href="{{url2}}" class="card card--link {{class2}} {[if imgUrl2]} with-image{[/]} {{orientation2}}" {[if imgUrl2]}style="background-image:url('{{imgUrl2}}')"{[/]}>
       <div class="card__content">
         {[ if title2 !== "" ]}<h4 class="card--title">{{title2}}</h4>{[/]}
@@ -68,7 +65,7 @@
         </div>
       </div>
     </a>
-    {[/]}{* end Card2 *}
+  {[/]}{* end Card2 *}
   </div>
 </div>
 {[/]}{* end title/body check *}
