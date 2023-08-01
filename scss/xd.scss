@@ -95,12 +95,12 @@ main > p:last-child {
 }
   
 /* ## CARD -link */
+.card:hover .card--action-text {
+  opacity: 1;
+}
 .card--link{
   &:hover {
     text-decoration: none;
-    .card--action-text {
-      opacity: 1;
-    }
   }
   &:after {
     content: "";
