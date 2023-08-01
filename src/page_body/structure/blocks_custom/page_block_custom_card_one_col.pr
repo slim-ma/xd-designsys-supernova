@@ -23,7 +23,7 @@
 {[ if (title !== "" || url !== "")]}
 <div class="content-block card-container--one-card {[if containerClass]}{{containerClass}}{[/]}">
   <div class="card-wrapper">
-    <a href="{{url}}" class="card card--link {[if imgUrl]} with-image {{orientation}}{[/]} {{class}}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
+    <a href="{{url}}" class="card card--link {[if imgUrl]} with-image {[/]} {{orientation}} {{class}}" {[if imgUrl]}style="background-image:url('{{imgUrl}}')"{[/]}>
       <div class="card__content">
         {[ if title !== "" ]}<h4 class="card--title">{{title}}</h4>{[/]}
         {[ if body !== "" ]}<p class="card--body">{{body}}</p>{[/]}
