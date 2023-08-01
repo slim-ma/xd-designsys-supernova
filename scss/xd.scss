@@ -17,6 +17,9 @@ main > p:last-child {
 }
 
 /* # CARD */
+.card:hover .card--title {
+  opacity: 1;
+}
 .card-container--one-card {
   & .card {
     border-radius: 24px;
@@ -46,10 +49,13 @@ main > p:last-child {
   width: 50%;
   }
   &> .with-image {
-    padding: 200px 53px 40px;
+    padding: 205px 50px 8px;
     background-size: 553px;
     background-repeat: no-repeat;
     background-position: top left;
+    &:hover {
+      padding: 190px 50px 25px;
+    }
   }
 }
 
@@ -72,8 +78,25 @@ main > p:last-child {
     margin-bottom: 0;
   }
 }
+
+.card--title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 900;
+  letter-spacing: 0.24px;
+  margin-bottom: 6px;
+}
+
+.card--body {
+  font-size: 24px;
+  letter-spacing: 0.24px;
+  line-height: 32px;
+  margin-bottom: 0px;
+}
+  
 /* ## CARD -link */
 .card--link{
+  transition: 1s;
   &:hover {
     text-decoration: none;
     .card__action-text {
@@ -89,15 +112,17 @@ main > p:last-child {
 }
 .card__action-text {
   opacity: 0;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 900;
   background: var(--gradient-blue-green, linear-gradient(139deg, #0D82B1 0%, #2DD3AF 100%));
   background-clip: text;
+  margin-top: 4px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* ## CARD ANIMATION ## */
+/* ### CARD BORDER ANIMATION ### */
 .card--link:hover:after {
   opacity: 1;
 }
@@ -140,7 +165,10 @@ main > p:last-child {
   mask-composite: exclude;
   border:solid rgba(0,0,0,0) 6px;
 }
-
+/* ### CARD TEXT ANIMATION ### */
+.card--action-text, .card--title, .card--link {
+  transition: 1s;
+}
 
 /* SPECIFIC PAGES */
 /* -- home page */
