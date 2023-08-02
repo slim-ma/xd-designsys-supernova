@@ -646,6 +646,243 @@
         ]
       },
       {
+        "key": "co.stevelim.documentation.asset-card-2col",
+        "title": "Asset Card (2-col)",
+        "description": "A row of card links for external assets",
+        "icon": "icons/custom-block-asset-2col.png",
+        "mode": "block",
+        "category": "Content",
+        "properties": [
+          {
+            "key": "rowClass",
+            "type": "string",
+            "label": "Block class",
+            "default": ""
+          },
+          {
+            "key": "title1",
+            "type": "string",
+            "label": "1: Card Title",
+            "default": ""
+          },
+          {
+            "key": "body1",
+            "type": "string",
+            "label": "1: Card body",
+            "default": ""
+          },
+          {
+            "key": "image1",
+            "type": "image",
+            "label": "1: Image (180h)"
+          },
+          {
+            "key": "url1",
+            "label": "1: Card Url",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "assetType1",
+            "type": "enum",
+            "label": "1: Asset Type",
+            "default": "Figma",
+            "values": [
+              "Angular",
+              "API",
+              "Code",
+              "Color",
+              "CSS",
+              "Figma",
+              "Font",
+              "HTML",
+              "React",
+              "Vue"
+            ]
+          },
+          {
+            "key": "title2",
+            "type": "string",
+            "label": "2: Card Title",
+            "default": ""
+          },
+          {
+            "key": "body2",
+            "type": "string",
+            "label": "2: Card body",
+            "default": ""
+          },
+          {
+            "key": "image2",
+            "type": "image",
+            "label": "2: Image (180h)"
+          },
+          {
+            "key": "url2",
+            "label": "2: Card Url",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "assetType2",
+            "type": "enum",
+            "label": "2: Asset Type",
+            "default": "Figma",
+            "values": [
+              "Angular",
+              "API",
+              "Code",
+              "Color",
+              "CSS",
+              "Figma",
+              "Font",
+              "HTML",
+              "React",
+              "Vue"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "co.stevelim.documentation.asset-card-3col",
+        "title": "Asset Card (3-col)",
+        "description": "A row of card link for external assets",
+        "icon": "icons/custom-block-asset-3col.png",
+        "mode": "block",
+        "category": "Content",
+        "properties": [
+          {
+            "key": "rowClass",
+            "type": "string",
+            "label": "Block class",
+            "default": ""
+          },
+          {
+            "key": "title1",
+            "type": "string",
+            "label": "1: Card Title",
+            "default": ""
+          },
+          {
+            "key": "body1",
+            "type": "string",
+            "label": "1: Card body",
+            "default": ""
+          },
+          {
+            "key": "image1",
+            "type": "image",
+            "label": "1: Image (180h)"
+          },
+          {
+            "key": "url1",
+            "label": "1: Card Url",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "assetType1",
+            "type": "enum",
+            "label": "1: Asset Type",
+            "default": "Figma",
+            "values": [
+              "Angular",
+              "API",
+              "Code",
+              "Color",
+              "CSS",
+              "Figma",
+              "Font",
+              "HTML",
+              "React",
+              "Vue"
+            ]
+          },
+          {
+            "key": "title2",
+            "type": "string",
+            "label": "2: Card Title",
+            "default": ""
+          },
+          {
+            "key": "body2",
+            "type": "string",
+            "label": "2: Card body",
+            "default": ""
+          },
+          {
+            "key": "image2",
+            "type": "image",
+            "label": "2: Image (180h)"
+          },
+          {
+            "key": "url2",
+            "label": "2: Card Url",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "asset-type2",
+            "type": "enum",
+            "label": "2: Asset Type",
+            "default": "Figma",
+            "values": [
+              "Angular",
+              "API",
+              "Code",
+              "Color",
+              "CSS",
+              "Figma",
+              "Font",
+              "HTML",
+              "React",
+              "Vue"
+            ]
+          },
+          {
+            "key": "title3",
+            "type": "string",
+            "label": "3: Card Title",
+            "default": ""
+          },
+          {
+            "key": "body3",
+            "type": "string",
+            "label": "3: Card body",
+            "default": ""
+          },
+          {
+            "key": "image3",
+            "type": "image",
+            "label": "3: Image (180h)"
+          },
+          {
+            "key": "url3",
+            "label": "3: Card Url",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "asset-type3",
+            "type": "enum",
+            "label": "3: Asset Type",
+            "default": "Figma",
+            "values": [
+              "Angular",
+              "API",
+              "Code",
+              "Color",
+              "CSS",
+              "Figma",
+              "Font",
+              "HTML",
+              "React",
+              "Vue"
+            ]
+          }
+        ]
+      },
+      {
         "key": "co.stevelim.documentation.card-one-col",
         "title": "Full Width Card",
         "description": "Card link w/optional image (full width)",

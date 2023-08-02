@@ -1,0 +1,62 @@
+{[ const block = context /]}
+
+{* set up variables *}
+{[ let rowClass = block.properties.rowClass /]}
+{[ let title1 = block.properties.title1 /]}
+{[ let url1 = block.properties.url1 /]}
+{[ let body1 = block.properties.body1 /]}
+{[ let assetType1 = block.properties.assetType1.lowercased() /]}
+{[ let image1 = block.properties.image1 /]}
+
+{[ let title2 = block.properties.title2 /]}
+{[ let url2 = block.properties.url2 /]}
+{[ let body2 = block.properties.body2 /]}
+{[ let assetType2 = block.properties.assetType2.lowercased() /]}
+{[ let image2 = block.properties.image2 /]}
+
+{[ let title3 = block.properties.title3 /]}
+{[ let url3 = block.properties.url3 /]}
+{[ let body3 = block.properties.body3 /]}
+{[ let assetType3 = block.properties.assetType3.lowercased() /]}
+{[ let image3 = block.properties.image3 /]}
+
+{* set up image urls *}
+{[ let imgUrl1 = "" /]}
+{[ if image1 ]}
+{[ let asset1 = image1.asset /]}
+{[ imgUrl1 = asset1.url /]}
+{[/]}
+{[ let imgUrl2 = "" /]}
+{[ if image2 ]}
+{[ let asset2 = image2.asset /]}
+{[ imgUrl2 = asset2.url /]}
+{[/]}
+{[ let imgUrl3 = "" /]}
+{[ if image3 ]}
+{[ let asset3 = image3.asset /]}
+{[ imgUrl3 = asset3.url /]}
+{[/]}
+
+{[ if (title1 !== "" && url1 !== "") ]}
+<div class="content-block asset-card-row two-col {[if rowClass]}{{rowClass}}{[/]}">
+  <a href="{{url1}}" class="asset-card" {[if imgUrl1]}style="background-image:url('{{imgUrl1}}')"{[/]}>
+    <h4 class="asset-card__title">{{title1}}</h4>
+    <p class="asset-card__content">{{body1}}</p>
+    <img src="" class="asset-card__type-icon {{assetType1}}" />
+  </a>
+  {[ if (title2 !== "" && url2 !== "") ]}
+  <a href="{{url2}}" class="asset-card" {[if imgUrl2]}style="background-image:url('{{imgUrl2}}')"{[/]}>
+    <h4 class="asset-card__title">{{title2}}</h4>
+    <p class="asset-card__content">{{body2}}</p>
+    <img src="" class="asset-card__type-icon {{assetType2}}"/>
+  </a>
+  {[/]}
+  {[ if (title3 !== "" && url3 !== "") ]}
+  <a href="{{url3}}" class="asset-card" {[if imgUrl3]}style="background-image:url('{{imgUrl3}}')"{[/]}>
+    <h4 class="asset-card__title">{{title3}}</h4>
+    <p class="asset-card__content">{{body3}}</p>
+    <img src="" class="asset-card__type-icon {{assetType3}}"/>
+  </a>
+  {[/]}
+</div>
+{[/]}

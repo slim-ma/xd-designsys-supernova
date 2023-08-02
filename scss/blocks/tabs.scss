@@ -12,11 +12,13 @@
 /* Styling */
 .nav-tabs {
   display: flex;
-  margin-top: 8px !important;
-  border-bottom: 0px;
+  max-width: var(--contentMaxWidth);
+  margin: 0 auto;
+  // margin-top: 8px !important;
+  border-bottom: var(--navBorderWidth) solid #ddddde;
   gap: var(--tabsGap);
-  overflow-x: auto;
-  overflow-y: hidden;
+  // overflow-x: auto;
+  // overflow-y: hidden;
 }
 
 #section-content-page .nav-tabs {
@@ -28,45 +30,35 @@
 }
 
 .nav-tabs .nav-item {
-  margin-bottom: 0;
+  margin-bottom: var(--navBorderWidth);
 }
 
 .nav-tabs .nav-item .nav-link {
-  display: flex;
-  border: 0;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
+  border-bottom: var(--navBorderWidth) solid var(--colorGray200);
   background: transparent;
   position: relative;
-  border-radius: var(--borderRadiusDefault);
-  padding: 0;
+  padding: 8px 0 6px;
   white-space: nowrap !important;
   transition: var(--transitionDefault);
   font-weight: var(--fontWeightRegular);
-  font-size: 0.875rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--colorAccentAlt);
   min-height: 40px;
   height: auto;
 
   span {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4px;
+    display: inline-block;
     width: 100%;
-    padding: 0 16px;
-    height: var(--tabsItemHeight);
-    border-radius: var(--borderRadiusDefault);
+    padding: 0;
     transition: var(--transitionDefault);
-  }
-
-  &:hover {
-    span {
-      background-color: var(--colorBackgroundSecondary);
-    }  
   }
 
   &.active {
     font-weight: var(--fontWeightBold);
+    border-color: var(--colorBlue600);
     /*
     &:after {
       height: var(--tabsActiveIndicatorHeight);
