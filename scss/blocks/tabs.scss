@@ -10,15 +10,12 @@
 }
 
 /* Styling */
-.nav-tabs {
+.container-tabs > .tabbed-navigation, .nav-tabs-inline {
   display: flex;
   max-width: var(--contentMaxWidth);
   margin: 0 auto;
-  // margin-top: 8px !important;
   border-bottom: var(--navBorderWidth) solid #ddddde;
   gap: var(--tabsGap);
-  // overflow-x: auto;
-  // overflow-y: hidden;
 }
 
 #section-content-page .nav-tabs {
@@ -30,12 +27,11 @@
 }
 
 .nav-tabs .nav-item {
-  margin-bottom: var(--navBorderWidth);
+  margin-bottom: -2px;
 }
 
 .nav-tabs .nav-item .nav-link {
-  // display: flex;
-  // align-items: center;
+  border: 0;
   border-bottom: var(--navBorderWidth) solid var(--colorGray200);
   border-radius: 0;
   background: transparent;

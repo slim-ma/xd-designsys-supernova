@@ -10,8 +10,13 @@
 
 /* LAYOUT */
 .nav-tabs-inline {
+  display: flex;
+  max-width: var(--contentMaxWidth);
   margin: 0 auto;
+  border-bottom: var(--navBorderWidth) solid #ddddde;
+  gap: var(--tabsGap);
 }
+
 .tab-pane {
   padding-top: 80px;
 }
