@@ -9,6 +9,22 @@
 }
 
 /* LAYOUT */
+.content-container > * {
+  width: 100%;
+  max-width: var(--contentMaxWidth);
+  margin: 0 auto;
+}
+.full-width {
+  max-width: none;
+  > .card-wrapper {
+    max-width: var(--contentMaxWidth);
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+  
+
+
 .container-tabs > .tabbed-navigation {
   align-items: start;
   display: block;
