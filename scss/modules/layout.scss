@@ -193,9 +193,9 @@
   .nav-item {
 
     .nav-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between;
       position: relative;
       font-weight: var(--sideNavItemFontWeight);
       font-size: var(--sideNavItemFontSize);
@@ -204,7 +204,7 @@
       text-indent: 0px;
       color: var(--sideNavInk);
       padding: 8px var(--sideNavItemPadding);  
-      border-radius: var(--sideNavItemBorderRadius);
+      // border-radius: var(--sideNavItemBorderRadius);
       transition: var(--transitionDefault);
 
       &:hover {
