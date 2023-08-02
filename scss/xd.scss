@@ -9,12 +9,16 @@
 }
 
 /* LAYOUT */
-.nav-tabs-inline {
-  display: flex;
+.container-tabs > .tabbed-navigation {
+  align-items: start;
+  display: block;
   max-width: var(--contentMaxWidth);
   margin: 0 auto;
-  border-bottom: var(--navBorderWidth) solid #ddddde;
+  border-bottom: var(--navBorderWidth) solid var(--colorGray200);
+}
+.nav-tabs {
   gap: var(--tabsGap);
+  border-bottom: 0;
 }
 
 .tab-pane {

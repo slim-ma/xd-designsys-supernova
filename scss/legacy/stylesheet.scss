@@ -325,10 +325,7 @@ ol>.block-children {
         width: 100%;
         margin: 0px auto;
         z-index: 1;
-        overflow-x: scroll;
-        overflow-y: hidden;
         scrollbar-width: none;
-        border-bottom: 2px solid var(--colorBorderProminent);
         /* Firefox */
         -ms-overflow-style: none;
         /* Internet Explorer 10+ */
@@ -361,12 +358,6 @@ ol>.block-children {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.container-tabs>.tabbed-navigation {
-    align-items: start;
-    min-height: 48px;
-    border-bottom: 2px solid var(--colorBorderProminent);
 }
 
 #section-content-page {

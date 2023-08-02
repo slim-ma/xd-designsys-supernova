@@ -10,14 +10,6 @@
 }
 
 /* Styling */
-.container-tabs > .tabbed-navigation, .nav-tabs-inline {
-  display: flex;
-  max-width: var(--contentMaxWidth);
-  margin: 0 auto;
-  border-bottom: var(--navBorderWidth) solid #ddddde;
-  gap: var(--tabsGap);
-}
-
 #section-content-page .nav-tabs {
   margin-top: 24px !important;
 }
