@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.85",
+  "version": "4.6.86",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -600,6 +600,40 @@
       }
     ],
     "blocks": [
+      {
+        "key": "co.stevelim.documentation.button-link",
+        "title": "Button link",
+        "description": "Simple Anchor element (styled as button)",
+        "icon": "icons/custom-block-button-link.png",
+        "mode": "block",
+        "category": "Content",
+        "properties": [
+          {
+            "key": "class",
+            "type": "string",
+            "label": "Class",
+            "default": "primary"
+          },
+          {
+            "key": "text",
+            "type": "string",
+            "label": "Link Text",
+            "default": ""
+          },
+          {
+            "key": "url",
+            "type": "string",
+            "label": "URL",
+            "default": ""
+          },
+          {
+            "key": "openNew",
+            "type": "boolean",
+            "label": "Open in a new tab",
+            "default": false
+          }
+        ]
+      },
       {
         "key": "co.stevelim.documentation.image-link",
         "title": "Image Link",

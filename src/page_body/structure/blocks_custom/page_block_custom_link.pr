@@ -1,0 +1,21 @@
+{[ const block = context /]}
+{* set up variables *}
+{[ let className = block.properties.class /]}
+{[ let openNew = block.properties.openNew /]}
+{[ let linkUrl = block.properties.url /]}
+{[ let text = block.properties.text /]}
+
+{* set up markup strings *}
+{[ let target = "" /]}
+{[ if openNew ]}
+  {[ target = "target=\"_blank\"" /]}
+{[/]}
+
+{[ let class = "" /]}
+{[ if className ]}
+  {[ class = className /]}
+{[/]}
+
+{[ if linkUrl !== "" && text !== "" ]}
+<a href="{{linkUrl}}" class="{{class}}" {{target}} >{{text}}</a>
+{[/]}
