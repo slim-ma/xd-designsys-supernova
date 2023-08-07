@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.87",
+  "version": "4.6.88",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -856,7 +856,7 @@
             "default": ""
           },
           {
-            "key": "asset-type2",
+            "key": "assetType2",
             "type": "enum",
             "label": "2: Asset Type",
             "default": "Figma",
@@ -897,7 +897,7 @@
             "default": ""
           },
           {
-            "key": "asset-type3",
+            "key": "assetType3",
             "type": "enum",
             "label": "3: Asset Type",
             "default": "Figma",
