@@ -17,5 +17,7 @@
 {[/]}
 
 {[ if linkUrl !== "" && text !== "" ]}
-<a href="{{linkUrl}}" class="{{class}}" {{target}} >{{text}}</a>
+<p class="link-wrapper {{class}}">
+  <a href="{{linkUrl}}" class="{{class}}" {{target}} >{{text}}</a>
+</p>
 {[/]}
