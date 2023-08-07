@@ -1,0 +1,33 @@
+.asset-card-row {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  
+  &.two-col {
+    gap: 50px;
+  }
+} 
+.two-col > .asset-card {
+  width: 50%;
+}
+  
+.asset-card {
+  background: white;
+  padding: 24px 24px 16px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.asset-card__title {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 400;
+}
+  
+.asset-card:after {
+  height: 32px;
+  width: 32px;
+  content: "";
+  background: green;
+  display: inline-block;
+}

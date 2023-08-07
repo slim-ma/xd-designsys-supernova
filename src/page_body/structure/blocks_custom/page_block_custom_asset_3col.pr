@@ -39,23 +39,20 @@
 
 {[ if (title1 !== "" && url1 !== "") ]}
 <div class="content-block asset-card-row two-col {[if rowClass]}{{rowClass}}{[/]}">
-  <a href="{{url1}}" class="asset-card" {[if imgUrl1]}style="background-image:url('{{imgUrl1}}')"{[/]}>
+  <a href="{{url1}}" class="asset-card {{assetType1}}" {[if imgUrl1]}style="background-image:url('{{imgUrl1}}')"{[/]}>
     <h4 class="asset-card__title">{{title1}}</h4>
-    <p class="asset-card__content">{{body1}}</p>
-    <img src="" class="asset-card__type-icon {{assetType1}}" />
+    {[ if body1 !== "" ]}<p class="asset-card__content">{{body1}}</p>{[/]}
   </a>
   {[ if (title2 !== "" && url2 !== "") ]}
-  <a href="{{url2}}" class="asset-card" {[if imgUrl2]}style="background-image:url('{{imgUrl2}}')"{[/]}>
+  <a href="{{url2}}" class="asset-card {{assetType2}}" {[if imgUrl2]}style="background-image:url('{{imgUrl2}}')"{[/]}>
     <h4 class="asset-card__title">{{title2}}</h4>
-    <p class="asset-card__content">{{body2}}</p>
-    <img src="" class="asset-card__type-icon {{assetType2}}"/>
+    {[ if body2 !== "" ]}<p class="asset-card__content">{{body2}}</p>{[/]}
   </a>
   {[/]}
   {[ if (title3 !== "" && url3 !== "") ]}
-  <a href="{{url3}}" class="asset-card" {[if imgUrl3]}style="background-image:url('{{imgUrl3}}')"{[/]}>
+  <a href="{{url3}}" class="asset-card {{assetType3}}" {[if imgUrl3]}style="background-image:url('{{imgUrl3}}')"{[/]}>
     <h4 class="asset-card__title">{{title3}}</h4>
-    <p class="asset-card__content">{{body3}}</p>
-    <img src="" class="asset-card__type-icon {{assetType3}}"/>
+    {[ if body3 !== "" ]}<p class="asset-card__content">{{body3}}</p>{[/]}
   </a>
   {[/]}
 </div>
