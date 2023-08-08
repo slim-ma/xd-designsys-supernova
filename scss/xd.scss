@@ -57,6 +57,9 @@ a.primary {
   line-height: 1.5rem;
   padding: 1rem 1.5rem;
 
+  display: inline-block;
+  width: fit-content;
+
   &:hover {
     --border-gradient-angle: 0deg;
     animation-name: rotate-border-cone;

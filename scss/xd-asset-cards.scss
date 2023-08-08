@@ -8,7 +8,10 @@
   }
 } 
 .two-col > .asset-card {
-  width: 50%;
+  width: calc(50% - 12px);
+}
+.three-col > .asset-card {
+  width: calc(33% - 16px);
 }
   
 .asset-card {
@@ -17,16 +20,25 @@
   &:hover {
     text-decoration: none;
   }
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px 0px #BFCBD7;
 }
 .asset-card__title {
+  background: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/link_arrow.svg) no-repeat;
+  background-size: 12px;
+  background-position: top 6px right;
+  display: inline-block;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.25;
-  font-weight: 400;
+  padding-right: 22px;
 }
   
 .asset-card:after {
-  height: 32px;
-  width: 32px;
+  background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_icons.svg);
   content: "";
+  height: 32px;
   display: inline-block;
+  margin-top: 40px;
+  width: 32px;
 }
