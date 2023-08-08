@@ -14,7 +14,7 @@
 {[ inject "page_head" context page /]}
 {[ const domain = ds.documentationDomain() /]}
 
-<body class="{{ pageIdentifier(page) }}{{ isHomepage ? " is-homepage" : "" }} {{pageId}}">
+<body class="{{ pageIdentifier(page) }}{{ isHomepage ? " is-homepage" : "" }} {{page.title.lowercased()}}">
 {* <body class="{{ exportConfiguration().defaultVisualMode }}"> *}
 {* {[ if exportConfiguration().showVisualModeSwitch ]} - hard-disabled for now, until full customization is in place *}
 {[ if false ]}
