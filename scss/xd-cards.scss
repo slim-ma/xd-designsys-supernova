@@ -1,7 +1,8 @@
 /* # CARD */
-.tab-pane > .card-container--two-card {
+.tab-pane > .card-container {
   max-width: none;
   margin: 0 calc(-50vw + 565px);
+  background-color: #F1F2F2;
 
   &> .card-wrapper {
     display: flex;
