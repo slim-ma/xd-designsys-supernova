@@ -44,7 +44,7 @@
 
 
 {[ if (title1 !== "" || url1 !== "") ]}
-<div class="content-block card-container--two-card {[if containerClass]}{{containerClass}}{[/]}">
+<div class="content-block card-container card-container--two-card {[if containerClass]}{{containerClass}}{[/]}">
   <div class="card-wrapper">
     <a href="{{url1}}" class="card card--link {{class1}} {[if imgUrl1]} with-image{[/]} {{orientation1}}" {[if imgUrl1]}style="background-image:url('{{imgUrl1}}')"{[/]}>
       <div class="card__content">
