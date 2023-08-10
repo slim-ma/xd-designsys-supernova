@@ -14,7 +14,7 @@
 {[ inject "page_head" context page /]}
 {[ const domain = ds.documentationDomain() /]}
 
-<body class="{{ pageIdentifier(page) }}{{ isHomepage ? " is-homepage" : "" }} {{page.title.lowercased()}}">
+<body class="{{ pageIdentifier(page) }}{{ isHomepage ? " is-homepage" : "" }}">
 {* <body class="{{ exportConfiguration().defaultVisualMode }}"> *}
 {* {[ if exportConfiguration().showVisualModeSwitch ]} - hard-disabled for now, until full customization is in place *}
 {[ if false ]}
@@ -74,7 +74,7 @@
             {[ inject "page_body_structure_title" context page /]}
 
             {* Generate content for the page *}
-            <main class="content-container">
+            <main class="content-container {{page.title.lowercased()}}">
                 {[ for block in page.blocks ]}
                     {[ inject "page_body_structure_block" context ({"block": block, "pageId": page.id}) /]}
                 {[/]}
