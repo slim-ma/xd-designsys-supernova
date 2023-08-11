@@ -82,8 +82,6 @@ a.primary {
     text-decoration: none;
   }
 }
-  
-
 
 .container-tabs {
   margin-top: 40px;
@@ -102,7 +100,11 @@ a.primary {
   border-bottom: 0;
 }
 
-/* # ELEMENTS */
+
+/*
+ * # ELEMENTS
+ */
+
 main > p:last-child {
   display: none;
 }
@@ -136,6 +138,11 @@ main > p:last-child {
   > .asset-card-row {
     margin-top: 48px;
   }
+  > hr {
+    margin-top: 80px;
+    margin-bottom: 64px;
+    border-top: 2px #ddddde solid;
+    }    
 }
 
 /* SPECIFIC PAGES */

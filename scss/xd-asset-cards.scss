@@ -17,11 +17,18 @@
 .asset-card {
   background: white;
   padding: 24px 24px 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px 0px #BFCBD7;
+
   &:hover {
     text-decoration: none;
   }
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px 0px #BFCBD7;
+
+  > p.asset-card__content {
+    color: #3B3C3E;
+    font-size: 16px;
+    line-height: normal;
+  }
 }
 .asset-card__title {
   background: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/link_arrow.svg) no-repeat;
@@ -31,6 +38,7 @@
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.25;
+  margin-bottom: 8px;
   padding-right: 22px;
 }
   
@@ -40,5 +48,6 @@
   height: 32px;
   display: block;
   margin-top: 40px;
+  margin-left: -6px;
   width: 32px;
 }
