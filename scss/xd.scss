@@ -39,9 +39,9 @@
     max-width: var(--contentMaxWidth);
     margin: 0 auto;
   }
-  > p:first-of-type {
+  > p {
     color: var(--pageDescriptionInk);
-    font-size: 24px;
+    font-size: 32px;
     margin-top: 24px;
     line-height: 40px;
   }
@@ -105,9 +105,6 @@ a.primary {
  * # ELEMENTS
  */
 
-main > p:last-child {
-  display: none;
-}
 .heading--level-1 {
   color: var(--pageHeaderInk);
   font-size: var(--headingLevel1Size);
