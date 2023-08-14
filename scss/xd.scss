@@ -109,6 +109,23 @@ a.primary {
   color: var(--pageHeaderInk);
   font-size: var(--headingLevel1Size);
 }
+
+.content-container > hr {
+  margin: 64px auto;
+}
+  
+.content-block--callout {
+  margin-top: 24px;
+  .content {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+  
+
+/*
+ *  # XD SECTIONS
+ */
 .xd-section {
   padding: 140px var(--contentContainerPadding) 75px;
 
