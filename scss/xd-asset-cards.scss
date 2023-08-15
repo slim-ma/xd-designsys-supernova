@@ -51,3 +51,10 @@
   margin-left: -6px;
   width: 32px;
 }
+
+// icon adjustments
+.asset-card {
+  &.font:after {
+    background-position-x: 99px ;
+  }
+}
