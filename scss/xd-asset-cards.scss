@@ -48,7 +48,6 @@
   height: 32px;
   display: block;
   margin-top: 40px;
-  margin-left: -6px;
   width: 32px;
 }
 
@@ -56,5 +55,44 @@
 .asset-card {
   &.font:after {
     background-position-x: 99px ;
+  }
+
+  &.vue:after {
+    background-position-x: -379px;
+  }
+    
+  &.font:after {
+    background-position-x: -339px;
+  }
+  
+  &.color:after {
+    background-position-x: -296px;
+  }
+  
+  &.css:after {
+    background-position-x: -254px;
+  }
+  
+  &.code:after {
+    background-position-x: -212px;
+  }
+    
+  &.api:after {
+    background-position-x: -171px;
+  }
+  
+  &.angular:after {
+    background-position-x: -128px;
+  }
+  &.react:after {
+    background-position-x: -85px;
+  }
+  
+  &.html:after {
+    background-position-x: -44px;
+  }
+  
+  &.figma:after {
+    background-position-x: -6px;
   }
 }
