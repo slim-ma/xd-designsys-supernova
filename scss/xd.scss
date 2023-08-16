@@ -166,7 +166,7 @@ a.primary {
 }
 .xd-section__content {
   margin: 0 auto;
-  max-width: calc( var(--contentMaxWidth) - (2 * var(--contentContainerPadding)));
+  max-width: calc( var(--siteMaxWidth) - (2 * var(--contentContainerPadding)));
   width: 100%;
   > .asset-card-row {
     margin-top: 48px;
