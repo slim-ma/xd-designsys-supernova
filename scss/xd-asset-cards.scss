@@ -16,9 +16,10 @@
   
 .asset-card {
   background: white;
-  padding: 24px 24px 64px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px 0px #BFCBD7;
+  padding: 24px 24px 64px;
+  position: relative;
 
   &:hover {
     text-decoration: none;
