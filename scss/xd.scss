@@ -7,13 +7,12 @@
 
 /* MEDIA QUERIES */
 @media (max-width: 1130px) {
+  .is-homepage .docs-content > .container-title {
+    width: 100%;
+    margin-left: auto;
+  }
   .docs-content {
     width: 100%;
-
-    .is-homepage .container-title {
-      width: 100%;
-      margin-left: auto;
-    }
   }
   .content-container {
     width: 100%;
