@@ -1,12 +1,17 @@
-/* # VARIABLES */
+/* # VARIABLES (new and permanent) */
 :root {
   --bgImageHomeSection: radial-gradient(circle, rgba(241,242,242,1) 0%, rgba(241,242,242,1) 20%, rgba(255,255,255,1) 85%);
+  --siteMaxWidth: 1130px;
+  --contentMaxWidth: 760px;
 }
 // REM = 16px
 
 /* RESETS */
 .container-title {
   border: 0;
+}
+ul.navbar-nav li:first-of-type {
+  display: none;
 }
 
 /* LAYOUT */
