@@ -2,7 +2,6 @@
 :root {
   --bgImageHomeSection: radial-gradient(circle, rgba(241,242,242,1) 0%, rgba(241,242,242,1) 20%, rgba(255,255,255,1) 85%);
   --siteMaxWidth: 1130px;
-  --contentMaxWidth: 760px;
 }
 // REM = 16px
 
@@ -15,9 +14,15 @@ ul.navbar-nav li:first-of-type {
 }
 
 /* LAYOUT */
+.docs-content {
+  max-width: var(--siteMaxWidth);
+}
+
 // PAGE HERO
 .container-title > .slider {
   gap: 24px;
+  max-width: var(--siteMaxWidth);
+
   .subtitle {
     font-size: 32px;
     line-height: 1.25;
@@ -41,8 +46,10 @@ ul.navbar-nav li:first-of-type {
   padding-top: 5rem;
   > * {
     width: 100%;
-    max-width: var(--contentMaxWidth);
+    max-width: var(--siteMaxWidth);
     margin: 0 auto;
+    padding-left: var(--contentContainerPadding);
+    padding-right: var(--contentContainerPadding);
   }
   > p {
     color: var(--pageDescriptionInk);
@@ -88,6 +95,7 @@ a.primary {
   }
 }
 
+/* TAB BAR */
 .container-tabs {
   margin-top: 40px;
   margin-bottom: 64px;
@@ -95,9 +103,10 @@ a.primary {
   > .tabbed-navigation {
     align-items: start;
     display: block;
-    max-width: var(--contentMaxWidth);
+    max-width: none;
     margin: 0 auto;
     border-bottom: var(--navBorderWidth) solid var(--colorGray200);
+    width: 100%;
   }
 }
 .nav-tabs {
@@ -136,9 +145,13 @@ a.primary {
   padding: 140px var(--contentContainerPadding) 75px;
 
   &.full-width {
-    padding: 80px var(--contentContainerPadding);
     margin-top: 48px;
+    margin-left: calc(-50vw + 565px);
+    margin-right: calc(-50vw + 565px);
     margin-bottom: 80px;
+    max-width: none;
+    padding: 80px var(--contentContainerPadding);
+    width: 100vw;
 
     .heading--level-2 {
       font-size: 36px;
@@ -153,7 +166,7 @@ a.primary {
 }
 .xd-section__content {
   margin: 0 auto;
-  max-width: var(--contentMaxWidth);
+  max-width: calc( var(--contentMaxWidth) - (2 * var(--contentContainerPadding)));
   width: 100%;
   > .asset-card-row {
     margin-top: 48px;
