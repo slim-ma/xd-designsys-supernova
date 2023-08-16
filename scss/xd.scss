@@ -44,6 +44,10 @@ ul.navbar-nav li:first-of-type {
 // PAGE CONTENT
 .content-container {
   padding-top: 5rem;
+  p {
+    margin-left: 0;
+    max-width: var(--contentMaxWidth);
+  }
   > * {
     width: 100%;
     max-width: var(--siteMaxWidth);
@@ -191,11 +195,6 @@ a.primary {
     > .slider {
       .page-title {
         font-size: 96px;
-      }
-      .subtitle {
-        font-size: 32px;
-        line-height: 1.25;
-        letter-spacing: 0.32px;
       }
     }
   }
