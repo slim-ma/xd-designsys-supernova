@@ -7,13 +7,17 @@
 
 /* MEDIA QUERIES */
 @media (max-width: 1130px) {
+  .is-homepage .container-title {
+    width: 100%;
+    margin-left: auto;
+  }
   .docs-content {
     width: 100%;
   }
   .content-container {
     width: 100%;
   }
-  .xd-section.full-width {
+  section.xd-section.full-width {
     margin-left: auto;
     margin-right: auto;
   }
@@ -228,7 +232,8 @@ a.primary {
   }
 
   main > .xd-section {
-   padding: 140px 0 75px;
+   padding: 140px var(--contentContainerPadding) 75px;
+   margin-top: 0;
   }
 }
   
