@@ -8,6 +8,8 @@
 {[ let isHomepage = isHomepage(page, ds.rootDocumentationGroup()) /]}
 {[ let designSystem = ds.documentationConfiguration().version.designSystem /]}
 {[ let globalConfiguration = exportConfiguration() /]}
+{[ let headerConfiguration = configuration.header /]}
+{[ let centeredClass = (headerConfiguration.alignment === "Center" ? " centered" : "") /]}
 
 <!DOCTYPE html>
 <html lang="en">
