@@ -1,0 +1,60 @@
+
+
+:root {
+    /* =========================== */
+    /* "Native" theme configuration */
+    /* =========================== */
+
+    
+    --fontFamily: "Bliss Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+    
+    --contentMaxWidth: 760px;
+    
+    --topNavHeight: 96px;
+    --logoHeight: 32px;
+    
+    --pageHeaderInk: #ffffffff;
+    --pageHeaderBackground: #ffffffff;
+}
+
+ 
+ 
+
+ 
+#header {
+    --topNavBackground: #000a28ff !important;
+    --topNavBorderColor: #000a28ff !important;
+}
+
+/* Advanced theme configuration */
+:root {
+  --contentFontBase: 32px;
+  --sideNavWidth: 0;
+  --logoWrapperWidth: auto;
+  --pageTitleFontFamily: "Bliss Pro", "Helvetica", "arial", sans-serif;
+  --headingFontFamily: "Bliss Pro", "Helvetica", "arial", sans-serif;
+  --fontFamily: "Bliss Pro", "Helvetica", "arial", sans-serif;
+  --pageTitleFontSize: 56px;
+  --pageTitleFontWeight: 900;
+  --headingFontWeight: 900;
+  --contentFontBase: 16px;
+  --contentBlockGap: 48px;
+  --contentBodyLineHeight: 24px;
+  --colorBorderProminent: #002E5D;
+  --colorAccentAlt: #002E5D;
+  --pageHeaderInk: #0028A0;
+  --pageHeaderPaddingTop: 48px;
+  --pageHeaderPaddingBottom: 48px;
+  --headingLevel1Size: 56px;
+  --pageDescriptionInk: #75787B;
+  --tabsGap: 80px;
+}
+
+
+
+ /* Custom CSS overrides */
+body,
+html {
+
+}

@@ -1,0 +1,579 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+            
+    <!-- Meta information -->
+    <meta name="robots" content="noindex" />
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
+    <link href="/assets/logos/favicon-default.png" rel="icon" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Usage | Button | Moody's Central Design System</title>
+    <meta name="title" content="Usage | Button | Moody's Central Design System" />
+    <meta name="description" content="Replace this with your own componentMoody's Central Design System" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/hidden/sn-examples/components/button/usage-rL9M9iot" />
+    <meta property="og:title" content="Usage | Button | Moody's Central Design System" />
+    <meta property="og:description" content="Replace this with your own componentMoody's Central Design System" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="/hidden/sn-examples/components/button/usage-rL9M9iot" />
+    <meta property="twitter:title" content="Usage | Button | Moody's Central Design System" />
+    <meta property="twitter:description" content="Replace this with your own componentMoody's Central Design System" />
+    
+    
+    
+    <!-- Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Inter:400,500,700,800', 'Fira Coda:500,600']
+        }
+      });
+    </script>
+    
+    
+    <link href="https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_dist/moodys-bliss-fontface.css" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="/assets/dist/docs.min.css?v=4.6.117" />
+    <link rel="stylesheet" type="text/css" href="/assets/dist/custom.css?v=ea0e55" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.js" integrity="sha512-3S64QagKiTlNjSfuh3UYtYSkP494WHoWc96YvbmB2BReHpNtxlrMNY6MbJLDpavcgD8Pj5p44F/PY586uVO5iA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/javascript/javascript.min.js" integrity="sha512-I6CdJdruzGtvDyvdO4YsiAq+pkWf2efgd1ZUSK2FnM/u2VuRASPC7GowWQrWyjxCZn6CT89s3ddGI+be0Ak9Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/xml/xml.min.js" integrity="sha512-LarNmzVokUmcA7aUDtqZ6oTS+YXmUKzpGdm8DxC46A6AHu+PQiYCUlwEGWidjVYMo/QXZMFMIadZtrkfApYp/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/jsx/jsx.min.js" integrity="sha512-+0Bk5jqcZFYMi5WaRZaTboF7s25sht/1pxmg3sXqWDeidrrw1yRqDzF25jsMOnToR8iXSqzrHfAD5wiDO1lwSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://codemirror.net/5/lib/codemirror.css" />
+    
+    
+    <style>
+/* for CMS items… */
+.contact.us p {
+    color: var(--pageDescriptionInk);
+    font-size: 24px;
+    margin-top: 24px;
+    line-height: 40px
+}
+
+.contact.us h2 {
+margin-top: 40px;
+color: var(--pageHeaderInk);
+}
+
+.img-page-stack {
+  position: relative;
+  margin-right: calc(585px - 50vw);
+  margin-bottom: 0;
+
+  @media(max-width: 1200px){
+    margin-right: 0;
+  }
+}
+
+.img-page-stack > img {
+  position: absolute;
+  right: -20px;
+  top: -550px;
+
+  @media (max-width: 1200px){
+    right: -32px;
+  }
+}
+.logos ul.content-block {
+  color: var(--pageDescriptionInk);
+}
+
+/* COLOR PAGES */
+.core.colors > p ~ p {
+  font-size: 24px;
+  margin-top: 12px;
+}
+
+.core.colors > .primary {
+  margin-top: 24px;
+}
+.core.colors > .content-block--token-group-container {
+  margin-top: 18px;
+}
+.combine-colors p:last-of-type {
+  margin-top: 48px;
+  font-size: 18px;
+}
+
+/* TYPOGRAPHY PAGE */
+.bliss .content-block .grid .tile-item {
+background: #F1F2F2;
+}
+.bliss ul.content-block {
+  margin-top: 18px;
+  font-size: 20px;
+}
+.bliss ul+div {
+margin-top: 64px;
+margin-bottom: 64px
+}
+.xd-section.hierarchy {
+  margin-bottom: 0;
+  padding-top: 0;
+}
+.text-tabular {
+margin-bottom: 64px;
+}
+
+.typography.for.data h2+p {
+font-size: 24px;
+margin-top: 0;
+margin-bottom: 12px;
+}
+
+.typography.for.data > ol.content-block {
+font-size: 20px;
+line-height: 32px;
+margin-bottom: 24px;
+margin-top: 12px;
+}
+
+/* GRID PAGE */
+.grids > .primary {
+  margin-bottom: 96px;
+}
+
+.grids > .heading--level-3+p {
+  margin-top: 8px;
+  font-size: 24px;
+  color: #3B3C3E;
+}
+
+.grids > .content-block {
+  margin-top: 16px;
+  font-size: 24px;
+  line-height: 36px;
+  color: #3B3C3E;
+}
+.grids ::marker {
+  font-size: 20px;
+}
+
+/* SPACING */
+.xd-section.getting-started, .xd-section.foundations, .xd-sections.resources {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.xd-section.brand {
+  margin-top: 90px;
+}
+.brand1, .foundations1, .grids ul.content-block {
+  margin-bottom: 24px;
+}
+
+.accessible.colors > .heading--level-3 {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.tones .content-block--token-group-container {
+margin-top: 2.5rem;
+}
+
+.tones .token-group-header {
+margin-bottom: 1rem;
+}
+.logos-page.primary {
+margin-bottom: 64px;
+}
+
+.content-block.logo-dimensions, .content-block.logo-panel {
+margin-bottom: 96px;
+}
+
+/* SECTION BACKGROUNDS */
+main.design.system > .getting-started, main.design.system > .foundations, main.design.system > .resources {
+  background: var(--bgImageHomeSection);
+}
+
+.gray, .xd-section.libraries, .xd-section.recommended, .xd-section.fonts, .foundations, .xd-section.plugins, .combine-colors {
+  background-color: #F1F2F2;
+}
+</style>
+</head>
+
+<body class="page-body/hidden/sn-examples/components/button/usage-rL9M9iot">
+
+
+
+<div class="SNSearch SNSearch-container backdrop-blur">
+   <div class="SNSearch-box">
+      <header class="SNSearch-header">
+         <label class="SNSearch-input-label">
+            <span class="icon">
+                               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <circle cx="10" cy="10" r="7"></circle>
+                                  <line x1="21" y1="21" x2="15" y2="15"></line>
+                               </svg>
+                               </span>
+         </label>
+         <form class="SNSearch-form">
+            <input class="SNSearch-input" id="SNSearch-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Search documentation..." maxlength="64" enterkeyhint="go">
+         </form>
+         <button class="SNSearch-close search">
+            <span class="icon">
+                               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                               </svg>
+                               </span>
+         </button>
+      </header>
+      <div class="SNSearch-results">
+        
+      </div>
+      <footer class="SNSearch-footer">
+         <div class="info">
+            <span>Cmd</span>/<span>Ctrl</span> + <span>K</span> to search
+         </div>
+         <div class="info">
+            <span>ESC</span> to clear / exit
+         </div>
+      </footer>
+   </div>
+</div>
+<!-- Document Wrapper -->
+<div id="main-wrapper"> 
+  
+  <!-- Content -->
+  <div id="content" role="main" class="site-wrapper">
+  
+    
+          
+          <!-- Header --> 
+          <header id="header" class="sticky-top style-dark"> 
+              
+              <!-- Navbar -->
+              <nav class="primary-menu navbar navbar-expand-lg">
+                  <div class="logo-wrapper">
+                      
+                      <!-- Logo -->
+                      <a href="/home/m-design-system-P8poRq78" class="site-logo" aria-label="Central Design System">
+                          
+                              <img src="https://studio-assets.supernova.io/design-systems/27071/aa27cda7-feb0-46e2-aa31-ca4b4f97a25a.svg" alt="Central Design System" />
+                      </a>
+                  </div>
+                  
+                  <div class="container-fluid">
+          
+                      
+                      <div id="header-nav" class="navbar-collapse">
+                          <ul class="navbar-nav">
+                                      
+                                      
+                                          <li><a class="typographyDocsViewNavigation " href="/home/m-design-system-P8poRq78">Home</a></li>
+                                      
+                                      
+                                          <li><a class="typographyDocsViewNavigation " href="/get-started/start-designing-hj1hH5Cn">Get Started</a></li>
+                                      
+                                      
+                                          <li><a class="typographyDocsViewNavigation " href="/foundations/foundations/brand-PlnMh7Zp">Foundations</a></li>
+                                      
+                                      
+                                          <li><a class="typographyDocsViewNavigation " href="/resources/resources/design-resources-kLljKqW5">Resources</a></li>
+                                      
+                                      
+                                          <li><a class="typographyDocsViewNavigation " href="/contact-us-Z5jeT1Gp">Contact Us</a></li>
+                                      
+                          </ul>
+          
+                          <div class="utility-nav">
+          
+                              <div id="mobile-menu-container" class="dropdown">
+                                  <button class="btn btn-secondary btn-outlined" type="button" id="mobile-menu-selector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   
+                                      
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                                      _[hidden]
+                                              
+                                  </button>
+                                  <div class="dropdown-menu pull-right" aria-labelledby="mobile-menu-selector">
+                                          
+                                              <a class="dropdown-item " href="/home/m-design-system-P8poRq78">Home</a>
+                                          
+                                              <a class="dropdown-item " href="/get-started/start-designing-hj1hH5Cn">Get Started</a>
+                                          
+                                              <a class="dropdown-item " href="/foundations/foundations/brand-PlnMh7Zp">Foundations</a>
+                                          
+                                              <a class="dropdown-item " href="/resources/resources/design-resources-kLljKqW5">Resources</a>
+                                          
+                                              <a class="dropdown-item " href="/contact-us-Z5jeT1Gp">Contact Us</a>
+                                          
+                                  </div>
+                              </div>
+                                  <button class="btn-icon-button btn-search search" aria-label="Search in documentation">
+                                      
+                                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                         <circle cx="10" cy="10" r="7"></circle>
+                                         <line x1="21" y1="21" x2="15" y2="15"></line>
+                                      </svg>
+                                                              </button>
+                          </div>        
+                       </div>
+                  </div>
+          
+                   <!-- Sidebar Toggler -->
+                      <button id="sidebarCollapse" class="toggle-navbar" type="button" aria-label="Open navigation">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                             <line x1="4" y1="6" x2="20" y2="6"></line>
+                             <line x1="4" y1="12" x2="20" y2="12"></line>
+                             <line x1="4" y1="18" x2="20" y2="18"></line>
+                          </svg>            </button>
+              </nav>
+          </header>
+          <!-- Header End -->          </nav>
+      </header>
+
+    <div class="site">
+      <div class="site-content-wrapper">
+        <div class="site-content">
+          
+          
+          <!-- Docs Content -->
+          <div class="docs-content">
+
+            
+            
+            
+            
+            
+            
+            
+            <div class="container-title" style="">
+                <div class="slider">
+                    
+            
+                        
+                        <h1 class="page-title" style="">Button</h1>
+                        
+                            <p class="subtitle" style="">Replace this with your own component</p>
+                </div>
+            </div>
+            
+            <style>
+             :root { --tabOffset: 40px; }
+            </style>
+            <div class="container-tabs">    
+                <div class="tabbed-navigation">
+                    <ul class="nav nav-tabs" id="page-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link " id="tab-4431678" href="/hidden/sn-examples/components/button/design-lYDd15Os" role="tab" aria-selected="false"><span>Design</span></a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link " id="tab-4431680" href="/hidden/sn-examples/components/button/code-tpI8NnJo" role="tab" aria-selected="false"><span>Code</span></a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="tab-4431679" href="/hidden/sn-examples/components/button/usage-rL9M9iot" role="tab" aria-selected="true"><span>Usage</span></a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <main class="content-container usage">
+                                    
+                                                            <div class="anchor" id="search-b1d878c0-5120-11ec-9e6d-bdf95c8a8921" aria-hidden="true"></div>
+                                                            
+                                                                    <h1 class="heading heading--level-1" id="section-usage-b1">
+                                                                        
+                                                                            
+                                                                            
+                                                                        
+                                                                        Usage
+                                                                                                <a data-copy-url="true" title="Copy link to heading" class="copy-anchor" href="#section-usage-b1"><span class="css-pxzk9z" role="presentation"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.971 3.029a4.367 4.367 0 0 0-6.175 0l-2.27 2.269 1.25 1.249 2.269-2.269a2.6 2.6 0 1 1 3.677 3.677l-2.269 2.269 1.25 1.25 2.268-2.27a4.367 4.367 0 0 0 0-6.175Z" fill="currentColor"/><path d="m13.526 7.798-1.324-1.324-5.728 5.728 1.324 1.324 5.728-5.728Z" fill="currentColor"/><path d="m6.547 9.776-1.25-1.25-2.268 2.27a4.367 4.367 0 1 0 6.175 6.175l2.27-2.269-1.25-1.249-2.269 2.269a2.6 2.6 0 1 1-3.677-3.677l2.269-2.269Z" fill="currentColor"/></svg></span></a>
+                                                                                            </h1>
+                                                            
+                                    
+                                    
+                                                                        
+                                                
+                                                    <p>&nbsp;</p>
+                                                
+                                    
+                                    
+                                                                        
+                                                                                                    
+                                                                                                    
+                                    
+                                    
+                                                                        
+                                                                            
+                                                                            
+                                                                            <div class="content-block content-block--callout callout-success" role="alert">
+                                                                                <div class="icon">
+                                                                                                    
+                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                                                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                                                                       <circle cx="12" cy="12" r="9"></circle>
+                                                                                                       <path d="M9 12l2 2l4 -4"></path>
+                                                                                                    </svg>
+                                                                                                        </div>
+                                                                                <div class="content">
+                                                                            
+                                                                                                    
+                                                                                                    
+                                                                                                
+                                                                                                DO -&gt; Use short and concise button labels to indicate the action to the user
+                                                                                                   
+                                                                                  
+                                                                                </div>
+                                                                            </div>  
+                                                                            
+                                    
+                                    
+                                                                        
+                                                
+                                                    <p>&nbsp;</p>
+                                                
+                                    
+                                    
+                                                                        
+                                                                                                    
+                                                                                                    
+                                    
+                                    
+                                                                        
+                                                                            
+                                                                            
+                                                                            <div class="content-block content-block--callout callout-danger" role="alert">
+                                                                                <div class="icon">
+                                                                                                                            
+                                                                                                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                                                                                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                                                                                               <circle cx="12" cy="12" r="9"></circle>
+                                                                                                                               <path d="M10 10l4 4m0 -4l-4 4"></path>
+                                                                                                                            </svg>
+                                                                                                                                </div>
+                                                                                <div class="content">
+                                                                            
+                                                                                                    
+                                                                                                    
+                                                                                                
+                                                                                                DON'T -&gt; Use long or indirect sentences to indicate an action
+                                                                                                   
+                                                                                  
+                                                                                </div>
+                                                                            </div>  
+                                                                            
+                                    
+                                    
+                                                                        
+                                                
+                                                    <p>&nbsp;</p>
+                                                
+                                    
+                                    
+                                                                        
+                                                
+                                                    <p>&nbsp;</p>
+                                                
+                                    
+                                    
+                                                    
+                            </main>
+
+            
+                
+               <footer class="footer"><p class="footer--text">© 2023 Moody’s Corporation, Moody’s Investors Service, Inc., Moody’s Analytics, Inc. and/or their licensors and affiliates (collectively, “MOODY’S”). All rights reserved.</p></footer>          </div>
+        </div> 
+      </div> 
+    </div> 
+  </div>
+  
+</div>
+<!-- .site end --> 
+
+<!-- JavaScript -->
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hotkeys-js@3.7.3/dist/hotkeys.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
+
+<!-- Prism -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-pUNGXbOrc+Y3dm5z2ZN7JYQ/2Tq0jppMDOUsN4sQHVJ9AUQpaeERCUfYYBAnaRB9r8d4gtPKMWICNhm3tRr4Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Live sandbox -->
+<script src="/assets/js/sandbox.js"></script> 
+
+<!-- Search Support-->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.5.3"></script>
+<script src="/si.js"></script>  
+
+<!-- General scripts -->
+<script src="/assets/dist/docs.min.js"></script>
+<script src="/assets/js/functionality.js"></script>
+<script src="/assets/js/cookie-consent.js"></script>
+
+<!-- After loading -->
+<script>
+$(document).ready(function() {
+    // Load versions
+    const versionUrl = "null/../versions.json"
+    loadVersions(versionUrl)
+
+    // Load sandboxes, if any
+    const sandboxConfigUrl = "null/../sandbox.json"
+    loadSandboxes(sandboxConfigUrl)
+
+
+    $("input[data-toggle='list-search']").on("keyup", function() {
+        searchInList($(this),$(this).attr("data-list-id"));
+    });
+})
+</script>
+
+
+
+
+
+
+</body>
+</html>
