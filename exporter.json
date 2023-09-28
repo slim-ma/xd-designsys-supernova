@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.6.117",
+  "version": "4.6.118",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -690,7 +690,7 @@
           {
             "key": "rowClass",
             "type": "string",
-            "label": "Block class",
+            "label": "Container class",
             "default": ""
           },
           {
@@ -788,7 +788,7 @@
           {
             "key": "rowClass",
             "type": "string",
-            "label": "Block class",
+            "label": "Container class",
             "default": ""
           },
           {
@@ -925,6 +925,12 @@
         "category": "Content",
         "properties": [
           {
+            "key": "class",
+            "label":"Container Class",
+            "type": "string",
+            "default": ""
+          },
+          {
             "key": "orientation",
             "type": "enum",
             "label": "Orientation",
@@ -933,7 +939,7 @@
           },
           {
             "key": "title",
-            "label":"Title",
+            "label":"Title*",
             "type": "string",
             "default": ""
           },
@@ -944,14 +950,8 @@
             "default": ""
           },
           {
-            "key": "class",
-            "label":"Container Class",
-            "type": "string",
-            "default": ""
-          },
-          {
             "key": "url",
-            "label": "Url",
+            "label": "Url*",
             "type": "string",
             "default": ""
           },
@@ -984,7 +984,7 @@
           },
           {
             "key": "title1",
-            "label":"First Card Title",
+            "label":"First Card Title*",
             "type": "string",
             "default": ""
           },
@@ -1002,7 +1002,7 @@
           },
           {
             "key": "url1",
-            "label": "First Card Url",
+            "label": "First Card Url*",
             "type": "string",
             "default": ""
           },
