@@ -5,151 +5,47 @@
 /* 400: NORMAL */
 @font-face {
     font-family: 'Bliss Pro';
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Regular.eot');
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Regular.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Regular.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Regular.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Regular.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Regular.svg#BlissPro-Regular') format('svg');
+    src: url('https://github.com/slim-ma/xd-designsys-supernova/blob/master/assets/_dist/webfonts/blsw-rg.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-}
-@font-face {
+  }
+  @font-face {
     font-family: 'Bliss Pro';
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Italic.eot');
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Italic.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Italic.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Italic.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Italic.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Italic.svg#BlissPro-Italic') format('svg');
+    src: url('https://github.com/slim-ma/xd-designsys-supernova/blob/master/assets/_dist/webfonts/blsw-it.woff') format('woff');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
-}
-
-/* 600: BOLD */
- @font-face {
+  }
+  
+  /* 600: BOLD */
+  @font-face {
     font-family: 'Bliss Pro';
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Bold.eot');
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Bold.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Bold.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Bold.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Bold.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Bold.svg#BlissPro-Bold') format('svg');
+    src: url('https://github.com/slim-ma/xd-designsys-supernova/blob/master/assets/_dist/webfonts/blsw-bd.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
-}
-@font-face {
+  }
+  @font-face {
    font-family: 'Bliss Pro';
-   src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-BoldItalic.eot');
-   src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-BoldItalic.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-BoldItalic.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-BoldItalic.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-BoldItalic.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-BoldItalic.svg#BlissPro-BoldItalic') format('svg');
+   src: url('https://github.com/slim-ma/xd-designsys-supernova/blob/master/assets/_dist/webfonts/blsw-bdit.woff') format('woff');
    font-weight: 600;
    font-style: italic;
    font-display: swap;
-}
-
-/* 900: HEAVY */
-@font-face {
+  }
+  
+  /* 900: HEAVY */
+  @font-face {
     font-family: 'Bliss Pro';
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Heavy.eot');
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Heavy.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Heavy.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Heavy.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Heavy.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Heavy.svg#BlissPro-Heavy') format('svg');
+    src: url('https://github.com/slim-ma/xd-designsys-supernova/blob/master/assets/_dist/webfonts/blsw-xbd.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
-}
- @font-face {
+  }
+  @font-face {
     font-family: 'Bliss Pro';
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-HeavyItalic.eot');
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-HeavyItalic.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-HeavyItalic.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-HeavyItalic.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-HeavyItalic.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-HeavyItalic.svg#BlissPro-HeavyItalic') format('svg');
+    src: url('https://github.com/slim-ma/xd-designsys-supernova/blob/master/assets/_dist/webfonts/blsw-xbdit.woff') format('woff');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
-}
-
-
-/*
- * CSS VARIABLES
- */
-
-:root {
-    --font-family: "Bliss Pro", "Helvetica", "arial", sans-serif;
-}
-
-/* 
- * STYLES
- */
-body {
-    font-family: var(--font-family);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5em;
-}
-/* headings */
-h1, h2, h3, h4, h5 {
-    font-family: var(--font-family);
-    font-weight: 900;
-}
-h1 {
-    font-size: 56px;
-    line-height: 1.15em;
-}
-h2 {
-    font-size: 36px;
-    line-height: 1.25;
-}
-h3 {
-    font-size: 24px;
-    line-height: 1.5em;
-}
-h4 {
-    font-size: 20px;
-    line-height: 1.5em;
-}
-h5 {
-    font-size: 18px;
-    line-height: 1.5em;
-}
-
-
-/* 200, 300: LIGHT & EXTRA LIGHT
-@font-face {
-    font-family: 'Bliss Pro';
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLight.eot');
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLight.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLight.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLight.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLight.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLight.svg#BlissPro-ExtraLight') format('svg');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Bliss Pro';
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLightItalic.eot');
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLightItalic.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLightItalic.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLightItalic.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLightItalic.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-ExtraLightItalic.svg#BlissPro-ExtraLightItalic') format('svg');
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Bliss Pro';
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Light.eot');
-    src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Light.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Light.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Light.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Light.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Light.svg#BlissPro-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-   }
-@font-face {
-      font-family: 'Bliss Pro';
-      src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-LightItalic.eot');
-      src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-LightItalic.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-LightItalic.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-LightItalic.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-LightItalic.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-LightItalic.svg#BlissPro-LightItalic') format('svg');
-      font-weight: 300;
-      font-style: italic;
-      font-display: swap;
-   }
-*/
-/* 500: MEDIUM
-@font-face {
-   font-family: 'Bliss Pro';
-   src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Medium.eot');
-   src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Medium.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Medium.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Medium.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Medium.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-Medium.svg#BlissPro-Medium') format('svg');
-   font-weight: 500;
-   font-style: normal;
-   font-display: swap;
-}
-@font-face {
-   font-family: 'Bliss Pro';
-   src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-MediumItalic.eot');
-   src: url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-MediumItalic.eot?#iefix') format('embedded-opentype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-MediumItalic.woff2') format('woff2'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-MediumItalic.woff') format('woff'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-MediumItalic.ttf') format('truetype'), url('https://d1dk2xlg0ye9xf.cloudfront.net/fonts/moodys-font/BlissPro-MediumItalic.svg#BlissPro-MediumItalic') format('svg');
-   font-weight: 500;
-   font-style: italic;
-   font-display: swap;
-}
-*/
+  }
