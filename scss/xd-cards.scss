@@ -55,8 +55,8 @@
   .card--action-text {
     font-size: 18px;
     line-height: 26px;
-    margin-top: 0px;
-    margin-bottom: -26px;
+    margin-top: 2px;
+    margin-bottom: -28px;
   }
   &> .card-wrapper {
     display: flex;
@@ -76,11 +76,11 @@
     }
     &>
      .with-image {
-      padding: 204px 50px 24px;
+      padding: 210px 50px 26px;
       background-size: 553px;
       background-position: top left;
       &:hover {
-        padding: 186px 50px 18px;
+        padding: 200px 50px 36px;
       }
     }
   }
@@ -110,7 +110,7 @@
 
 .card--title {
   font-size: 24px;
-  line-height: 32px;
+  line-height: 1;
   font-weight: 900;
   letter-spacing: 0.24px;
   margin-bottom: 6px;
@@ -119,7 +119,7 @@
 .card--body {
   font-size: 24px;
   letter-spacing: 0.24px;
-  line-height: 32px;
+  line-height: 1.2;
   margin-bottom: 0px;
 }
 
@@ -148,9 +148,6 @@
 
 .card-container--one-card {
   .card:hover {
-    .card--title { 
-      margin-bottom: 2px;
-    }
     .card--action-text {
       margin-top: 2px;
       margin-bottom: 0;
@@ -163,18 +160,6 @@
   .horizontal:hover {
     padding-top: 63px;
     padding-bottom: 63px;
-  }
-}
-
-.card-container--two-card {
-  .card:hover {
-    .card--title {
-      margin-bottom: 2px;
-    }
-    .card--action-text {
-      margin-top: 2px;
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -237,6 +222,6 @@
 }
 
 /* ### CARD TEXT ANIMATION ### */
-.card, .card--action-text, .card--title {
+.card, .card__content, .card--action-text, .card--title {
   transition: 1s;
 }
