@@ -126,6 +126,18 @@
   margin-bottom: 0px;
 }
 
+.card-bg {
+  background-size: cover;
+  background-position: left center;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+}
+
 /*
  * HOVER styles
  */
