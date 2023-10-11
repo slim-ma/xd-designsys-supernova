@@ -2,28 +2,9 @@
 :root {
   --bgImageHomeSection: radial-gradient(circle, rgba(241,242,242,1) 0%, rgba(241,242,242,1) 20%, rgba(255,255,255,1) 85%);
   --siteMaxWidth: 1130px;
+  --sideMarginCalculated: calc(-50vw + 565px);
 }
 // REM = 16px
-
-
-
-/* MEDIA QUERIES */
-@media (max-width: 1130px) {
-  .is-homepage .site-content > .docs-content > .container-title {
-    width: 100%;
-    margin-left: auto;
-  }
-  .docs-content {
-    width: 100%;
-  }
-  .content-container {
-    width: 100%;
-  }
-  .xd-section.full-width {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 /* RESETS */
 .container-title {
@@ -195,7 +176,7 @@ a.primary {
 
   &.full-width {
     margin-top: 48px;
-    margin-left: calc(-50vw + 565px);
+    margin-left: --sideMarginCalculated;
     margin-bottom: 80px;
     max-width: none;
     padding: 80px var(--contentContainerPadding);
@@ -232,7 +213,7 @@ a.primary {
     background: url(https://studio-assets.supernova.io/design-systems/27071/010dabc8-2824-4ce7-b66d-c8319175e5c4.svg) no-repeat bottom 80px center, url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/bg_waves.jpg) no-repeat center;
     background-size: 48px, cover;
     height: 810px;
-    margin-left: calc(-50vw + 565px);
+    margin-left: --sideMarginCalculated;
     max-width: none;
     width: 100vw;
 
@@ -257,5 +238,23 @@ a.primary {
     top: -177px;
     left: 50%;
     margin-left: -24px;
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1130px) {
+  .is-homepage .site-content > .docs-content > .container-title {
+    width: 100%;
+    margin-left: auto;
+  }
+  .docs-content {
+    width: 100%;
+  }
+  .content-container {
+    width: 100%;
+  }
+  .xd-section.full-width {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
