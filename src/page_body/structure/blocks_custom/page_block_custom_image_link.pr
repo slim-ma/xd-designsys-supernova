@@ -43,9 +43,12 @@
     src="{{ imgUrl }}"
     alt="{{alt}}"
     {[if className ]}
-    class="{{class}}__image image-link__image"
+    class="{{class}} image-link__image"
     {[else]}
     class="image-link__image"
+    {[/]}
+    {[if height !== 50]}
+    max-height="{{height}}"
     {[/]}
   />
 </div>
