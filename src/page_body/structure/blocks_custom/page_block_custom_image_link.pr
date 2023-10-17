@@ -47,7 +47,7 @@
     {[else]}
     class="image-link__image"
     {[/]}
-    {[if height]}
+    {[if height !== "50"]}
     height="{{height}}"
     {[/]}
   />
