@@ -55,16 +55,14 @@ ul.navbar-nav li:first-of-type {
   > ol.content-block {
     font-size: 24px;
     line-height: 32px;
-    margin-left: var(--contentContainerPadding);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0 24px;
+    padding-left: calc(var(--contentContainerPadding)*2);
   }
   > ul.content-block {
     font-size: 24px;
     line-height: 32px;
-    margin-left: var(--contentContainerPadding);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0 24px;
+    padding-left: calc(var(--contentContainerPadding)*2);
   }
   > * {
     width: 100%;
@@ -165,6 +163,12 @@ a.primary {
     line-height: 24px;
   }
 }
+
+.image-link__image {
+  max-height: 100%;
+  max-width: 100%;
+}
+  
   
 
 /*
@@ -199,10 +203,11 @@ a.primary {
     margin-top: 48px;
   }
   > hr {
+    border-top: 2px #ddddde solid;
     margin-top: 80px;
     margin-bottom: 64px;
-    border-top: 2px #ddddde solid;
-    }    
+    padding: 0;
+  }
 }
 
 /* SPECIFIC PAGES */
