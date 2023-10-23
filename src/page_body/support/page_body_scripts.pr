@@ -85,7 +85,9 @@ $(document).ready(function() {
         initGoogleAnalytics()
     }
     {[ else ]}
-    initGoogleAnalytics()
+    if (window.location.hostname !== 'moodys.preview.supernova-docs.io'){
+        initGoogleAnalytics()
+    }
     {[/]}
 </script>
 <!-- End Google Analytics -->
