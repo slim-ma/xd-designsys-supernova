@@ -17,15 +17,6 @@
 {[ const domain = ds.documentationDomain() /]}
 
 <body class="{{ pageIdentifier(page) }}{{ isHomepage ? " is-homepage" : "" }}">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DTWE2CEL0H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DTWE2CEL0H');
-</script>
 {* <body class="{{ exportConfiguration().defaultVisualMode }}"> *}
 {* {[ if exportConfiguration().showVisualModeSwitch ]} - hard-disabled for now, until full customization is in place *}
 {[ if false ]}
