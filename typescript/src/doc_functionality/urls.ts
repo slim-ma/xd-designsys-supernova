@@ -6,6 +6,31 @@ import { firstPageFromTop } from './lookup';
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 // MARK: - URLs
 
+/** Extract the unique slug */
+export function getPageSlug(
+  relUrl: string
+) {
+  // Prevent generation of URLs for objects that are not provided
+  if (!relUrl) {
+    return '';
+  }
+
+  const pagePathSegments = relUrl.split('-');
+  const lastSegment = pagePathSegments.at(-1);
+  return lastSegment;
+  /*
+  const url = [prefix, ...pagePathSegments].join('/');
+  const systemData = Pulsar.systemData?.() as any;
+  if (systemData && systemData.environment === 'extension') {
+    // For VSCode, retrieve the URL containing .html so local FS can read it
+    return url + '.html';
+  } else {
+    // For web, keep server-obtained URL
+    return url;
+  }
+  */
+}
+
 /** Generate page slug for the generated page */
 export function pageUrl(
   object: DocumentationPage | DocumentationGroup,

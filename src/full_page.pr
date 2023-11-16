@@ -17,7 +17,7 @@
 {[ inject "page_head" context page /]}
 {[ const domain = ds.documentationDomain() /]}
 
-<body class="pid-{{ page.id }}{{ (isHomepage || isHomepageTab) ? " is-homepage" : "" }}">
+<body class="{{ getPageSlug(page.relativeUrl) }} pid-{{ page.id }}{{ (isHomepage || isHomepageTab) ? " is-homepage" : "" }}">
 {* <body class="{{ exportConfiguration().defaultVisualMode }}"> *}
 {* {[ if exportConfiguration().showVisualModeSwitch ]} - hard-disabled for now, until full customization is in place *}
 {[ if false ]}
