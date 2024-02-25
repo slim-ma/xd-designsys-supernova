@@ -21,21 +21,81 @@ $(window).on('load', function() {
         );
     });
 
+    // ENG-1151: Browser should by default scroll to the anchor when the page is loaded, but in some cases it doesn't
+    if (window.location.hash) {
+        setTimeout(() => {
+            const foundElement = document.querySelector(window.location.hash);
+            if (foundElement && !isElementInViewport(foundElement) && window.getComputedStyle) {
+                let style = window.getComputedStyle(foundElement);
+                let height = ["height", "margin-top", "margin-bottom"]
+                    .map((key) => parseInt(style.getPropertyValue(key), 10))
+                    .reduce((prev, cur) => prev + cur);
+
+                $(document).scrollTop(foundElement.offsetTop - height);
+            }
+        }, 250)
+    }
+
+    // Add preview banner in case the page is loaded in preview mode
+    const isPreviewSite = window.location.host.indexOf('preview.supernova-docs.io') !== -1;
+    if (isPreviewSite) {
+         $('#header').prepend('<div class="banner-preview"><div class="content"><div class="message"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12.01" y2="8"></line><polyline points="11 12 12 12 12 16 13 16"></polyline></svg> <span>This website is a <b>private preview</b> of the changes made to your documentation.</span></div></div></div>');
+    }
+
     // Create intersection observer for all sections
     const observer = new IntersectionObserver(_entries => {
         // Highlight headers in viewport
         let isAnythingSelected = false;
-        for (let section of sections) {
+
+        const findExistingSectionInOverview = (section) => {
             let id = section.getAttribute('id');
+            let sectionElementInOverview = document
+                .querySelector(`nav li a[href="#${id}"]`);
+
+            if (sectionElementInOverview && sectionElementInOverview.parentElement) {
+                return sectionElementInOverview.parentElement;
+            }
+
+            if (!['h3', 'h2'].includes(section.tagName.toLowerCase())) {
+                return null;
+            }
+            const desiredHeadingLevels = section.tagName.toLowerCase() === 'h3' ? ['h2', 'h1']: ['h1'];
+
+            // when h3 headers are skipped, we need to highlight the parent h2 header
+            let prevSection = null;
+            let prevElement = section.previousElementSibling;
+            let safetyIterationCounter = 0;
+            while (prevElement && safetyIterationCounter < 250) {
+                if (
+                  (desiredHeadingLevels.includes(prevElement.tagName.toLowerCase()) && sections.includes(prevElement))
+                ) {
+                    prevSection = prevElement;
+
+                    break;
+                }
+
+                safetyIterationCounter++;
+                prevElement = prevElement.previousElementSibling;
+            }
+
+            return prevSection && findExistingSectionInOverview(prevSection);
+        }
+
+        const overviewItemsToKeepActiveEvenIfNotInView = new Set();
+        for (let section of sections) {
             if (isElementInViewport(section)) {
-                document
-                    .querySelector(`nav li a[href="#${id}"]`)
-                    .parentElement.classList.add('active');
                 isAnythingSelected = true;
-            } else {
-                document
-                    .querySelector(`nav li a[href="#${id}"]`)
-                    .parentElement.classList.remove('active');
+
+                const overviewItem = findExistingSectionInOverview(section)
+                overviewItemsToKeepActiveEvenIfNotInView.add(overviewItem);
+                overviewItem && overviewItem.classList.add('active');
+            }
+        }
+
+        for (const section of sections) {
+            const overviewItem = findExistingSectionInOverview(section);
+            if (!overviewItemsToKeepActiveEvenIfNotInView.has(overviewItem)) {
+                overviewItem && overviewItem.classList.remove('active');
             }
         }
 
@@ -51,10 +111,8 @@ $(window).on('load', function() {
                 }
             }
             if (currentSection) {
-                let id = currentSection.getAttribute('id');
-                document
-                    .querySelector(`nav li a[href="#${id}"]`)
-                    .parentElement.classList.add('active');
+                const overviewItem = findExistingSectionInOverview(currentSection);
+                overviewItem && overviewItem.classList.add('active');
             }
         }
     });
@@ -71,6 +129,12 @@ $(window).on('load', function() {
     document.querySelectorAll('h3[id]').forEach(section => {
         observer.observe(section);
         sections.push(section);
+    });
+
+    $('[data-action="copy-asset-content"]').on('click', function() {
+        // Extract the SVG URL from the src attribute of the sibling <img> element
+        const svgUrl = $(this).closest('.asset-item').find('img.asset-source').attr('src');
+        copySVGTextToClipboard(svgUrl);
     });
 });
 
@@ -179,6 +243,203 @@ function loadSandboxes(url) {
         }
     });
 }
+
+/*-----------------------------
+    Download assets as ZIP
+------------------------------- */
+async function downloadAssets(assets, blockId) {
+    const zip = new JSZip();
+    const block = $(`[data-block-id="${blockId}"]`);
+    const button = $(block).find('[data-action="download-assets"]');
+
+    // Display the loading state
+    $(button).prop('disabled', true);
+    $(button).find('.label').addClass('hide');
+    $(button).find('.loading').removeClass('hide').find(".text").text('Downloading... 0%');
+
+    let processedFiles = 0;
+    const totalFiles = Object.keys(assets).length;
+
+    const addFileToZip = async (fileName, url) => {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch ${url}. Status: ${response.status}`);
+            }
+            const blob = await response.blob();
+            const fileExtension = url.split('.').pop();
+            zip.file(`${fileName}.${fileExtension}`, blob);
+            processedFiles++;
+            if (processedFiles === Object.keys(assets).length) {
+                $(button).find('.loading .text').text('Almost ready, zipping...');
+            } else {
+                let percentage = Math.round((processedFiles / totalFiles) * 100);
+                $(button).find('.loading .text').text('Downloading... ' + percentage + '%');
+            }
+        } catch (error) {
+            console.error(`Error adding file ${fileName} to zip.`, error);
+        }
+    };
+
+    const downloadBatch = async (batch) => {
+        for (const [fileName, url] of batch) {
+            await addFileToZip(fileName, url);
+        }
+    };
+
+    const chunkArray = (array, size) => {
+        const chunks = [];
+        for (let i = 0; i < array.length; i += size) {
+            chunks.push(array.slice(i, i + size));
+        }
+        return chunks;
+    };
+
+    const processDownloads = async () => {
+        const allFiles = Object.entries(assets);
+        const batches = chunkArray(allFiles, 50); // Batch size set to 50
+        for (const batch of batches) {
+            await downloadBatch(batch);
+        }
+    };
+
+    await processDownloads();
+
+    zip.generateAsync({ type: "blob" }).then(blob => {
+        saveAs(blob, "assets.zip");
+        $(button).find('.loading').addClass('hide');
+        $(button).find('.label').removeClass('hide');
+        $(button).prop('disabled', false);
+        $.toast({
+            title: 'Download was successful',
+            position: 'bottom'
+        });
+    }).catch(error => {
+        console.error("Error generating zip file.", error);
+        $.toast({
+            title: 'There was an error creating the zip file. Please try again.',
+            position: 'bottom'
+        });
+        $(button).find('.loading').addClass('hide');
+        $(button).find('.label').removeClass('hide');
+        $(button).prop('disabled', false);
+        $.toast({
+            title: 'Download failed',
+            position: 'bottom'
+        });
+    });
+}
+
+
+/*-----------------------------
+   Initialize Download button for all assets download
+------------------------------- */
+$('[data-action="download-assets"]').on('click', function() {
+    // Fetch the `data-id` attribute from the clicked button
+    const blockId = $(this).attr('data-from-block');
+    // Fetch all `.asset-item` elements with a matching `data-block-id` and extract their image URLs
+    const block = $(`[data-block-id="${blockId}"]`);
+    const assets = {};
+
+    block.find('.asset-item img').each(function() {
+        const imgElement = $(this);
+        const nameFromAlt = imgElement.attr('alt');
+        const url = imgElement.attr('src');
+        assets[nameFromAlt] = url;
+    });
+
+
+    // Call the `downloadAssets` function with the extracted URLs
+    if (Object.keys(assets).length > 0) {
+        downloadAssets(assets, blockId)
+    } else {
+        $.toast({
+            title: 'Download failed',
+            position: 'bottom'
+        });
+    }
+});
+
+
+/**
+ * Downlaod and rename a file
+ */
+async function downloadAndRenameFile(url, newName) {
+    try {
+        // Extract the file extension from the URL
+        const fileExtension = url.split('.').pop();
+
+        // Combine the new filename with the extracted extension
+        const newFilename = `${newName}.${fileExtension}`;
+
+        // Fetch the content of the file
+        const response = await fetch(url);
+        const blob = await response.blob();
+
+        // Trigger the download with the new filename using saveAs function
+        saveAs(blob, newFilename);
+
+        $.toast({
+            title: 'Download was successful',
+            position: 'bottom'
+        });
+    } catch (error) {
+        $.toast({
+            title: 'Download failed',
+            position: 'bottom'
+        });
+    }
+}
+
+/*-----------------------------
+   Initialize Download button for a single asset download
+------------------------------- */
+$('[data-action="download-asset"]').on('click', function() {
+    const asset = $(this).closest('.asset-item').find('img.asset-source')
+    const url = $(asset).attr('src');
+    const name = (asset).attr('alt');
+    
+    downloadAndRenameFile(url, name);
+});
+
+
+/*-----------------------------
+    Copy SVG assset to clipboard
+------------------------------- */
+async function copySVGTextToClipboard(svgURL) {
+    try {
+        // Fetch the SVG content from the URL
+        let response = await fetch(svgURL);
+        if (!response.ok) {
+            $.toast({
+                title: 'An error occured while copying SVG (this one)',
+                position: 'bottom'
+            });
+            throw new Error('Network response was not ok');
+        }
+
+        let svgData = await response.text();
+        
+        // Copy the SVG content to the clipboard using navigator.clipboard API
+
+        await navigator.clipboard.writeText(svgData);
+    
+        // Notify user
+        $.toast({
+            title: 'SVG copied to clipboard',
+            position: 'bottom'
+        });
+    
+    } catch(err) {
+        console.error("Error:", err);
+        $.toast({
+            title: 'An error occured while copying SVG',
+            position: 'bottom'
+        });
+    }
+}
+
+
 
 /*-----------------------------
     Tooltips
