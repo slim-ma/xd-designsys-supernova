@@ -81,10 +81,10 @@
                 {[ for block in page.blocks ]}
                     {[ inject "page_body_structure_block" context ({"block": block, "pageId": page.id}) /]}
                 {[/]}
-                {* {[ inject "page_body_structure_page_navigation" context page /]} *}
-                {[ inject "page_body_structure_content" context page /]}
               </main>
             </section>
+            {* {[ inject "page_body_structure_page_navigation" context page /]} *}
+            {[ inject "page_body_structure_content" context page /]}
             {* Generate footer, if enabled *}
             {[ inject "page_body_structure_footer" context page /]}
           </div>
