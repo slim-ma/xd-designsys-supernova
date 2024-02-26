@@ -12,6 +12,9 @@
 {[ let headerConfiguration = configuration.header /]}
 {[ let centeredClass = (headerConfiguration.alignment === "Center" ? " centered" : "") /]}
 
+{[ let gTitle = htmlSafeString(group.title) /]}
+{[ let pTitle = htmlSafeString(page.title) /]}
+
 <!DOCTYPE html>
 <html lang="en">
 {[ inject "page_head" context page /]}
@@ -73,6 +76,8 @@
           <!-- Docs Content -->
           <div class="docs-content">
             <section id="section-content-page" class="page-content">
+              {* custom breadcrumb *}
+              <p>gtitle: {{gTitle}} / ptitle: {{pTitle}}</p>
               {* Generate page header that is present on each page *}
               {[ inject "page_body_structure_title" context page /]}
 
