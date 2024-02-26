@@ -78,7 +78,7 @@
 
               {* Generate content for the page *}
               <div class="content-container">
-                <main class="content-container {{page.title.lowercased()}}">
+                <main class="page-main-content {{page.title.lowercased()}}">
                   {[ for block in page.blocks ]}
                       {[ inject "page_body_structure_block" context ({"block": block, "pageId": page.id}) /]}
                   {[/]}
