@@ -24,7 +24,7 @@
      With one exception — if there is a sidebar, we need to render TOC container to make sure the page layout doesn't jump when navigating across pages
  *}
 {[ if (showTOCOnHomepage || pageConfiguration.showSidebar) ]}
-    <nav id="content-nav">
+    <nav id="content-nav" class="page-nav">
     {[ if showTOC ]}
         {[ if showTOCOnHomepage ]}
             <span class="content-nav-header">{{ configuration.tocCustomLabel }}</span>
