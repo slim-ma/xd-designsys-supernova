@@ -72,21 +72,21 @@
           
           <!-- Docs Content -->
           <div class="docs-content">
-            <div class="content-container">
-              <section id="section-content-page" class="page-content">
-                {* Generate page header that is present on each page *}
-                {[ inject "page_body_structure_title" context page /]}
+            <section id="section-content-page" class="page-content">
+              {* Generate page header that is present on each page *}
+              {[ inject "page_body_structure_title" context page /]}
 
-                {* Generate content for the page *}
+              {* Generate content for the page *}
+              <div class="content-container">
                 <main class="content-container {{page.title.lowercased()}}">
                   {[ for block in page.blocks ]}
                       {[ inject "page_body_structure_block" context ({"block": block, "pageId": page.id}) /]}
                   {[/]}
                 </main>
-              </section>
-              {* {[ inject "page_body_structure_page_navigation" context page /]} *}
-              {[ inject "page_body_structure_content" context page /]}
-            </div>
+                {* {[ inject "page_body_structure_page_navigation" context page /]} *}
+                {[ inject "page_body_structure_content" context page /]}
+              </div>
+            </section>
             {* Generate footer, if enabled *}
             {[ inject "page_body_structure_footer" context page /]}
           </div>
