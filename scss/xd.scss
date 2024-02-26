@@ -1,4 +1,62 @@
+/* RESETS */
+.container-title, .container-title > .slider, .container-tabs {
+  padding: 0;
+}
+.container-title, .container-title > .slider {
+  margin: 0;
+}
+.is-homepage .container-title, .container-title > .slider, .container-tabs > .tabbed-navigation {
+  max-width: none;
+}
+
+/* LAYOUT  */
+  
+.docs-content {
+  margin: 0 auto;
+  max-width: fit-content;
+}
+  
+#section-content-page {
+  width: auto;
+}
+  
+#section-content-page, .footer {
+  max-width: var(--mainWidth);
+  margin: 0 var(--contentContainerPadding);
+}
+  
+.container-title {
+  max-width: var(--mainWidth);
+}
+.container-tabs {
+  max-width: var(--mainWidth);
+}
+.container-tabs > .tabbed-navigation {
+  align-items: start;
+}
+  
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: var(--mainWidth);
+}
+  
+.page-main-content {
+  max-width: 741px;
+}
+  
+.page-nav {
+  z-index: 30;
+  width: 265px;
+  position: sticky;
+  top: 120px;
+}
+
+
+
 /*
+****** OLD STYLING ******
 SETTINGS STYLES:
 
 /* for CMS items…

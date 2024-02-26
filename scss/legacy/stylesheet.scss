@@ -18,13 +18,12 @@
 /*  Legacy stylesheet – slowly breaking it down to smaller chunks
 /* =================================== */
 
-body,
-html {
+body, html {
     height: 100%;
 }
 
 html {
-    scroll-padding-top: calc(var(--topNavHeight) + 20px + var(--tabOffset, 0px);
+    scroll-padding-top: calc(var(--topNavHeight) + 20px + var(--tabOffset, 0px));
 }
 
 body {
@@ -407,27 +406,6 @@ ol>.block-children {
     .cta-button {
         display: none;
     }
-
-    // .side-navigation-wrapper {
-    //     display: none;
-    //     position: fixed;
-    //     right: 0;
-    //     bottom: 0;
-    //     z-index: 21;
-
-    //     &.nav-open {
-    //         display: flex;
-    //     }
-
-    //     .bg-sidebar {
-    //         opacity: 0.7;
-    //     }
-
-    //     .sidebar-navigation {
-    //         --topNavHeight: 62px;
-    //         box-shadow: var(--boxShadowLevel2);
-    //     }
-    // }
     
     .navbar-expand-lg .navbar-collapse {
         position: relative;
