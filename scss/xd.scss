@@ -1,11 +1,223 @@
-/* # VARIABLES (new and permanent) */
+/*
+SETTINGS STYLES:
+
+/* for CMS items…
+.contact.us p {
+  color: var(--pageDescriptionInk);
+  font-size: 24px;
+  margin-top: 24px;
+  line-height: 40px
+}
+
+.contact.us h2 {
+margin-top: 40px;
+color: var(--pageHeaderInk);
+}
+
+.img-page-stack.xd-section.full-width {
+margin-bottom: 0;
+padding: 0 32px 0;
+}
+.img-page-stack.image-link__image.xd-section.full-width {
+padding: 0;
+margin: 0;
+width: auto;
+}
+.img-page-stack {
+position: relative;
+margin-right: calc(585px - 50vw);
+margin-bottom: 0;
+}
+
+@media(max-width: 1130px){
+.img-page-stack.xd-section.full-width {
+  margin-left: 0;
+  margin-right: 0;
+}
+}
+
+.img-page-stack > img {
+margin-right: 0;
+padding: 0;
+position: absolute;
+transition: transform 300ms;
+top: -500px;
+right: 0;
+}
+.logos ul.content-block {
+color: var(--pageDescriptionInk);
+}
+
+/* -- HOMEPAGE Responsiveness
+@media (max-width: 1220px) {
+.img-page-stack > img {
+  transform: scale(0.8);
+  transform-origin: top right;
+  top: -460px;
+}
+}
+@media (max-width: 1100px) {
+.container-title>.slider .subtitle {
+  max-width: 640px;
+}
+.container-title>.slider h1.page-title {
+    line-height: 1;
+}
+}
+@media (max-width: 970px) {
+.img-page-stack > img {
+  top: -260px;
+}
+}
+@media (max-width: 780px) {
+.img-page-stack > img {
+  transform: scale(0.6);
+  top: -160px;
+}
+}
+
+@media(max-width: 680px) {
+.is-homepage .container-title {
+  background-position: center bottom 20px, center;
+}
+.img-page-stack > img {
+  transform: scale(0.5);
+}
+.is-homepage .container-title {
+  height: 54rem;
+}
+}
+
+
+/* COLOR PAGES
+.core.colors > p ~ p {
+font-size: 24px;
+margin-top: 12px;
+}
+
+.core.colors > .primary {
+margin-top: 24px;
+}
+.core.colors > .content-block--token-group-container {
+margin-top: 18px;
+}
+.combine-colors p:last-of-type {
+margin-top: 48px;
+font-size: 18px;
+}
+
+/* TYPOGRAPHY PAGE
+.bliss .content-block .grid .tile-item {
+background: #F1F2F2;
+}
+.bliss ul.content-block {
+margin-top: 18px;
+font-size: 20px;
+}
+.bliss ul+div {
+margin-top: 64px;
+margin-bottom: 64px
+}
+.xd-section.hierarchy {
+margin-bottom: 0;
+padding-top: 0;
+}
+.text-tabular {
+margin-bottom: 64px;
+}
+
+.typography.for.data h2+p {
+font-size: 24px;
+margin-top: 0;
+margin-bottom: 12px;
+}
+
+.typography.for.data > ol.content-block {
+font-size: 20px;
+line-height: 32px;
+margin-bottom: 24px;
+margin-top: 12px;
+}
+
+/* GRID PAGE
+.grids > .primary {
+margin-bottom: 96px;
+}
+
+.grids > .heading--level-3+p {
+margin-top: 8px;
+font-size: 24px;
+color: #3B3C3E;
+}
+
+.grids > .content-block {
+margin-top: 16px;
+font-size: 24px;
+line-height: 36px;
+color: #3B3C3E;
+}
+.grids ::marker {
+font-size: 20px;
+}
+
+/* COPILOT
+.cETxd4nw .content-container > p, .KJjgGMH0 .content-container > p, .FmMFbaeK .content-container > p {
+font-size: 24px;
+line-height: 1.4;
+}
+
+/* SPACING
+.xd-section.getting-started, .xd-section.foundations, .xd-sections.resources {
+margin-top: 0;
+margin-bottom: 0;
+}
+.xd-section.brand {
+margin-top: 90px;
+}
+.brand1, .foundations1, .grids ul.content-block {
+margin-bottom: 24px;
+}
+
+.accessible.colors > .heading--level-3 {
+margin-top: 48px;
+margin-bottom: 16px;
+}
+
+.tones .content-block--token-group-container {
+margin-top: 2.5rem;
+}
+
+.tones .token-group-header {
+margin-bottom: 1rem;
+}
+.logos-page.primary {
+margin-bottom: 64px;
+}
+
+.content-block.logo-dimensions, .content-block.logo-panel {
+margin-bottom: 96px;
+}
+
+/* SECTION BACKGROUNDS
+main.design.system > .getting-started, main.design.system > .foundations, main.design.system > .resources {
+background: var(--bgImageHomeSection);
+}
+
+.gray, .xd-section.libraries, .xd-section.recommended, .xd-section.fonts, .foundations, .xd-section.plugins, .combine-colors {
+background-color: #F1F2F2;
+}
+
+// END SETTINGS STYLES
+
+
+/* # VARIABLES (new and permanent)
 :root {
   --bgImageHomeSection: radial-gradient(circle, rgba(241,242,242,1) 0%, rgba(241,242,242,1) 20%, rgba(255,255,255,1) 85%);
   --siteMaxWidth: 1130px;
 }
 // REM = 16px
 
-/* RESETS */
+/* RESETS
 .container-title {
   border: 0;
 }
@@ -14,7 +226,7 @@ ul.navbar-nav li:first-of-type {
 }
 
 
-/* LAYOUT */
+/* LAYOUT
 .docs-content {
   max-width: var(--siteMaxWidth);
 }
@@ -92,7 +304,7 @@ ul.navbar-nav li:first-of-type {
 
 /* 
  * CUSTOM BLOCK DEFAULTS:
- */
+
 .full-width {
   max-width: none;
   > .card-wrapper {
@@ -104,7 +316,7 @@ ul.navbar-nav li:first-of-type {
 
 /* 
  * BUTTON LINK:
- */
+
 .link-wrapper.primary {
   margin-top: 24px;
 }
@@ -133,7 +345,7 @@ a.primary {
   }
 }
 
-/* TAB BAR */
+/* TAB BAR
 .container-tabs {
   margin-top: 40px;
   margin-bottom: 64px;
@@ -155,7 +367,7 @@ a.primary {
 
 /*
  * # ELEMENTS
- */
+
 
 .heading--level-1 {
   color: var(--pageHeaderInk);
@@ -181,7 +393,7 @@ a.primary {
 
 /*
  *  # XD SECTIONS
- */
+
 .xd-section {
   padding: 140px var(--contentContainerPadding) 75px;
 
@@ -221,8 +433,8 @@ a.primary {
   }
 }
 
-/* SPECIFIC PAGES */
-/* -- home page */
+/* SPECIFIC PAGES
+/* -- home page
 .is-homepage {
   .container-title {
     background: url(https://studio-assets.supernova.io/design-systems/27071/010dabc8-2824-4ce7-b66d-c8319175e5c4.svg) no-repeat bottom 80px center, url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/bg_waves.jpg) no-repeat center;
@@ -256,7 +468,7 @@ a.primary {
   }
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES
 @media (max-width: 1130px) {
   .is-homepage .site-content > .docs-content > .container-title {
     width: 100%;
@@ -273,3 +485,5 @@ a.primary {
     margin-right: auto;
   }
 }
+
+*/

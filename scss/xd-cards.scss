@@ -1,4 +1,6 @@
-/* # CARD */
+/*
+
+/* # CARD
 .tab-pane > .card-container {
   max-width: none;
   margin: 0 calc(-50vw + 565px);
@@ -140,7 +142,7 @@
 
 /*
  * HOVER styles
- */
+
 
 .card:hover .card--action-text {
   opacity: 1;
@@ -189,7 +191,7 @@
   }
 }
 
-/* # CARD BORDER --ANIMATION # */
+/* # CARD BORDER --ANIMATION #
 // STATIC Properties
 
 // define property
@@ -236,7 +238,9 @@
   height: 101%;
 }
 
-/* ### CARD TEXT ANIMATION ### */
+/* ### CARD TEXT ANIMATION ###
 .card, .card__content, .card--action-text, .card--title {
   transition: 1s;
 }
+
+*/
