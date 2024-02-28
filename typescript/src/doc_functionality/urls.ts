@@ -17,7 +17,8 @@ export function getPageSlug(
 
   const pagePathSegments = relUrl.split('-');
   const lastSegment = pagePathSegments.at(-1);
-  return lastSegment;
+  const cleanSlug = lastSegment?.split('.')[0];
+  return cleanSlug;
   /*
   const url = [prefix, ...pagePathSegments].join('/');
   const systemData = Pulsar.systemData?.() as any;

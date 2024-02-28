@@ -12,8 +12,12 @@
 {[ let headerConfiguration = configuration.header /]}
 {[ let centeredClass = (headerConfiguration.alignment === "Center" ? " centered" : "") /]}
 
-{[ let gTitle = htmlSafeString(group.title) /]}
-{[ let pTitle = htmlSafeString(page.title) /]}
+{* Breadcrumb scaffolding *}
+{* get Non-Tab Title *}
+{[ let pageIsTab = group.groupBehavior === "Tabs" /]}
+{[ let title = (pageIsTab ? htmlSafeString(group.title) : htmlSafeString(page.title)) /]}
+{[ let parent = (pageIsTab ? group.parent : page.parent) /]}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +81,16 @@
           <div class="docs-content">
             <section id="section-content-page" class="page-content">
               {* custom breadcrumb *}
-              <p>gtitle: {{gTitle}} / ptitle: {{pTitle}}</p>
+              {[if !isHomepage]}
+                <div class="breadcrumb--container">
+                  {[if parent]}
+                    {[ inject "page_body_structure_breadcrumbs" context parent  /]}
+                  {[/]}
+                  {[if page]}
+                    <span class="breadcrumb_end">{{ title }}</span>
+                  {[/]}
+                </div>
+              {[/]}
               {* Generate page header that is present on each page *}
               {[ inject "page_body_structure_title" context page /]}
 

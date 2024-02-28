@@ -1,0 +1,17 @@
+{[ let page = context /]}
+{[ let parent = page.parent /]}
+{[ let slug = getPageSlug(pageUrl(page, ds.documentationDomain())) /]}
+
+{* add recursion if there's a parent *}
+{[if parent]}
+  {[ inject "page_body_structure_breadcrumbs" context parent /]}
+  {[if page]}
+    {* current page link *}
+    <a href="/latest/{{slug}}" class="breadcrumb__link">{{page.title}}</a>
+  {[/]}
+  <span class="breadcrumb__divider">/</span>
+{[else]}
+{* No parent means we end *}
+  <a href="/" class="breadcrumb__link">Home</a>
+  <span class="breadcrumb__divider">/</span>
+{[/]}
