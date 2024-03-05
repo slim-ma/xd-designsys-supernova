@@ -2,6 +2,8 @@
 
 {* Generate each block depending on this custom block identifier *}
 {[ switch block.key ]}
+{[ case "co.stevelim.documentation.asset_link" /]}
+    {[ inject "page_block_custom_asset_link" context block /]}
 {[ case "co.stevelim.documentation.button-link" ]}
     {[ inject "page_block_custom_link" context block /]}
 {[ case "co.stevelim.documentation.asset-card-2col" ]}
