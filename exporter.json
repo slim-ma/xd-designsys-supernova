@@ -601,6 +601,51 @@
     ],
     "blocks": [
       {
+        "key": "co.stevelim.documentation.asset-link",
+        "title": "Asset Link",
+        "description": "A blue banner that links to an asset",
+        "mode": "block",
+        "category": "Content",
+        "properties": [
+          {
+            "key": "title",
+            "type": "string",
+            "label": "Title",
+            "default": ""
+          },
+          {
+            "key": "body",
+            "type": "string",
+            "label": "Body",
+            "default": ""
+          },
+          {
+            "key": "url",
+            "label": "Url",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "key": "buttonText",
+            "label": "Button Text",
+            "type": "string",
+            "default": "Open in Figma"
+          },
+          {
+            "key": "assetType",
+            "type": "enum",
+            "label": "Asset Type",
+            "default": "Figma",
+            "values": [
+              "CSS",
+              "Figma",
+              "Font",
+              "Adobe"
+            ]
+          }
+        ]
+      },
+      {
         "key": "co.stevelim.documentation.button-link",
         "title": "Button link",
         "description": "Simple Anchor element (styled as button)",

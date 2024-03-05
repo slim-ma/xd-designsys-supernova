@@ -1,0 +1,24 @@
+{[ const block = context /]}
+
+{* set up variables *}
+{[ let title = block.properties.title /]}
+{[ let url = block.properties.url /]}
+{[ let body = block.properties.body /]}
+{[ let assetType = block.properties.assetType.lowercased() /]}
+{[ let buttonText = block.properties.buttonText /]}
+
+{[ if (title !== "" && url !== "") ]}
+{[ if buttonText == "" && assetType == "figma" ]}
+  {[ buttonText = "Open in Figma" /]}
+{[/]}
+{[if buttonText == "" && assetType != "figma"]}
+  {[ buttonText = "Download" /]}
+{[/]}
+<div class="content-block asset-link {{assetType}}">
+  <h4 class="asset-link__title">{{title}}</h4>
+  {[ if body !== "" ]}<p class="asset-link__content">{{body}}</p>{[/]}
+  <a href="{{url}}" class="asset-link__button" target="_blank">
+    {{buttonText}}
+  </a>
+</div>
+{[/]}
