@@ -4,8 +4,13 @@
 {[ let title = block.properties.title /]}
 {[ let url = block.properties.url /]}
 {[ let body = block.properties.body /]}
-{[ let assetType = block.properties.assetType.lowercased() /]}
+{[ let assetEnum = block.properties.assetType /]}
 {[ let buttonText = block.properties.buttonText /]}
+
+{[ let assetType = '' /]}
+{[ if assetEnum ]}
+  {[ assetType = assetEnum.lowercased() /]}
+{[/]}
 
 {[ if (title !== "" && url !== "") ]}
 {[ if buttonText == "" && assetType == "figma" ]}
@@ -14,6 +19,8 @@
 {[if buttonText == "" && assetType != "figma"]}
   {[ buttonText = "Download" /]}
 {[/]}
+
+
 <div class="content-block asset-link {{assetType}}">
   <h4 class="asset-link__title">{{title}}</h4>
   {[ if body !== "" ]}<p class="asset-link__content">{{body}}</p>{[/]}
