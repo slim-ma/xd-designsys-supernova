@@ -22,8 +22,12 @@
 
 
 <div class="content-block asset-link {{assetType}}">
-  <h4 class="asset-link__title">{{title}}</h4>
-  {[ if body !== "" ]}<p class="asset-link__content">{{body}}</p>{[/]}
+  <div class="asset-link__content">
+    <h4 class="asset-link__title">{{title}}</h4>
+    {[ if body !== "" ]}
+      <p class="asset-link__content">{{body}}</p>
+    {[/]}
+  </div>
   <a href="{{url}}" class="asset-link__button" target="_blank">
     {{buttonText}}
   </a>
