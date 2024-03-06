@@ -9,10 +9,17 @@
   max-width: none;
 }
 
+#main-wrapper, .site-wrapper, .site-content-wrapper, .site-content {
+  height: 100%;
+}
+
 /* LAYOUT  */
 .docs-content {
   margin: 0 auto;
   max-width: fit-content;
+}
+.page-content {
+  min-height: calc(100vh - 193px);
 }
   
 #section-content-page {

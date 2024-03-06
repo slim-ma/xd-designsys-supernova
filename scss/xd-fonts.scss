@@ -3,10 +3,41 @@
  */
 
 /* 
- * FINANCIER
+ * FINANCIER (Semibold)
  */
+ @font-face {
+  font-family: Financier;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url(https://github.com/slim-ma/xd-designsys-supernova/raw/master/assets/_dist/webfonts/financier-display-semibold.woff2);
+}
+
 
 /* 
- * GT America (Normal & BOLD)
+ * GT America (Normal, Italic, & Bold)
  */
+ @font-face {
+  font-family: "GT America";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(https://github.com/slim-ma/xd-designsys-supernova/raw/master/assets/_dist/webfonts/GT-America-Standard-Bold.woff2);
+}
+
+@font-face {
+  font-family: "GT America";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(https://github.com/slim-ma/xd-designsys-supernova/raw/master/assets/_dist/webfonts/GT-America-Standard-Regular.woff2);
+}
+
+@font-face {
+  font-family: "GT America";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url(https://github.com/slim-ma/xd-designsys-supernova/raw/master/assets/_dist/webfonts/GT-America-Standard-Regular-Italic.woff2);
+}
 
