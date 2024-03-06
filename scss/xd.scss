@@ -78,16 +78,23 @@
 .container-title {
   padding: 3.5rem 0;
 }
+
+.container-title>.slider {
+  gap: 1.5rem;
+}
   
 .container-title>.slider h1.page-title {
   color: var(--color-moodys-blue);
-  color: black;
   font-size: 4.75rem;
   font-weight: 600;
   line-height: 1;
 }
 
-  
+.container-title>.slider .subtitle {
+  color: var(--color-gray-08);
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 
 /* TABS */
 .container-tabs {
