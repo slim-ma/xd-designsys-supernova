@@ -12,7 +12,7 @@
   {[ assetType = assetEnum.lowercased() /]}
 {[/]}
 
-{[ if (title !== "" && url !== "") ]}
+{[ if title !== "" ]}
 {[ if buttonText == "" && assetType == "figma" ]}
   {[ buttonText = "Open in Figma" /]}
 {[/]}
