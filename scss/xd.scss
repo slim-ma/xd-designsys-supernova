@@ -10,7 +10,6 @@
 }
 
 /* LAYOUT  */
-  
 .docs-content {
   margin: 0 auto;
   max-width: fit-content;
@@ -53,7 +52,54 @@
   top: 120px;
 }
 
+/* HEADER */
+#header > .navbar {
+  background: rgba(255,255,255,0.63);
+  backdrop-filter: blur(20px);
+  padding: 1.25rem 2rem;
+}
+.logo-wrapper {
+  width: unset;
+  height: unset;
+  margin-right: 2rem;
+  padding-right: 0;
+}
 
+/* BREADCRUMBS */
+.breadcrumb--container {
+  padding-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* TITLE AREA */
+.container-title {
+  padding: 3.5rem 0;
+}
+  
+.container-title>.slider h1.page-title {
+  color: var(--color-moodys-blue);
+  color: black;
+  font-size: 4.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+  
+
+/* TABS */
+.container-tabs {
+  border-bottom: 2px solid #DDDDDE;
+  max-width: 741px;
+  margin-bottom: 1rem;
+}
+
+/* side NAV */
+.page-nav {
+  border-left: 1px solid #DDDDDE;
+}
 
 /*
 ****** OLD STYLING ******
