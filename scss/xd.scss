@@ -17,8 +17,12 @@
 
 
 /*  DAY ONE */
+.navbar-nav, .utility-nav, #sidebarCollapse {
+  display: none;
+}
 .container-title>.slider h1.page-title {
   font-family: Fiancier;
+  letter-spacing: -0.5px;
 }
 
 .site-content-wrapper {
