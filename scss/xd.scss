@@ -13,10 +13,27 @@
   height: 100%;
 }
 
+
+
+
 /*  DAY ONE */
 .container-title>.slider h1.page-title {
   font-family: Fiancier;
 }
+
+.site-content-wrapper {
+  background: var(--color-bright-blue);
+}
+ 
+.container-title, .docs-content {
+  background: transparent;
+}
+
+.sub-title, p, .navbar-nav {
+  font-family: "GT America";
+}
+
+
 
 /* LAYOUT  */
 .docs-content {
