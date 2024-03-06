@@ -32,6 +32,45 @@
 .sub-title, p, .navbar-nav {
   font-family: "GT America";
 }
+.sub-title, p, .navbar-nav {
+  font-family: "GT America";
+}
+
+.page-title, p {
+  color: white !important;
+}
+.site-content {
+  background-image: url('https://studio-assets.supernova.io/design-systems/27071/77609bbf-c942-4aad-87d7-4bf5a7d897f4.png');
+  background-repeat: no-repeat;
+  background-position: top ;
+  background-position-x:  calc(45vw);
+}
+.container-title {
+  border-bottom: 0;
+}
+main > p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+a {
+  color: white;
+  text-decoration: underline;
+}
+a:hover {
+  color: #9DC1FF;;
+}
+a.day-one {
+  padding: 1rem 2rem;
+  background: var(--color-moodys-blue);
+  border-radius: 35px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+p.link-wrapper.day-one {
+  margin-top: 2rem;
+}
 
 
 
