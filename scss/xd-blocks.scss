@@ -1,6 +1,12 @@
+.content-block {
+  margin-top: 1rem;
+}
+
+/* ASSET LINK BANNERS */
+
 .asset-link {
   background: var(--color-bright-blue);
-  color: white;
+  color: var(--color-light-text);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -8,14 +14,39 @@
   padding: 1.5rem 1.5rem 1.5rem 4.5rem;
   gap: 1rem;
   align-items: center;
+  background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_figma.svg);
+  background-repeat: no-repeat;
+  background-position: 24px 50%;
+  &.css {
+    background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_css.svg);
+  }
+  &.asset-link.adobe {
+    background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_abobe.svg);
+  }
+  &.asset-link.type {
+    background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_type.svg);
+  }
 }
-
+.asset-link__content {
+  margin-bottom: 0;
+}
+.asset-link__title {
+  color: var(--color-light-text);
+  margin-bottom: 0;
+}
+.asset-link__body {
+  color: var(--color-light-text);
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
 .asset-link__button {
-  background: var(--color-bright-blue);
-  padding: 0.5rem 1.375rem 0.5rem 2.875rem;
+  background: var(--color-moodys-blue);
   border-radius: 20px;
+  color: var(--color-light-text);
   height: 40px;
-  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1.375rem 0.5rem 2.875rem;
 }
 
 /*

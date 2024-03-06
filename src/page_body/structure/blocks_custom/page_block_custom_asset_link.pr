@@ -23,12 +23,11 @@
   {[ buttonText = "NO URL" /]}
 {[/]}
 
-
 <div class="content-block asset-link {{assetType}}">
   <div class="asset-link__content">
     <h4 class="asset-link__title">{{title}}</h4>
     {[ if body !== "" ]}
-      <p class="asset-link__content">{{body}}</p>
+      <p class="asset-link__body">{{body}}</p>
     {[/]}
   </div>
   <a href="{{url}}" class="asset-link__button" target="_blank">
