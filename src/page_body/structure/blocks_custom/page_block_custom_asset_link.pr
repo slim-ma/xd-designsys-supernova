@@ -19,6 +19,9 @@
 {[if buttonText == "" && assetType != "figma"]}
   {[ buttonText = "Download" /]}
 {[/]}
+{[ if url == undefined || url == "" ]}
+  {[ buttonText = "NO URL" /]}
+{[/]}
 
 
 <div class="content-block asset-link {{assetType}}">

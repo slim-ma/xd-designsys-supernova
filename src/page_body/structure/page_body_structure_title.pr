@@ -11,9 +11,6 @@
 
 {* Title *}
 {[ let title = (group.groupBehavior === "Tabs" ? htmlSafeString(group.title) : htmlSafeString(page.title)) /]}
-{* Description *}
-{[ let test = group.title /]}
-THIS IS MY TEST: {{test}}
 
 {* Configure appropriate classes based on the configuration *}
 {[ let centeredClass = (headerConfiguration.alignment === "Center" ? " centered" : "") /]}
