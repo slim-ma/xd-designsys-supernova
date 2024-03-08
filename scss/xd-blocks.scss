@@ -23,7 +23,7 @@
   &.asset-link.adobe {
     background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_abobe.svg);
   }
-  &.asset-link.type {
+  &.asset-link.font {
     background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_type.svg);
   }
 }
@@ -41,6 +41,9 @@
 }
 .asset-link__button {
   background: var(--color-moodys-blue);
+  background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/icon_download.svg);
+  background-repeat: no-repeat;
+  background-position: 22px;
   border-radius: 20px;
   color: var(--color-light-text);
   height: 40px;
