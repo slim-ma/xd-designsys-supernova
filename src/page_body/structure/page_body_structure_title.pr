@@ -30,7 +30,8 @@
 
 {* Background image set on the page overrides all settings *}
 {[ if headerConfiguration.backgroundImageAssetUrl ]}
-<div class="container-title{{ centeredClass }}{{ flexedClass }}{{layoutTypeClass}}" style="{{ heightStyle }}background: url({{ headerConfiguration.backgroundImageAssetUrl }}) no-repeat center center; background-size: {{ headerConfiguration.backgroundImageScaleType === "AspectFill" ? "cover" : "contain" }};">
+{* <div class="container-title{{ centeredClass }}{{ flexedClass }}{{layoutTypeClass}}" style="{{ heightStyle }}background: url({{ headerConfiguration.backgroundImageAssetUrl }}) no-repeat center center; background-size: {{ headerConfiguration.backgroundImageScaleType === "AspectFill" ? "cover" : "contain" }};"> *}
+<div class="container-title{{ centeredClass }}{{ flexedClass }}{{layoutTypeClass}}" style="{{ heightStyle }}">
 <!-- bg:1 -->
 {* Background image set on doc export settings level overrides all settings *}
 {[ elseif (globalConfiguration.lookAndFeelHeaderBackgroundImage && globalConfiguration.lookAndFeelHeaderBackgroundImage.assetUrl) ]}
@@ -56,6 +57,7 @@
 {* Default without any configuration *}
 {[ else ]}
 <div class="container-title{{ centeredClass }}{{ flexedClass }}{{layoutTypeClass}}" style="{{ heightStyle }}">
+<!-- bg:6 -->
 {[/]}
     {[ if headerConfiguration.showBackgroundOverlay ]}
         <div class="container-title-overlay"></div>
@@ -84,6 +86,9 @@
             {[/]}
         {[/]}
     </div>
+    {[ if headerConfiguration.backgroundImageAssetUrl ]}
+    <div class="hero-image" style="{{ heightStyle }}background-image: url({{ headerConfiguration.backgroundImageAssetUrl }});"></div>
+    {[/]}
 </div>
 
 {* Generate tabs if parent is group *}
