@@ -14,17 +14,17 @@
   padding: 1.5rem 1.5rem 1.5rem 4.5rem;
   gap: 1rem;
   align-items: center;
-  background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_figma.svg);
+  background-image: url("https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_figma.svg");
   background-repeat: no-repeat;
   background-position: 24px 50%;
   &.css {
-    background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_css.svg);
+    background-image: url("https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_css.svg");
   }
   &.adobe {
-    background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_abobe.svg);
+    background-image: url("https://studio-assets.supernova.io/design-systems/27071/88ac3722-a606-4435-ac10-b6f9ab3ebd2f.svg");
   }
   &.font {
-    background-image: url(https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_type.svg);
+    background-image: url("https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_type.svg");
   }
 }
 .asset-link__content {
