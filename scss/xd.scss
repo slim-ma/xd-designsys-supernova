@@ -13,17 +13,10 @@
   height: 100%;
 }
 
-
-
-
 /*  DAY ONE */
 /*
 .navbar-nav, .utility-nav, #sidebarCollapse {
   display: none;
-}
-.container-title>.slider h1.page-title {
-  font-family: Fiancier;
-  letter-spacing: -0.5px;
 }
 
 .site-content-wrapper {
@@ -160,10 +153,12 @@ p.link-wrapper.day-one {
 .container-title>.slider {
   gap: 1.5rem;
 }
-  
+
 .container-title>.slider h1.page-title {
   color: var(--color-moodys-blue);
+  font-family: "Financier";
   font-size: 4.75rem;
+  letter-spacing: -0.5px;
   font-weight: 600;
   line-height: 1;
 }
