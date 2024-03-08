@@ -87,7 +87,7 @@
         {[/]}
     </div>
     {[ if headerConfiguration.backgroundImageAssetUrl ]}
-    <div class="hero-image" style="{{ heightStyle }}background-image: url({{ headerConfiguration.backgroundImageAssetUrl }});"></div>
+    <img class="hero-image" src="{{ headerConfiguration.backgroundImageAssetUrl }})" aria-hidden="true" />
     {[/]}
 </div>
 
