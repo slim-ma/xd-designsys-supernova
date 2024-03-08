@@ -147,7 +147,8 @@ p.link-wrapper.day-one {
 
 /* TITLE AREA */
 .container-title {
-  padding: 3.5rem 0;
+  border-bottom: 0;
+  padding: 3.5rem 0 2rem;
 }
 
 .container-title>.slider {
@@ -167,6 +168,12 @@ p.link-wrapper.day-one {
   color: var(--color-gray-08);
   font-size: 1.5rem;
   line-height: 2rem;
+  max-width: unset;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  width: 100%;
 }
 
 /* TABS */
