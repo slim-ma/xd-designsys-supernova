@@ -82,7 +82,8 @@
             <h1 class="page-title" style="{{ style }}">{{ withHTMLNewlines(title) }}</h1>
             {* Show description if provided *}
             {[ if headerConfiguration.description ]}
-                <p class="subtitle" style="{{ style }}">{{ withHTMLNewlines(htmlSafeString(headerConfiguration.description)) }}</p>
+                {* <p class="subtitle" style="{{ style }}">{{ withHTMLNewlines(htmlSafeString(headerConfiguration.description)) }}</p> *}
+                <p class="subtitle">{{ withHTMLNewlines(htmlSafeString(headerConfiguration.description)) }}</p>
             {[/]}
         {[/]}
     </div>

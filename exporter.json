@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.10.29",
+  "version": "4.10.30",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -728,7 +728,7 @@
         "key": "co.stevelim.documentation.asset-card-2col",
         "title": "Asset Card (2-col)",
         "description": "A row of card links for external assets",
-        "icon": "icons/custom-block-asset-2col.png",
+        "icon": "icons/custom-deprecated.png",
         "mode": "block",
         "category": "Content",
         "properties": [
@@ -826,7 +826,7 @@
         "key": "co.stevelim.documentation.asset-card-3col",
         "title": "Asset Card (3-col)",
         "description": "A row of card link for external assets",
-        "icon": "icons/custom-block-asset-3col.png",
+        "icon": "icons/custom-deprecated.png",
         "mode": "block",
         "category": "Content",
         "properties": [
@@ -965,7 +965,7 @@
         "key": "co.stevelim.documentation.card-one-col",
         "title": "Full Width Card",
         "description": "Card link w/optional image (full width)",
-        "icon": "icons/custom-block-card-1col.png",
+        "icon": "icons/custom-deprecated.png",
         "mode": "block",
         "category": "Content",
         "properties": [
@@ -1017,7 +1017,7 @@
         "key": "co.stevelim.documentation.card-two-col",
         "title": "Two Half Width Cards",
         "description": "Two card link across 2 columns",
-        "icon": "icons/custom-block-card-2col.png",
+        "icon": "icons/custom-deprecated.png",
         "mode": "block",
         "category": "Content",
         "properties": [
