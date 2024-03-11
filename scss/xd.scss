@@ -13,6 +13,10 @@
   height: 100%;
 }
 
+.nav > .nav-item {
+  padding: 0 0 0 0;
+}
+
 /*  DAY ONE */
 /*
 .navbar-nav, .utility-nav, #sidebarCollapse {
@@ -78,12 +82,15 @@ p.link-wrapper.day-one {
 
 
 /* LAYOUT  */
+.site-wrapper .site .site-content-wrapper .site-content {
+  min-height: unset;
+}
 .docs-content {
   margin: 0 auto;
   max-width: fit-content;
 }
 .page-content {
-  min-height: calc(100vh - 193px);
+  flex-grow: 2;
 }
   
 #section-content-page {
@@ -100,6 +107,7 @@ p.link-wrapper.day-one {
 }
 .container-tabs {
   max-width: var(--mainWidth);
+  top: 5rem;
 }
 .container-tabs > .tabbed-navigation {
   align-items: start;
@@ -114,20 +122,37 @@ p.link-wrapper.day-one {
   
 .page-main-content {
   max-width: 741px;
+  padding-top: 1.5rem;
 }
   
 .page-nav {
   z-index: 30;
   width: 265px;
   position: sticky;
-  top: 120px;
+  top: 10.5rem;
+  margin-left: 3.75rem;
 }
 
+/*
+ * RESPONSIVE LAYOUT
+ */
+ @media (max-width: 790px) {
+  .content-nav-container {
+    display: none;
+  }
+}
+
+
 /* HEADER */
-#header > .navbar {
-  background: rgba(255,255,255,0.63);
-  backdrop-filter: blur(20px);
-  padding: 1.25rem 2rem;
+#header {
+  background: transparent;
+  border-bottom: 0;
+
+  &> .navbar {
+    background: rgba(255,255,255,0.63);
+    backdrop-filter: blur(20px);
+    padding: 1.25rem 2rem;
+  }
 }
 .logo-wrapper {
   width: unset;
@@ -181,6 +206,23 @@ p.link-wrapper.day-one {
   border-bottom: 2px solid #DDDDDE;
   max-width: 741px;
   margin-bottom: 1rem;
+  top: 4.5rem;
+}
+
+.nav-tabs {
+  border-bottom: 0;
+  padding: 0 1.5rem;
+  gap: 5rem;
+
+  .nav-item .nav-link {
+    color: var(--color-moodys-blue);
+    padding: 0.75rem 0;
+
+    .nav-link.active {
+      font-weight: 700;
+      border-bottom: 2px solid var(--color-moodys-blue);
+    }      
+  }
 }
 
 /* side NAV */
@@ -188,6 +230,7 @@ p.link-wrapper.day-one {
   border-left: 1px solid #DDDDDE;
   font-size: 0.75rem;
   line-height: 1rem;
+  margin-left: 3.75rem;
 }
   
 .content-nav-header {
@@ -226,7 +269,6 @@ p.link-wrapper.day-one {
   color: var(--color-moodys-blue-300);
   font-size: 0.875rem;
   line-height: 1.375rem;
-  max-height: 5.375rem;
   text-align: center;
 }
 .footer--text {
