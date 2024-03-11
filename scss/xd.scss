@@ -218,7 +218,7 @@ p.link-wrapper.day-one {
     color: var(--color-moodys-blue);
     padding: 0.75rem 0;
 
-    .nav-link.active {
+    &.active {
       font-weight: 700;
       border-bottom: 2px solid var(--color-moodys-blue);
     }      
