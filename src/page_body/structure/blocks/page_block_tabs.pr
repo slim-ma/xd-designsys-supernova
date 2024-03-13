@@ -83,7 +83,7 @@
     <div class="row tabs-as-columns">
       {[ map (block.children.enumerated()) to index tab ]}
           {[ let id = tab.id.prefixed("T") /]}
-        <div class="col-sm">
+        <div class="col-sm {{tab.caption}}">
           {[ for child in tab.children ]}
             {[ inject "page_body_structure_block" context ({"block": child, "pageId": pageId}) /]}
           {[/]}
