@@ -85,6 +85,9 @@
                 <div class="breadcrumb--container">
                   {[if parent]}
                     {[ inject "page_body_structure_breadcrumbs" context parent  /]}
+                  {[ else ]}
+                    <a href="/" class="breadcrumb__link">Home</a>
+                    <span class="breadcrumb__divider">/</span>
                   {[/]}
                   {[if page]}
                     <span class="breadcrumb_end">{{ page.title }}</span>
