@@ -87,7 +87,7 @@
                     {[ inject "page_body_structure_breadcrumbs" context parent  /]}
                   {[/]}
                   {[if page]}
-                    <span class="breadcrumb_end">{{ title }}</span>
+                    <span class="breadcrumb_end">{{ page.title }}</span>
                   {[/]}
                 </div>
               {[/]}
