@@ -1,0 +1,54 @@
+/*
+ * HOMEPAGE
+ */
+
+.is-homepage {
+  .container-title {
+    display: none;
+  }
+  .page-main-content {
+    max-width: 1128px;
+  }
+  .site-wrapper {
+    background-image: url('https://studio-assets.supernova.io/design-systems/27071/cfac6f23-39bc-4c5c-8ebc-6d36ab881ed5.svg');
+    background-repeat: no-repeat;
+  }
+  // TWIN BLOCKS
+  .content-block--tabs {
+    margin-top: 480px;
+  }
+  .content-block--tabs .col-sm{
+    height:   776px;
+    max-width: 670px;
+    width: 40%;
+  }
+}
+
+/*
+ * ICONOGRAPHY
+ */
+  
+.GHTTVQ0c {
+  .container-title>.slider .subtitle {
+    margin-bottom: 532px;
+  }
+
+  .content-block--tabs {
+    margin-top: -550px;
+    width: 1128px;
+    padding: 2rem;
+
+    .col-sm {
+      height: 500px;
+      background: silver;
+    }
+  }
+  .tabs-as-columns {
+    gap: 2rem;
+  }
+}
+  
+  
+  
+  
+  
