@@ -109,7 +109,6 @@ button.bg-primary:hover {
     background-color: var(--colorAccent);
 }
 
-.page-item.active .page-link,
 .custom-radio .custom-control-input:checked~.custom-control-label:before,
 .custom-control-input:checked~.custom-control-label::before,
 .custom-checkbox .custom-control-input:checked~.custom-control-label:before,
@@ -122,31 +121,6 @@ button.bg-primary:hover {
     background-color: var(--colorAccent);
     border-color: var(--colorAccent);
 }
-
-.page-link {
-    color: var(--colorAccent);
-    transition: var(--transitionDefault);
-}
-
-.page-link:hover {
-    color: var(--colorAccentAlt);
-}
-
-
-/* Pagination */
-
-.page-link {
-    border: none;
-    border-radius: var(--borderRadiusDefault);
-    margin: 0 0.22rem;
-    font-size: 16px;
-    font-size: 1rem;
-}
-
-.page-link:hover {
-    background-color: #e9eff0;
-}
-
 
 /* Vertical Multilple input group */
 
@@ -267,7 +241,7 @@ ol>.block-children {
     }
 }
 
-.container-title > .slider {
+.slider {
     width: 100%;
     max-width: var(--contentMaxWidth);
     margin: 0px auto;
@@ -279,7 +253,7 @@ ol>.block-children {
     min-height: var(--pageHeaderHeight);
     justify-content: center;
 
-    h1.page-title {
+    .page-title {
         padding: 0px;
         // font-family: var(--pageTitleFontFamily);
         color: var(--pageHeaderInk);
@@ -299,7 +273,7 @@ ol>.block-children {
     }
 }
 
-.container-title.inverted > .slider {
+.container-title.inverted .slider {
     h1,
     .subtitle {
         color: var(--colorInkInverted);
