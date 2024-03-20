@@ -6,7 +6,7 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
-  "version": "4.10.39",
+  "version": "4.10.40",
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -604,6 +604,7 @@
         "key": "co.stevelim.documentation.asset-link",
         "title": "Asset Link",
         "description": "A blue banner that links to an asset",
+        "icon": "icons/custom-block-asset-link.png",
         "mode": "block",
         "category": "Content",
         "properties": [
