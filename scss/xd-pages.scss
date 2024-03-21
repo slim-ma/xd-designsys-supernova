@@ -10,6 +10,9 @@
     padding-top: 0;
     max-width: 741px;
     margin: 0 auto;
+    & > h2:first-of-type {
+      margin-top: 110px;
+    }
   }
   .site {
     margin-top: -96px;

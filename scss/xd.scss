@@ -176,8 +176,9 @@ p.link-wrapper.day-one {
 .primary-menu #header-nav ul.navbar-nav > li > a {
   &:not(.btn) {
     color: var(--color-moodys-blue);
-    padding: 0.5rem 0;
-    border-radius: 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
   }
   &.active:not(.btn) {
     background: transparent;
@@ -185,6 +186,8 @@ p.link-wrapper.day-one {
     font-weight: 700;
     padding: 0.5rem 0 6px;
     border-bottom: 2px solid var(--color-moodys-blue);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
