@@ -7,20 +7,70 @@
     display: none;
   }
   .page-main-content {
-    max-width: 1128px;
+    padding-top: 0;
   }
-  .site-wrapper {
+  .site {
+    margin-top: -96px;
+  }
+  .content-block--tabs:first-of-type {
+    background: #005EFF;
+    width: 100vw;
+    margin: 0 calc(-50vw + 370px);
+    padding-top: 320px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 980px;
     background-image: url('https://studio-assets.supernova.io/design-systems/27071/cfac6f23-39bc-4c5c-8ebc-6d36ab881ed5.svg');
     background-repeat: no-repeat;
+    background-position: top right;
+
+    &> .row {
+      display: block;
+      margin: 0 auto;
+      max-width: 1128px;
+    }
+    .hero {
+      height: auto;
+      padding: 0;
+      max-width: 40%;
+    }
   }
+
   // TWIN BLOCKS
-  .content-block--tabs {
-    margin-top: 480px;
+  .content-block--tabs:nth-of-type(2) {
+    width: 100vw;
+    margin: 0 calc(-50vw + 370px);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 2rem;
+    margin-top: -200px;
+    
+    .row{
+      gap: 2rem;
+      flex-direction: row;
+      justify-content: center;
+    }
   }
-  .content-block--tabs .col-sm{
-    height:   776px;
-    max-width: 670px;
-    width: 40%;
+}
+
+.left-hero-col, .right-hero-col {
+  border: 1px solid var(--color-moodys-blue);
+  text-align: center;
+  
+  .heading {
+    font-size: 3rem; 
+    font-weight: 400;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .link-wrapper > .primary {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem 1.375rem;
+    border-radius: 1rem;
   }
 }
 
