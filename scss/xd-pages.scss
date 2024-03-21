@@ -91,13 +91,14 @@
 }
 
 .left-hero-col, .right-hero-col {
+  align-items: center;
   border: 1px solid var(--color-moodys-blue);
-  text-align: center;
-  height: 776px;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  align-items: center;
+  height: 776px;
+  max-width: 741px;
+  text-align: center;
   
   .heading {
     font-size: 3rem; 
@@ -109,20 +110,20 @@
   }
   
   .link-wrapper > .primary {
+    border-radius: 2rem;
     font-size: 1rem;
     font-weight: 700;
     padding: 0.5rem 1.375rem;
-    border-radius: 2rem;
   }
 }
 
 .left-hero-col {
-  padding-top: 110px;
-  justify-content: flex-start;
   background-color: white;
   background-image: url("https://studio-assets.supernova.io/design-systems/27071/c2e093ca-02b3-4d4d-8e61-a206b31d5cb4.svg");
   background-repeat: no-repeat;
   background-position: bottom;
+  justify-content: flex-start;
+  padding-top: 110px;
 
   & > * {
     max-width: 520px;
