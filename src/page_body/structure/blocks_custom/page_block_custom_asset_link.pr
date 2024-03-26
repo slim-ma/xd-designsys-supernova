@@ -13,16 +13,6 @@
 {[/]}
 
 {[ if title !== "" ]}
-{[ if buttonText == "" && assetType == "figma" ]}
-  {[ buttonText = "Open in Figma" /]}
-{[/]}
-{[if buttonText == "" && assetType != "figma"]}
-  {[ buttonText = "Download" /]}
-{[/]}
-{[ if url == undefined || url == "" ]}
-  {[ buttonText = "NO URL" /]}
-{[/]}
-
 <div class="content-block asset-link {{assetType}}">
   <div class="asset-link__content">
     <h4 class="asset-link__title">{{title}}</h4>
@@ -30,8 +20,10 @@
       <p class="asset-link__body">{{body}}</p>
     {[/]}
   </div>
+  {[ if buttonText !== "" ]}
   <a href="{{url}}" class="asset-link__button" target="_blank">
     {{buttonText}}
   </a>
+  {[/]}
 </div>
 {[/]}
