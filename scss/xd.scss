@@ -144,7 +144,15 @@ p.link-wrapper.day-one {
     display: none;
   }
 }
-
+@media(max-width: 804px ){
+  .is-homepage .content-container {
+    margin: 0 -32px;
+  }
+    
+  .is-homepage .content-block--tabs:first-of-type {
+    margin: 0;
+  }
+}
 
 /* HEADER */
 #header {

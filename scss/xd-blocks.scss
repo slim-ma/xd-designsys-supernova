@@ -26,6 +26,14 @@
   &.font {
     background-image: url("https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_type.svg");
   }
+  &.web {
+    background-image: url('https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_link.svg');
+
+    & > .asset-link__button {
+      background-image: url('https://raw.githubusercontent.com/slim-ma/xd-designsys-supernova/master/assets/_img/asset_jumpSM.svg');
+      background-size: 14px;
+    }
+  }
 }
 .asset-link__content {
   margin-bottom: 0;
