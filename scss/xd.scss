@@ -97,6 +97,7 @@ p.link-wrapper.day-one {
 }
   
 #section-content-page {
+  padding-top: 96px;  
   width: auto;
 }
   
@@ -158,6 +159,9 @@ p.link-wrapper.day-one {
 #header {
   background: transparent;
   border-bottom: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   &> .navbar {
     background: rgba(255,255,255,0.63);
