@@ -14,23 +14,30 @@
   --colorNeutral800: #515964;
   --colorNeutral900: #141618;
   --colorRed100: #fff5f5;
+  --colorRed300: #e46969;
+  --colorRed400: #ef4444;
   --colorRed500: #d23031;
   --colorRed700: #C13F39;
   --colorRed900: #9e2122;
   --colorGreen100: #ebfff0;
+  --colorGreen300: #4ade80;
+  --colorGreen400: #22c55e;
   --colorGreen500: #00a454;
   --colorGreen900: #008141;
   --colorOrange100: #fff6f0;
+  --colorOrange300: #fdba74;
+  --colorOrange400: #f97316;
   --colorOrange500: #e36b00;
   --colorOrange900: #ba4e00;
 
   /*  Core tokens 
   /* =================================== */
   --fontFamily: Inter, Arial, sans-serif;
+  --fontFamilyCode: 'Fira Code', 'Fira Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   --headingFontFamily: var(--fontFamily);
-  --borderRadiusSmall: 2px;
-  --borderRadiusDefault: 4px;
-  --borderRadiusLarge: 6px;
+  --borderRadiusSmall: 4px;
+  --borderRadiusDefault: 6px;
+  --borderRadiusLarge: 8px;
   --navItemBorderRadius: var(--borderRadiusDefault);
   --transitionDefault: 200ms all ease-in-out;
   --boxShadowLevel0: 0px 0px 0px 1px var(--colorBorderSubtle);
@@ -62,7 +69,7 @@
   /* for page structure */
   --colorBorderStructure: var(--colorBorderSubtle);
   /* links, active states, ... */
-  --colorAccent: #0f62fe;
+  --colorAccent: #104fc6;
   /* hovers for primary */
   --colorAccentAlt: #0043ce;
   /* Background for active items, e.g. in left nav or tabs */

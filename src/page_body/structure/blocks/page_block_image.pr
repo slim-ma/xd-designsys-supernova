@@ -2,6 +2,7 @@
 {[ const block = context /]}
 {[ let imgClass = "" /]}
 {[ let alignClass = "" /]}
+{[ let altText = "" /]}
 
 {* Create image with lightbox interaction, or ignore it if url is not set *}
 {[ if block.url ]}
@@ -23,9 +24,38 @@
     {[ alignClass = "sn-text-left" /]}
 {[/]}
 
+{[ if (isNonEmptyString(block.imageAlt)) ]}
+    {[ altText = block.imageAlt /]}
+{[ elseif (isNonEmptyString(block.caption)) ]}
+    {[ altText = block.caption /]}
+{[/]}
+
 <div class="content-block content-block--image {{ alignClass }}" id="{{ getSearchIDString(block.id) }}">
 {* Add <a class="popup-img" href="{{ block.url }}"> <img> </a> if you want to enable lightbox-functionality *}
-    <img src="{{ block.url }}" class="{{ imgClass }}" alt="{{ block.caption }}" />
+{[ if (block.asset && block.asset.type === "figmaFrame" && block.asset.frame && block.asset.frame.origin && block.asset.frame.origin.height) ]}
+    {[ if ((altText === "" && block.asset.frame.title)) ]}
+        {[ altText = block.asset.frame.title /]}
+    {[/]}
+    {[ if (isNonEmptyString(altText)) ]}
+       <img src="{{ block.url }}"
+        class="{{ imgClass }}"
+        alt="{{ altText }}"
+        height="{{ block.asset.frame.origin.height }}"
+        width="{{ block.asset.frame.origin.width }}" />
+    {[ else ]}
+        <img src="{{ block.url }}"
+        class="{{ imgClass }}"
+        height="{{ block.asset.frame.origin.height }}"
+        width="{{ block.asset.frame.origin.width }}" />
+    {[/]}
+    
+{[ else ]}
+    {[ if (isNonEmptyString(altText)) ]}
+        <img src="{{ block.url }}" class="{{ imgClass }}" alt="{{ altText }}" />
+    {[ else ]}
+        <img src="{{ block.url }}" class="{{ imgClass }}" />
+    {[/]}
+{[/]}
     
 {* Add caption if set *}
 {[ if block.caption ]}

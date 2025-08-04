@@ -19,7 +19,7 @@
     > .slider {
       display: flex;
       align-items: center;
-      height: 59px;
+      height: 43px;
       padding: 0;
     }
   }
@@ -34,6 +34,10 @@
     font-size: var(--fontSizeSmall);
     line-height: var(--contentBodyLineHeight);
     color: var(--colorInkSecondary);
+  }
+
+  a {
+    text-decoration: underline;
   }
 
   p:last-child {

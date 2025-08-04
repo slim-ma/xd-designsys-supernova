@@ -19,6 +19,7 @@ export type DocSearchResultData = {
   text: string,
   category: string,
   type: DocSearchResultDataType
+  keywords?: string
   url: string
 }
 
@@ -35,9 +36,9 @@ export function buildSearchIndexJSON(pages: Array<DocumentationPage>, groups: Ar
     // Path and url creation
     let subpaths: Array<string> = [page.title]
     let parent: DocumentationGroup | null = page.parent
-    let skipGenBecauseHidden: boolean = !isExportable(page)
+    let skipGenBecauseHidden: boolean = !isExportable(page) || page.configuration.isPrivate
     while (parent) {
-      if (!isExportable(parent)) {
+      if (!isExportable(parent) || parent.configuration.isPrivate) {
         skipGenBecauseHidden = true
       } 
       if (parent?.isRoot) {
@@ -63,7 +64,8 @@ export function buildSearchIndexJSON(pages: Array<DocumentationPage>, groups: Ar
     // Extract rich text from headers and any text piece there is
     let allBlocks = flattenedBlocksOfPage(page)
     for (let block of allBlocks) {
-      if (block.hasOwnProperty("text")) {
+      // We only hide content from the private pages
+      if (block.hasOwnProperty("text") && !page.configuration.isPrivate) {
         let textBlock = block as DocumentationPageBlockText
 
         data.push({
@@ -82,13 +84,14 @@ export function buildSearchIndexJSON(pages: Array<DocumentationPage>, groups: Ar
       type: DocSearchResultDataType.pageTitle,
       pageName: pageName,
       category: category,
+      keywords: category,
       url: url,
     })
   }
 
   // Process every group for data
   for (let group of groups) {
-    if (!isExportable(group)) {
+    if (!isExportable(group) || group.configuration.isPrivate) {
       // Don't generate content for hidden groups
       continue
     }

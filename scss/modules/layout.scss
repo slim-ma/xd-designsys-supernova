@@ -7,7 +7,7 @@
   --siteMaxWidth: none;
   --contentMaxWidth: 756px;
   --contentContainerPadding: 32px;
-  --tocContainerWidth: 280px;
+  --tocContainerWidth: 260px;
   --iconStrokeWidth: 2px;
 
   /* Side Navigation */
@@ -110,6 +110,7 @@ b, strong {
   --sideNavItemHoverInk: var(--sideNavInk);
   --sideNavItemActiveBackground: rgba(255,255,255,0.2);
   --sideNavItemActiveInk: white;
+  --buttonSearchInk: rgba(255, 255, 255, 0.6);
 }
 
 /*=== Side Navigation ===*/
@@ -229,6 +230,18 @@ b, strong {
             flex-shrink: 0;
           }
         }
+
+        .icon-lock {
+          opacity: 0.8;
+          transition: var(--transitionDefault);
+
+          svg {
+            display: inline;
+            height: 16px;
+            width: 16px;
+            flex-shrink: 0;
+          }
+        }
       }
 
       &.active {
@@ -340,8 +353,8 @@ b, strong {
   transition: var(--transitionDefault);
   padding: 0;
   border-radius: var(--sideNavItemBorderRadius);
+  margin-top: 1px;
   
-
   &.is-tab a {
     color: var(--sideNavInkTab);
   }
@@ -393,9 +406,7 @@ b, strong {
 
 
 .nav-sn {
-  position: sticky;
-  bottom: 0;
-  height: 60px;
+  height: 44px;
   z-index: 1;
   border-top: 1px solid var(--sideNavBorderColor);
   display: flex;

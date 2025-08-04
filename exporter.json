@@ -6,7 +6,11 @@
   "organization": "Supernova",
   "source_dir": "src",
   "assets_dir": "assets",
+<<<<<<< HEAD
   "version": "4.10.54",
+=======
+  "version": "5.5.3",
+>>>>>>> upstream/master
   "usesBrands": false,
   "config": {
     "sources": "sources.json",
@@ -18,6 +22,7 @@
     "supernova": "1.0.0"
   },
   "routing": "2",
+  "tokensModel": "2",
   "type": "documentation",
   "tags": ["Documentation", "Template", "Docs", "Reference site", "Styleguide"],
   "contributes": {
@@ -62,7 +67,7 @@
         "key": "lookAndFeelAccentSurfaceColor",
         "type": "color",
         "label": "Surface accent color",
-        "description": "Used for backgrounds of active and selected items. This color should meet AA+ contract criteria against the main accent color. Default color: #ecf4ff.",
+        "description": "Used for backgrounds of active and selected items. This color should meet AA+ contrast criteria against the main accent color. Default color: #ecf4ff.",
         "category": "Look & feel"
       },
       {
@@ -574,7 +579,7 @@
         "key": "contentMarkdownToken",
         "type": "string",
         "label": "Private Markdown token",
-        "description": "If provided, your markdown will be authenticated using this token. The token can contain its type , format: ['basic' | 'Bearer' | 'token'] [token]. If no type of format is provided, 'token' is assumed.",
+        "description": "If provided, your markdown will be authenticated using this token. The token can contain its type , format: ['Basic' | 'Bearer' | 'token'] [token]. If no type of format is provided, 'token' is assumed.",
         "category": "Other",
         "default": ""
       },
@@ -1545,18 +1550,6 @@
           "key": "codeRight",
           "description": "Side-by-side preview and code, with code on the right.",
           "thumbnail": "thumbnails/RenderCode_CodeRight.png"
-        },
-        {
-          "name": "Only preview, no code",
-          "key": "noCode",
-          "description": "Full-width preview only, with no code displayed.",
-          "thumbnail": "thumbnails/RenderCode_NoCode.png"
-        },
-        {
-          "name": "Preview without controls",
-          "key": "noCodeNoControls",
-          "description": "Full-width preview only, with no code and no controls.",
-          "thumbnail": "thumbnails/RenderCode_NoCodeNoControls.png"
         }
       ],
       "io.supernova.documentation-main.markdown": [

@@ -220,8 +220,9 @@ ol>.block-children {
     bottom: 0;
     left: 0;
     background: var(--colorNeutral900);
-    opacity: 0.4;
+    opacity: 0.3;
     z-index: 0;
+    border-radius: var(--pageHeaderRadius);
 }
 
 .container-title {
@@ -252,6 +253,8 @@ ol>.block-children {
     flex-direction: column;
     min-height: var(--pageHeaderHeight);
     justify-content: center;
+    position: relative;
+    z-index: 1;
 
     .page-title {
         padding: 0px;
@@ -335,6 +338,14 @@ ol>.block-children {
     max-width: var(--contentMaxWidth);
     width: 100%;
     margin-bottom: 100px;
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 @media (max-width: 1169px) {
@@ -343,6 +354,107 @@ ol>.block-children {
     }
 }
 
+<<<<<<< HEAD
+=======
+
+/* Sidebar Navigation */
+#content-nav-container {
+    padding-bottom: 16px;
+}
+#content-nav {
+    padding-left: 16px;
+    box-shadow: inset 1px 0 0px 0px var(--colorBorderProminent);
+    width: 200px;
+    position: sticky;
+    float: right;
+    top: calc(var(--topNavHeight) + 20px + var(--tabOffset, 12px));
+    z-index: 10;
+    margin-left: 60px;
+    align-self: flex-start;
+    margin-top: 16px;
+    /* protection for long pages with many titles) */
+    max-height: calc(100vh - (var(--topNavHeight) + 20px + var(--tabOffset, 12px)) - 16px);
+    overflow: auto;
+}
+
+#content-nav>ul>li.sub {
+    margin-left: 12px;
+}
+
+#content-nav>ul>li.sub-2 {
+    margin-left: 24px;
+}
+#content-nav li.active>a {
+    color: var(--colorAccent);
+    font-weight: 500;
+    position: relative;
+}
+
+#content-nav li.active>a::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    left: -16px;
+    top: 2px;
+    background: var(--colorAccent);
+    border-radius: 2px;
+}
+
+#content-nav li.active:last-of-type>a::before {
+    height: 90%; // small UI hack to avoid overflowing the last element
+}
+
+#content-nav li.sub.active>a::before {
+    left: -28px;
+}
+
+#content-nav li.sub-2.active>a::before {
+    left: -49px;
+}
+
+#content-nav ul {
+    list-style-type: none;
+    margin: 0 0 0 16px;
+    padding: 0;
+}
+
+#content-nav>ul {
+    margin: 0;
+}
+
+#content-nav a {
+    text-decoration: none;
+    display: block;
+    padding: 4px 0px;
+    color: var(--colorInkSecondary);
+    font-size: 0.825rem;
+    line-height: 1.5;
+    transition: all 50ms ease-in-out, color 200ms ease-in-out;
+    /* 💡 This small transition makes setting of the active state smooth */
+}
+
+#content-nav .content-nav-header {
+    color: var(--colorInkSecondary);
+    text-transform: uppercase;
+    font-size: 0.725rem;
+    font-weight: var(--fontWeightBold);
+    line-height: 16px;
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: sticky;
+    top: 0;
+    background: var(--colorBackgroundPrimary);
+    z-index: 1;
+}
+
+#content-nav a:hover,
+#content-nav a:focus {
+    color: var(--colorInkPrimary);
+}
+
+>>>>>>> upstream/master
 .btn.focus,
 .btn:focus {
     outline: 0;
@@ -485,7 +597,7 @@ ol>.block-children {
 textarea {
     background: #fff;
     color: hsl(230, 8%, 24%);
-    font-family: 'Fira Code', 'Fira Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-family: var(--fontFamilyCode);
     direction: ltr;
     text-align: left;
     word-spacing: normal;

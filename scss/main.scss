@@ -57,11 +57,15 @@
 @import './blocks/embed';
 @import './blocks/image';
 @import './blocks/markdown';
-@import './blocks/shortcuts';
+@import './blocks/shortcuts-files';
 @import './blocks/table';
 @import './blocks/tabs';
 @import './blocks/tokens';
-@import './blocks/release-notes.scss';
+@import './blocks/release-notes';
+@import './blocks/guidelines';
+@import './blocks/figma-component-props-table';
+@import './blocks/figma-components';
+@import './blocks/files';
 
 /* =================================== */
 
@@ -69,7 +73,7 @@
 /*  Code hightlight
 /* =================================== */
 
-@import './code/highlight.scss';
+@import './code/highlight';
 
 /* =================================== */
 

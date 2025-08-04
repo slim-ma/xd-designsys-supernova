@@ -1,27 +1,37 @@
 {[ const token = context.token /]}
-{[ const theme = context.theme /]}
+{[ const themes = context.themes /]}
 
 {* todo: this needs some refactoring *}
-
 {[ if token.tokenType.equals("Color") ]}
+    {[ let hexValue = tokenValueToHex(token.value) /]}
     <div class="preview checkered-background-light">
-        <div class="color-preview {{ returnSwatchClassnames(token.value) }}" style="background-color: #{{ token.value.hex }};">
-                {[ inject "page_block_token_reference_badge" context token /]}
-
+        <div class="color-preview {{ returnSwatchClassnames(token.value) }}" style="background-color: {{ hexValue }};">
+        {[ inject "page_block_token_reference_badge" context token /]}
         {[ inject "page_block_token_value" context token /]}
-        {[ inject "page_block_token_theme_badge" context theme /]}
+        {[ inject "page_block_token_themes_badge" context themes /]}
         </div>
     </div>
 {[ elseif token.tokenType.equals("Border")]}
     <div class="preview bordered">
         {[ inject "page_block_token_reference_badge" context token /]}
         <div class="token-preview-container large checkered-background-light">
-            <div class="token-preview-container-border large" style="border: {{ token.value.width.measure }}px solid #{{ token.value.color.hex }};"></div>
+            <div class="token-preview-container-border large" style="border: {{ token.value.width.measure }}px {{getBorderStyleValue(token.value.style)}} {{ tokenValueToHex(token.value.color) }};"></div>
         </div>
         <div class="value-footer">
             {[ inject "page_block_token_value" context token /]}
         </div>
-        {[ inject "page_block_token_theme_badge" context theme /]}
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>
+{[ elseif token.tokenType.equals("BorderWidth")]}
+    <div class="preview bordered">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="token-preview-container large checkered-background-light">
+            <div class="token-preview-container-border large" style="border: {{ measureValueToReadableUnit(token.value) }} solid var(--colorBorderProminent);"></div>
+        </div>
+        <div class="value-footer">
+            {[ inject "page_block_token_value" context token /]}
+        </div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
     </div>
 {[ elseif token.tokenType.equals("Blur")]}
     {[ let measure = token.value.radius.measure /]}
@@ -46,7 +56,7 @@
         <div class="value-footer">
             {[ inject "page_block_token_value" context token /]}
         </div>
-        {[ inject "page_block_token_theme_badge" context theme /]}
+        {[ inject "page_block_token_themes_badge" context themes /]}
     </div>
 {[ elseif token.tokenType.equals("Font")]}
     <div class="preview bordered">Ag</div>
@@ -57,33 +67,16 @@
         <div class="value-footer">
             {[ inject "page_block_token_value" context token /]}
         </div>
-        {[ inject "page_block_token_theme_badge" context theme /]}
-    </div>
-{[ elseif token.tokenType.equals("Measure")]}
-     {[ if includes(token.parent.path, "Border Radius") ]}
-        <div class="preview token-preview-container large checkered-background-light bordered">
-            {[ inject "page_block_token_reference_badge" context token /]}
-            <div class="token-preview-container-radius large" style="border-radius: {{ token.value.measure}}px"></div>
-            <div class="value-footer">
-                {[ inject "page_block_token_value" context token /]}
-            </div>
-            {[ inject "page_block_token_theme_badge" context theme /]}
-        </div>
-    {[ else ]}
-        <div class="preview bordered">
-            {[ inject "page_block_token_reference_badge" context token /]}
-            {[ inject "page_block_token_reference_badge" context token /]}
-            {{ token.value.measure}}{{ measureTypeIntoReadableUnit(token.value.unit) }}
-        </div>    
-    {[/]}
-{[ elseif token.tokenType.equals("Radius")]}
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>     
+{[ elseif token.tokenType.equals("BorderRadius")]}
     <div class="preview token-preview-container large checkered-background-light bordered">
         {[ inject "page_block_token_reference_badge" context token /]}
-        <div class="token-preview-container-radius large" style="border-radius: {{ token.value.radius.measure}}px"></div>
+        <div class="token-preview-container-radius large" style="border-radius: {{ token.value.measure}}{{ measureTypeIntoReadableUnit(token.value.unit) }}"></div>
         <div class="value-footer">
             {[ inject "page_block_token_value" context token /]}
         </div>
-        {[ inject "page_block_token_theme_badge" context theme /]}
+        {[ inject "page_block_token_themes_badge" context themes /]}
     </div>
 {[ elseif token.tokenType.equals("Shadow")]}
     <div class="preview bordered">
@@ -94,24 +87,101 @@
         <div class="value-footer">
             {[ inject "page_block_token_value" context token /]}
         </div>
-        {[ inject "page_block_token_theme_badge" context theme /]}
+        {[ inject "page_block_token_themes_badge" context themes /]}
     </div>
-{[ elseif token.tokenType.equals("Text")]}
-    <div class="preview small-text bordered">
+{[ elseif token.tokenType.equals("FontWeight") ]}
+    <div class="preview bordered no-footer">
         {[ inject "page_block_token_reference_badge" context token /]}
-        <div class="value-preview">{{ token.value.text }}</div>
-        {[ inject "page_block_token_theme_badge" context theme /]}
+        <div class="value-preview" style="font-weight: {{ token.value.text }}">Ag</div>
+        <div class="value-footer">
+            {[ inject "page_block_token_value" context token /]}
+        </div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
     </div>
 {[ elseif token.tokenType.equals("Typography")]}
     {[ const typographyCSS = convertTypographyTokenToCSS(token) /]}
-    <div class="preview bordered">
+    <div class="preview bordered preview-typography">
         {[ inject "page_block_token_reference_badge" context token /]}
         <div class="value-preview" style="{{ typographyCSS }}">Ag</div>
         <div class="value-footer">
             {[ inject "page_block_token_value" context token /]}
         </div>
-        {[ inject "page_block_token_theme_badge" context theme /]}
+        {[ inject "page_block_token_themes_badge" context themes /]}
     </div>
-{[ elseif token.tokenType.equals("GenericToken")]}
-    <div class="preview small-text bordered">{{ token.value.text }}</div>
+{[ elseif token.tokenType.equals("FontSize")]}
+    <div class="preview bordered">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="value-preview" style="font-size: {{ normalizeFontSizeCSS(token.value) }}">Ag</div>
+        <div class="value-footer">
+            {[ inject "page_block_token_value" context token /]}
+        </div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>
+{[ elseif token.tokenType.equals("LetterSpacing")]}
+    <div class="preview bordered">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="value-preview" style="letter-spacing: {{ measureValueToReadableUnit(token.value) }}">Hello</div>
+        <div class="value-footer">
+            {[ inject "page_block_token_value" context token /]}
+        </div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>
+{[ elseif token.tokenType.equals("FontFamily")]}
+    <div class="preview bordered">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="value-preview" style="font-family: {{ extendFontFamily(token.value.text) }}">Ag</div>
+        <div class="value-footer">
+            {[ inject "page_block_token_value" context token /]}
+        </div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>
+{[ elseif token.tokenType.equals("Opacity")]}
+    <div class="preview bordered">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="token-preview-container large checkered-background-light">
+            <div class="token-preview-container-opacity" style="opacity: {{ decimalOpacityToPercentage(token.value) }}"></div>
+        </div>
+        <div class="value-footer">
+            {[ inject "page_block_token_value" context token /]}
+        </div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>
+{[ elseif token.tokenType.equals("TextDecoration")]}
+    <div class="preview bordered">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="token-preview-container large" style="text-decoration: {{ convertTextDecorationToCSS(token.value.value) }}">Hello</div>
+        <div class="value-footer">
+            {[ inject "page_block_token_value" context token /]}
+        </div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>
+{[ elseif token.tokenType.equals("TextCase")]}
+    <div class="preview bordered">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="token-preview-container large" style="{{ convertTextCaseToTextTransform(token.value.value, true) }}">Hello world</div>
+        <div class="value-footer">
+            {[ inject "page_block_token_value" context token /]}
+        </div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>
+{[ elseif isStringToken(token.tokenType)]}
+    <div class="preview small-text bordered no-footer">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="token-preview-container-string">
+            {{ token.value.text }}
+        </div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>
+{[ elseif isOptionsToken(token.tokenType)]}
+    <div class="preview small-text bordered no-footer">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        <div class="value-preview">{{ token.value.value }}</div>
+        {[ inject "page_block_token_themes_badge" context themes /]}
+    </div>
+{[ elseif isDimensionToken(token.tokenType)]}
+    <div class="preview small-text bordered no-footer">
+        {[ inject "page_block_token_reference_badge" context token /]}
+        {[ inject "page_block_token_themes_badge" context themes /]}
+        {{ measureValueToReadableUnit(token.value) }}
+    </div>
 {[/]}
