@@ -48,12 +48,7 @@
         {[ let colorToken = ds.tokenById(headerConfiguration.backgroundColor.aliasTo) /]}
         {[ let backgroundColor = "" /]}
         {[ if colorToken ]}
-<<<<<<< HEAD
-        <div class="container-title{{ centeredClass }}{{ flexedClass }}{{layoutTypeClass}}" style="{{ heightStyle }}background-color: #{{ colorToken.value.hex }};">
-        <!-- bg:4 -->
-=======
              {[ backgroundColor = ("background-color: " + tokenValueToHex(colorToken.value) + ";") /]}
->>>>>>> upstream/master
         {[/]}
         <div class="container-title{{ centeredClass }}{{ flexedClass }}{{layoutTypeClass}}" style="{{ heightStyle }}{{ backgroundColor }}">
     {[ else ]}
