@@ -88,7 +88,7 @@
           <!-- Docs Content -->
           <div class="docs-content">
             <section id="section-content-page" class="page-content">
-              {* custom breadcrumb *}
+              {* START custom breadcrumb *}
               {[if !isHomepage]}
                 <div class="breadcrumb--container">
                   {[if parent]}
@@ -102,10 +102,11 @@
                   {[/]}
                 </div>
               {[/]}
+              {* END custom breadcrumb *}
               {* Generate page header that is present on each page *}
               {[ inject "page_body_structure_title" context page /]}
 
-              {* Generate content for the page *}
+              {* Generate content for the page (add page identifier-class; remove prev/next page buttons) *}
               <div class="content-container">
                 <main class="page-main-content {{page.title.lowercased()}}">
                   {[ for block in page.blocks ]}

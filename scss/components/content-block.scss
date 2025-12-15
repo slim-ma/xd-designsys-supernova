@@ -30,3 +30,22 @@ ol.content-block{
         margin-bottom: 0 !important;
     }
 }
+
+.content-block p, 
+ul.content-block li,
+.heading {
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+ul.content-block, 
+ol.content-block{
+    ul, ol {
+        margin-bottom: 0 !important;
+    }
+}
