@@ -75,7 +75,8 @@ import {
   pageAnchorUrl,
   slugifyHeading,
   pageIdentifier,
-  removeVersionFromDomainUrl
+  removeVersionFromDomainUrl,
+  getPageSlug
 } from './doc_functionality/urls';
 import {
   generateCustomCSSHash,
@@ -169,6 +170,7 @@ Pulsar.registerFunction('getVariantClass', getVariantClass);
 Pulsar.registerFunction('buildSearchIndexJSON', buildSearchIndexJSON);
 
 /* URL manipulation and support */
+Pulsar.registerFunction('getPageSlug', getPageSlug);
 Pulsar.registerFunction('pageUrl', pageUrl);
 Pulsar.registerFunction('pageUrlForFilepath', pageUrlForFilepath);
 Pulsar.registerFunction('pageAnchorUrl', pageAnchorUrl);
